@@ -1,0 +1,44 @@
+@import '@nativescript/theme/scss/variables/blue';
+
+// Custom styles
+.fas {
+    @include colorize($color: accent);
+}
+.text-center{
+  text-align: center;
+
+}
+
+.info {
+    font-size: 20;
+   
+    vertical-align: center;
+}
+/* Estilos para las tarjetas */
+.card {
+ 
+    transition: border-color 0.3s ease; /* Animación de transición para el color del borde */
+    border-width: 2;
+    border-radius: 10;
+}
+
+
+ /* Estilos para el borde del cinturón seleccionado */
+.border-active {
+  border-width: 10;
+}
+  
+  /* Estilos de color del borde según el cinturón */
+.border-white {
+  border-color: white;
+}
+  
+.border-yellow {
+  border-color: yellow;
+}
+  
+.border-green {
+  border-color: green;
+}
+  
+  
