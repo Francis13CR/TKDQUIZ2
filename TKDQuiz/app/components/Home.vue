@@ -3,16 +3,16 @@
       <ActionBar class="action-bar">
         <NavigationButton visibility="hidden"/>
         <GridLayout columns="50, *">
-          <Label class="action-bar-title" text="Home" colSpan="2"/>
+          <Label class="action-bar-title" text="Cinturones" colSpan="2"/>
 
           <Label class="fas" text.decode="&#xf0c9;" @tap="onDrawerButtonTap"/>
         </GridLayout>
       </ActionBar>
-
-        <FlexboxLayout   flexDirection="column" alignItems="stretch" justifyContent="center">
-          <StackLayout margin="2" padding="2">
+      <ScrollView> 
+        <FlexboxLayout class="page__content"  flexDirection="column" alignItems="stretch" justifyContent="center">
+          <!-- <StackLayout margin="2" padding="2">
               <SearchBar id="searchBar" hint="Buscar cinta" text="" />
-          </StackLayout>
+          </StackLayout> -->
           <!-- Mostrar cada cinturón en una tarjeta -->
           <FlexboxLayout v-for="belt in belts" :key="belt.color" v-show="belt.id != 1"
               flexDirection="column"
@@ -20,7 +20,7 @@
               justifyContent="center"
               height="300"
               borderRadius="10"
-              class="card "
+              class=" card "
               :class="[ `border-${belt.color.toLowerCase()}`]"
               margin="5"
               padding="10"
@@ -35,7 +35,8 @@
               />
               <HtmlView margin="0 10" :html="belt.text" class="text-center text-secondary" />
           </FlexboxLayout>
-      </FlexboxLayout>
+        </FlexboxLayout>
+      </ScrollView>
     </Page>
 </template>
 
