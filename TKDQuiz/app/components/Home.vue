@@ -26,7 +26,7 @@
               padding="10"
               @tap="onBeltsTap(belt)"
           >
-              <image :src="belt.img" stretch="none" />
+              <image :src="belt.img" stretch="none"  />
               <Label
                   fontWeight="700"
                   class="text-primary"
@@ -43,22 +43,42 @@
 <script>
   import { SelectedPageService } from "../shared/selected-page-service";
   import { belts } from '../data/taekwondo-data.js';
-  import HomeJS from '../js/home.js';
-
+  import * as utils from "~/shared/utils";
+  import BeltView from "./BeltView.vue";
   export default {
     data() {
         return {
             belts: belts,
-            selectedBelt : HomeJS.data().selectedBelt
-         
-            // Puedes agregar más propiedades de datos según tus necesidades
+            selectedBelt : null
         };
     },
     mounted() {
       SelectedPageService.getInstance().updateSelectedPage("Home");
     },
-    computed: HomeJS.computed,
-    methods: HomeJS.methods,
+    computed: {
+      message() {
+        return "Blank {N}-Vue app";
+      },
+    }, 
+    components: {
+      BeltView
+    },
+    methods: {
+        onBeltsTap(event){
+            this.selectedBelt = event;
+            this.$navigateTo(BeltView, {
+              transition: {
+                name: "slideLeft",
+                duration: 300,
+                curve: "easeIn"
+              },
+              props: { belt: this.selectedBelt }
+            });
+        },
+        onDrawerButtonTap() {
+          utils.showDrawer();
+        },
+    },
   };
 </script>
 
