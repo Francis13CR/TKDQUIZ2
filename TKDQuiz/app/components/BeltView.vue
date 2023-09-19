@@ -9,19 +9,25 @@
       </ActionBar>
       <StackLayout>
         <ScrollView orientation="horizontal"  ref="scrollView">
-        <SegmentedBar   v-model="currentSectionIndex" @selectedIndexChange="onCategorySelected">
-            <SegmentedBarItem v-for="(category, index) in categories" :key="category.id" :title="category.name" class="text-center"/>
-        </SegmentedBar>
+          <SegmentedBar   v-model="currentSectionIndex" @selectedIndexChange="onCategorySelected">
+              <SegmentedBarItem v-for="(category, index) in categories" :key="category.id" :title="category.name" class="text-center"/>
+          </SegmentedBar>
         </ScrollView>
-
-        
-        <StackLayout v-for="(section, index) in info" :key="index" v-show="selectedCategoryId == section.id_category">
-            <Label :text="section.name" class="section-title" margin="10"/>
-            <Label :text="section.text" class="section-text" margin="10"/>
+        <ListView for="(section, index) in filterInfo" height="80%">
+          <v-template >
+            <StackLayout >
+              <Label :text="section.name" class="section-title text-center" margin="10" />
+              <HtmlView margin="0 10" :html="section.text" class="text-center text-secondary" />
+            </StackLayout>
+          </v-template>
+        </ListView>
+        <StackLayout orientation="horizontal" horizontalAlignment="right">
+          <Button class="bg-secondary"  v-show="currentSectionIndex > 0" text="Atrás" @tap="goToPreviousSection" witdh="50" />
+        <Button class="bg-primary" text=" Siguiente " @tap="goToNextSection" witdh="50" /> 
         </StackLayout>
-        <Button class="bg-primary" text="Siguiente" @tap="goToNextSection" />
-       
-    </StackLayout>
+        
+        
+      </StackLayout>
 
       
     </Page>
@@ -38,7 +44,8 @@
             categories: categories,
             selectedCategoryId: 1,
             info: info,
-            currentSectionIndex: 0
+            currentSectionIndex: 0,
+            filterInfo : []
         }
     },
     mounted() {
@@ -57,20 +64,34 @@
         onCategorySelected(index) {
             this.currentSectionIndex = index.value;
             this.selectedCategoryId = this.categories[index.value].id;
+            this.filterInfo = this.info.filter(item => item.id_category === this.selectedCategoryId);
             console.log(this.selectedCategoryId)
         },
         goToNextSection() {
-        if (this.currentSectionIndex < this.categories.length - 1) {
-            this.currentSectionIndex++;
+          if (this.currentSectionIndex < this.categories.length - 1) {
+              this.currentSectionIndex++;
+              this.selectedCategoryId = this.categories[this.currentSectionIndex].id;
+              this.$nextTick(() => {
+                  const scrollView = this.$refs.scrollView.nativeView;
+                  const selectedCategoryIndex = this.categories.findIndex(category => category.id === this.selectedCategoryId) * 1.8;
+                  const itemWidth = scrollView.getMeasuredWidth() / this.categories.length;
+                  scrollView.scrollToHorizontalOffset(selectedCategoryIndex * itemWidth, true);
+              });
+          }
+        },
+        goToPreviousSection() {
+          if (this.currentSectionIndex > 0) {
+            this.currentSectionIndex--;
             this.selectedCategoryId = this.categories[this.currentSectionIndex].id;
             this.$nextTick(() => {
-                const scrollView = this.$refs.scrollView.nativeView;
-                const selectedCategoryIndex = this.categories.findIndex(category => category.id === this.selectedCategoryId) * 1.8;
-                const itemWidth = scrollView.getMeasuredWidth() / this.categories.length;
-                scrollView.scrollToHorizontalOffset(selectedCategoryIndex * itemWidth, true);
+              const scrollView = this.$refs.scrollView.nativeView;
+              const selectedCategoryIndex = this.categories.findIndex(category => category.id === this.selectedCategoryId) * 1.8;
+              const itemWidth = scrollView.getMeasuredWidth() / this.categories.length;
+              scrollView.scrollToHorizontalOffset(selectedCategoryIndex * itemWidth, true);
             });
+          }
         }
-        }
+
        
     }
   };

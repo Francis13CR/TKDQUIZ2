@@ -52,7 +52,7 @@
 
 export const categories = [
   { name: 'Introducción al Taekwondo', id: 1 },
-  { name: 'Filosofía y Valores del Taekwondo', id: 2 },
+  { name: 'Filosofía del Taekwondo.', id: 2 },
   { name: 'Taekwondo en la Actualidad', id: 3 },
   { name: 'Taekwondo Fénix', id: 4 },
   { name: 'Misión y Visión', id: 5 },
@@ -67,21 +67,60 @@ export const info = [
   { 
     name: 'Qué es el Taekwondo', 
     id_category: 1, 
-    text: 'Es un arte marcial originario de Corea y practicado hace miles de años,<br>' +
-    'en el cual se utilizan técnicas de defensa y ataque, convertido en uno de los estilos de defensa personal más efectivos del mundo.'+
-    'Utiliza la fuerza, velocidad, coordinación, potencia, precisión y la resistencia cardiovascular y muscular.'+
-    'Es una disciplina que ayuda a formar el carácter, brinda la  seguridad en sí mismo, enseña a convivir con otras personas,'+ 
-    'logra descargar tensiones y agresividad provocando un estado de relajación en el practicante que lo ayudara a aprovechar '+
-    'mejor sus cualidades de cara a los estudios, el trabajo y a la relación con sus semejantes. Busca la plenitud total del hombre, un cuerpo sano en armonía con un espíritu limpio y '+
-    'generoso. Es un deporte que ofrece una mejoría considerable '+
-    'de la condición física de sus practicantes, debido al nivel tan '+
-    'riguroso de los entrenamientos. Es una técnica que ofrece al '+
-    'practicante la posibilidad de herir a un adversario, pero no es el '+
-    'fin buscado, sino que se busca la paz con los semejantes. '+
-    '(Aprender a pelear para no pelear).'  
+    text:  `
+    <p>
+      <strong>Taekwondo</strong> es un arte marcial originario de Corea practicado durante miles de años. En este arte, se emplean técnicas de defensa y ataque, convirtiéndolo en uno de los estilos de defensa personal más efectivos en el mundo.
+    </p>
+    
+    <p>
+      Utiliza la fuerza, velocidad, coordinación, potencia, precisión y la resistencia cardiovascular y muscular. Más que un deporte, el Taekwondo es una disciplina que ayuda a formar el carácter, brinda seguridad en uno mismo y enseña a convivir con otras personas. Además, permite liberar tensiones y agresividad, promoviendo un estado de relajación que beneficia al practicante en su vida cotidiana, estudios y relaciones interpersonales.
+    </p>
+    
+    <p>
+      El Taekwondo busca la plenitud total del individuo, fomentando un cuerpo sano en armonía con un espíritu limpio y generoso.
+    </p>
+    
+    <p>
+      Se trata de un deporte que ofrece una mejora significativa en la condición física de sus practicantes debido a la intensidad de los entrenamientos.
+    </p>
+    
+    <p>
+      Aunque el Taekwondo proporciona al practicante la habilidad de herir a un adversario, este no es el objetivo buscado. En cambio, se busca la paz y la convivencia armoniosa con los demás. Como dice el lema: <strong>"Aprender a pelear para no pelear"</strong>.
+    </p>
+    ` 
   },
-  { name: 'Origen y historia', id_category: 1 },
-  { name: 'Filosofía subyacente', id_category: 2}
+  { name: 'Filosofía y honor subyacente', id_category: 2,
+    text: `
+    <p>
+      El Taekwondo es un arte marcial que tiene su origen en <strong>Corea</strong>, por lo que a lo largo de su historia ha desarrollado una gran tradición filosófica y espiritual.
+    </p>
+    
+    <p>
+      El uniforme (dobok) representa tres elementos:
+      <ul>
+        <li>La gabacha: representa el cielo.</li>
+        <li>El pantalón: representa la tierra.</li>
+        <li>El cinturón: representa la persona.</li>
+      </ul>
+      El anudarse el cinturón (Ti) tiene como significado el orden y la apariencia personal; las dos puntas tienen que estar del mismo tamaño, lo que representa el equilibrio.
+    </p>
+    
+    <p>
+      La bandera coreana (Tae Kukki) simboliza la forma de pensar, la filosofía y el misticismo de los coreanos.
+    </p>
+    
+    <p>
+      El código de honor del Taekwondo consiste en:
+      <ul>
+        <li>Respeto a la nación.</li>
+        <li>Respeto y obediencia a los padres.</li>
+        <li>Honor a los amigos.</li>
+        <li>Justicia y omisión a la violencia innecesaria.</li>
+        <li>El valor.</li>
+      </ul>
+    </p>
+    `
+  }
 ]
 
 export const belts = [
