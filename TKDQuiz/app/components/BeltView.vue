@@ -45,11 +45,11 @@
             selectedCategoryId: 1,
             info: info,
             currentSectionIndex: 0,
-            filterInfo : []
+            filterInfo : [],
         }
     },
     mounted() {
-        console.log(this.belt)
+        console.log(this.belt.id)
      // SelectedPageService.getInstance().updateSelectedPage("Featured");
     },
     computed: {
@@ -64,8 +64,7 @@
         onCategorySelected(index) {
             this.currentSectionIndex = index.value;
             this.selectedCategoryId = this.categories[index.value].id;
-            this.filterInfo = this.info.filter(item => item.id_category === this.selectedCategoryId);
-            console.log(this.selectedCategoryId)
+            this.filterInfo = this.info.filter(item => item.id_category === this.selectedCategoryId &&  (this.belt.id == item.id_bell || item.id_bell == 0) );
         },
         goToNextSection() {
           if (this.currentSectionIndex < this.categories.length - 1) {
