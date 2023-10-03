@@ -86,11 +86,11 @@ export const info = [
     
     <h2>Taeguk Básicas</h2>
     <ul>
-        <li><strong>Taeguk il Chang:</strong> Cielo y Luz (18 movimientos)
+        <li><strong>Taeguk il Chang:</strong> Cielo y Luz (18 movimientos) <a href="https://www.youtube.com/embed/bP_5GYMC0GQ?si=0fUM3nb4emd2Bnvb"> Ver video </a>
         </li>
-        <li><strong>Taeguk i Chang:</strong> Júbilo y Alegría (18 movimientos)</li>
+        <li><strong>Taeguk i Chang:</strong> Júbilo y Alegría (18 movimientos)  <a href="https://www.youtube.com/embed/hAjxTL4p2mQ?si=0Wg4vpNZJR3jbWzL"> Ver video </a></li>
     </ul>
-    <a href="" style=" font-weight: bold;color: #FF5733;text-align: center;margin-top: 20px;">¡Mira los videos de referencia al final de esta sección!</a>
+    <a href="" style=" font-weight: bold;color: #FF5733;text-align: center;margin-top: 20px;">¡Tambien puedes ver los  videos de referencia al final de esta sección!</a>
     
     <h2>Aspectos para Mejorar las Formas</h2>
     <ul>
