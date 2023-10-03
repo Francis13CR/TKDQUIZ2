@@ -16,7 +16,6 @@
 }
 /* Estilos para las tarjetas */
 .card {
- 
     transition: border-color 0.3s ease; /* Animación de transición para el color del borde */
     border-width: 2;
     border-radius: 10;
@@ -26,6 +25,13 @@
    font-weight: bold!important;
    font-size: 16px!important;
 }
+.message {
+  font-weight: bold;
+  color: #FF5733; /* Color llamativo, puedes personalizarlo */
+  text-align: center;
+  margin-top: 20px; /* Espaciado superior para separarlo del texto anterior */
+}
+
 
  /* Estilos para el borde del cinturón seleccionado */
 .border-active {
@@ -38,11 +44,18 @@
 }
   
 .border-yellow {
-  border-color: yellow;
+  border-color: rgb(255, 255, 31)!important;
 }
   
 .border-green {
-  border-color: green;
+  border-color: green!important;
+}
+
+.border-blue{
+  border-color: blue!important;
+}
+.border-red{
+  border-color: red!important;
 }
   // applied when device is in light mode
 .ns-light {

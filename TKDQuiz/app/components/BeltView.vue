@@ -18,6 +18,11 @@
             <StackLayout >
               <Label :text="section.name" class="section-title text-center" margin="10" />
               <HtmlView margin="0 10" :html="section.text" class="text-center text-secondary" />
+              <StackLayout v-for="(video, index) in section.videos" id="videos" >
+                <Label :text="video.title" class="section-title text-center" margin="10" />
+                <WebView :src="video.url" height="300" />
+              </StackLayout>
+              
             </StackLayout>
           </v-template>
         </ListView>

@@ -65,9 +65,58 @@ export const categories = [
 
 export const info = [
   {
+    name: 'Taeguk',
+    id_category: 6,
+    id_bell: 2,
+    videos: [
+      {
+        title: 'Taeguk 1',
+        url: 'https://www.youtube.com/embed/bP_5GYMC0GQ?si=0fUM3nb4emd2Bnvb',
+      },
+      {
+        title: 'Taeguk 2',
+        url: 'https://www.youtube.com/embed/hAjxTL4p2mQ?si=0Wg4vpNZJR3jbWzL',
+      },
+      // ... Puedes agregar hasta 10 videos aquí
+    ],
+    text: `
+    <p>Las Taeguk son una serie de movimientos coordinados y sistematizados que simulan un combate con varios oponentes.</p>
+    <p><strong>Tae:</strong> Grandeza</p>
+    <p><strong>Guk:</strong> Eternidad</p>
+    
+    <h2>Taeguk Básicas</h2>
+    <ul>
+        <li><strong>Taeguk il Chang:</strong> Cielo y Luz (18 movimientos)
+        </li>
+        <li><strong>Taeguk i Chang:</strong> Júbilo y Alegría (18 movimientos)</li>
+    </ul>
+    <a href="" style=" font-weight: bold;color: #FF5733;text-align: center;margin-top: 20px;">¡Mira los videos de referencia al final de esta sección!</a>
+    
+    <h2>Aspectos para Mejorar las Formas</h2>
+    <ul>
+        <li>Foco</li>
+        <li>Respeto de posiciones</li>
+        <li>Precisión</li>
+        <li>Balance (Equilibrio)</li>
+        <li>Conocer bien la secuencia</li>
+        <li>Concentración</li>
+        <li>Potencia</li>
+        <li>Respiración</li>
+        <li>Velocidad</li>
+        <li>Tiempos</li>
+        <li>Terminar en el punto donde se empezó</li>
+        <li>Coordinación</li>
+        <li>Buena postura</li>
+    </ul>
+    `
+  },
+
+
+  {
     name: 'Significados',
     id_category: 5,
     id_bell: 0,
+    videos: [],
     text: `
     <h2>Significado del Taekwondo</h2>
     <p><strong>TAE:</strong> Saltar, patear, majar</p>
@@ -112,6 +161,7 @@ export const info = [
     name: 'Academia Fenix',
     id_category: 4,
     id_bell: 0,
+    videos: [],
     text: `
     <p>
       <strong>Taekwondo Fénix</strong> surge del compromiso de un grupo de entrenadores liderados por el profesor y fundador <strong>Luis Lobo Rojas</strong>, con el objetivo de llevar el taekwondo y sus estudiantes a otro nivel deportivo y marcial. Se enfocan en potenciar las habilidades de cada estudiante y consolidar estrategias, promoviendo el trabajo duro y el esfuerzo continuo.
@@ -135,6 +185,7 @@ export const info = [
     name: 'Taekwondo en tiempos modernos',
     id_category: 3,
     id_bell: 0,
+    videos: [],
     text : `   
       <p>
         La Federación Mundial de Taekwondo (WTF) es el ente rector del Taekwondo en todo el mundo, está ubicada en Seúl, Corea y fue fundada en 1973.
@@ -152,6 +203,7 @@ export const info = [
     name: '¿Qué es el Taekwondo?', 
     id_category: 1, 
     id_bell : 0,
+    videos: [],
     text:  `
     <p>
       El <strong>Taekwondo</strong> es un arte marcial originario de Corea practicado durante miles de años. En este arte, se emplean técnicas de defensa y ataque, convirtiéndolo en uno de los estilos de defensa personal más efectivos en el mundo.
@@ -176,6 +228,7 @@ export const info = [
   },
   { name: 'Filosofía y honor subyacente', 
     id_category: 2,
+    videos: [],
     id_bell : 0,
     text: `
     <p>
@@ -233,7 +286,7 @@ export const belts = [
   { 
     id: 5 , 
     name: 'Azul (Chong-ti)', 
-    color: 'red' ,
+    color: 'blue' ,
     img: '~/imgs/blue-belt.png',
     text: '<p>El Cinturón Amarillo es el inicio del aprendizaje, el nacimiento. El amarillo representa las riquezas físicas y espirituales. Este cinturón representa el amanecer.<p>' 
   },

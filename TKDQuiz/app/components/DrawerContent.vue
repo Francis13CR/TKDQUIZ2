@@ -2,7 +2,7 @@
     <GridLayout rows="auto, *" class="nt-drawer__content">
         <StackLayout row="0" class="nt-drawer__header">
             <!-- <Image class="nt-drawer__header-image fas t-36" src.decode="font://&#xf2bd;"/> -->
-            <Label class="nt-drawer__header-brand" text="TKD Feniz"/>
+            <Label class="nt-drawer__header-brand" text="TKD Fenix"/>
             <!-- <Label class="nt-drawer__header-footnote" text="username@mail.com"/> -->
         </StackLayout>
 
@@ -19,13 +19,13 @@
                             :class="'nt-drawer__list-item' + (selectedPage === 'Browse' ? ' -selected': '')"
                             @tap="onNavigationItemTap(Browse)">
                     <Label col="0" text.decode="&#xf1ea;" class="nt-icon far"/>
-                    <Label col="1" text="Ranking" class="p-r-10"/>
+                    <Label col="1" text="Noticias" class="p-r-10"/>
                 </GridLayout>
 
                 <GridLayout columns="auto, *"
-                            :class="'nt-drawer__list-item' + (selectedPage === 'Search' ? ' -selected': '')"
-                            @tap="onNavigationItemTap(Search)">
-                    <Label col="0" text.decode="&#xf002;" class="nt-icon fas"/>
+                            :class="'nt-drawer__list-item' + (selectedPage === 'Quiz' ? ' -selected': '')"
+                            @tap="onNavigationItemTap(Quiz)">
+                    <Label col="0" text.decode="&#xf128;" class="nt-icon fas"/>
                     <Label col="1" text="Quiz" class="p-r-10"/>
                 </GridLayout>
 
@@ -53,7 +53,7 @@
   import Home from "./Home";
   import Browse from "./Browse";
   import Featured from "./Featured";
-  import Search from "./Search";
+  import Quiz from "./Quiz";
   import Settings from "./Settings";
   import * as utils from "~/shared/utils";
   import { SelectedPageService } from "~/shared/selected-page-service";
@@ -68,7 +68,7 @@
         Home: Home,
         Browse: Browse,
         Featured: Featured,
-        Search: Search,
+        Quiz: Quiz,
         Settings: Settings,
         selectedPage: ""
       };
@@ -77,7 +77,7 @@
       Home,
       Browse,
       Featured,
-      Search,
+      Quiz,
       Settings
     },
     methods: {

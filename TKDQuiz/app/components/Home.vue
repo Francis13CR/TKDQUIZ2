@@ -18,10 +18,10 @@
               flexDirection="column"
               alignItems="center"
               justifyContent="center"
-              height="300"
+              height="auto"
               borderRadius="10"
               class=" card "
-              :class="[ `border-${belt.color.toLowerCase()}`]"
+              :class="[ `border-${belt.color}`]"
               margin="5"
               padding="10"
               @tap="onBeltsTap(belt)"
@@ -29,7 +29,7 @@
               <image :src="belt.img" stretch="none"  />
               <Label
                   fontWeight="700"
-                  class="text-primary"
+                  class="text-primary text-center"
                   fontSize="18"
                   :text="belt.name"
               />
