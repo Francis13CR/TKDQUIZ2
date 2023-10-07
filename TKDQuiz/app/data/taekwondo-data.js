@@ -58,12 +58,34 @@ export const categories = [
   // { name: 'Misión y Visión', id: 5 },
   { name: 'Significado del Taekwondo y sus Componentes', id: 5 },
   { name: 'Taeguk y Formas', id: 6 },
-  { name: 'Vocabulario y Conceptos Clave', id: 7 },
-  { name: 'Fundamentos y Técnicas del Taekwondo', id: 8 },
-  { name: 'Acciones Prohibidas en Combate', id: 9 },
+  { name: 'Tips de poomsae', id: 7 },
+  { name: 'Vocabulario y Conceptos Clave', id: 8 },
+  { name: 'Fundamentos y Técnicas del Taekwondo', id: 9 },
+  { name: 'Acciones Prohibidas en Combate', id: 10 },
 ];
 
 export const info = [
+  {
+    id_category: 7,
+    name: `Aspectos para Mejorar las Formas`,
+    id_bell: 0,
+    text: `
+    <ul>
+        <li>Foco</li>
+        <li>Respeto de posiciones</li>
+        <li>Precisión</li>
+        <li>Balance (Equilibrio)</li>
+        <li>Conocer bien la secuencia</li>
+        <li>Concentración</li>
+        <li>Potencia</li>
+        <li>Respiración</li>
+        <li>Velocidad</li>
+        <li>Tiempos</li>
+        <li>Terminar en el punto donde se empezó</li>
+        <li>Coordinación</li>
+        <li>Buena postura</li>
+    </ul>`
+  },
   {
     name: 'Taeguk',
     id_category: 6,
@@ -86,28 +108,11 @@ export const info = [
     
     <h2>Taeguk Básicas</h2>
     <ul>
-        <li><strong>Taeguk il Chang:</strong> Cielo y Luz (18 movimientos) <a href="https://www.youtube.com/embed/bP_5GYMC0GQ?si=0fUM3nb4emd2Bnvb"> Ver video </a>
+        <li><strong>Taeguk il Chang:</strong> Cielo y Luz (18 movimientos) <br><a href="https://www.youtube.com/embed/bP_5GYMC0GQ?si=0fUM3nb4emd2Bnvb"> Ver video </a>
         </li>
-        <li><strong>Taeguk i Chang:</strong> Júbilo y Alegría (18 movimientos)  <a href="https://www.youtube.com/embed/hAjxTL4p2mQ?si=0Wg4vpNZJR3jbWzL"> Ver video </a></li>
+        <li><strong>Taeguk i Chang:</strong> Júbilo y Alegría (18 movimientos) <br>  <a href="https://www.youtube.com/embed/hAjxTL4p2mQ?si=0Wg4vpNZJR3jbWzL"> Ver video </a></li>
     </ul>
     <a href="" style=" font-weight: bold;color: #FF5733;text-align: center;margin-top: 20px;">¡Tambien puedes ver los  videos de referencia al final de esta sección!</a>
-    
-    <h2>Aspectos para Mejorar las Formas</h2>
-    <ul>
-        <li>Foco</li>
-        <li>Respeto de posiciones</li>
-        <li>Precisión</li>
-        <li>Balance (Equilibrio)</li>
-        <li>Conocer bien la secuencia</li>
-        <li>Concentración</li>
-        <li>Potencia</li>
-        <li>Respiración</li>
-        <li>Velocidad</li>
-        <li>Tiempos</li>
-        <li>Terminar en el punto donde se empezó</li>
-        <li>Coordinación</li>
-        <li>Buena postura</li>
-    </ul>
     `
   },
 
