@@ -66,6 +66,36 @@ export const categories = [
 
 export const info = [
   {
+    name: 'Acciones Prohibidas GAMCHON ',
+    id_bell: 0,
+    id_category: 10, 
+    text: `
+    <ul>
+        <li>Evadir al oponente dando la espalda o agachándose</li>
+        <li>Caer al piso intencionalmente</li>
+        <li>Evitar el combate</li>
+        <li>Agarrar, retener o empujar al oponente</li>
+        <li>Atacar por debajo de la cintura</li>
+        <li>Fingir lesión</li>
+        <li>Cabezazo o ataque con la rodilla</li>
+        <li>Golpear la cara del oponente con la mano</li>
+        <li>Cruzar la línea límite</li>
+        <li>Mostrar mala conducta por parte del competidor o coach</li>
+        <li>Levantar la rodilla para evitar un ataque</li>
+        <li>Pasividad de parte de los competidores durante el combate</li>
+        <li>Atacar al oponente después de kalyo</li>
+        <li>Atacar al oponente caído</li>
+        <li>Derribar al oponente, sujetándolo o empujándolo</li>
+        <li>Golpear la cara del oponente con la mano</li>
+        <li>Atacar con intención por debajo de la cintura</li>
+        <li>Interrumpir el combate por parte del competidor o coach</li>
+        <li>Comportamientos violentos del competidor o coach</li>
+        <li>Evitar intencionalmente el combate</li>
+        <li>Manipular el sistema PSS antes de cada round</li>
+    </ul>
+    `
+  },
+  {
     id_category: 7,
     name: `Aspectos para Mejorar las Formas`,
     id_bell: 0,
