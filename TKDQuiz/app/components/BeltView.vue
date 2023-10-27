@@ -77,7 +77,7 @@
               this.selectedCategoryId = this.categories[this.currentSectionIndex].id;
               this.$nextTick(() => {
                   const scrollView = this.$refs.scrollView.nativeView;
-                  const selectedCategoryIndex = this.categories.findIndex(category => category.id === this.selectedCategoryId) * 1.8;
+                  const selectedCategoryIndex = this.categories.findIndex(category => category.id === this.selectedCategoryId) * 2.5;
                   const itemWidth = scrollView.getMeasuredWidth() / this.categories.length;
                   scrollView.scrollToHorizontalOffset(selectedCategoryIndex * itemWidth, true);
               });
@@ -89,7 +89,7 @@
             this.selectedCategoryId = this.categories[this.currentSectionIndex].id;
             this.$nextTick(() => {
               const scrollView = this.$refs.scrollView.nativeView;
-              const selectedCategoryIndex = this.categories.findIndex(category => category.id === this.selectedCategoryId) * 1.8;
+              const selectedCategoryIndex = this.categories.findIndex(category => category.id === this.selectedCategoryId) * 2.5;
               const itemWidth = scrollView.getMeasuredWidth() / this.categories.length;
               scrollView.scrollToHorizontalOffset(selectedCategoryIndex * itemWidth, true);
             });

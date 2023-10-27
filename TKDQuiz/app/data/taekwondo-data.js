@@ -60,15 +60,18 @@ export const categories = [
   { name: 'Taeguk y Formas', id: 6 },
   { name: 'Tips de poomsae', id: 7 },
   { name: 'Vocabulario y Conceptos Clave', id: 8 },
-  { name: 'Fundamentos y Técnicas del Taekwondo', id: 9 },
-  { name: 'Acciones Prohibidas en Combate', id: 10 },
+  { name: 'Partes del cuerpo', id: 9 },
+  { name: 'Numeros en coreano', id: 10 },
+  { name: 'Fundamentos básicos', id: 11 },
+  { name: 'Fundamentos Practicos', id: 12 },
+  { name: 'Acciones Prohibidas en Combate', id: 13 },
 ];
 
 export const info = [
   {
     name: 'Acciones Prohibidas GAMCHON ',
     id_bell: 0,
-    id_category: 10, 
+    id_category: 13, 
     text: `
     <ul>
         <li>Evadir al oponente dando la espalda o agachándose</li>
@@ -94,6 +97,176 @@ export const info = [
         <li>Manipular el sistema PSS antes de cada round</li>
     </ul>
     `
+  },
+  {
+    name: 'Fundamentos Practicos',
+    id_bell: 0,
+    id_category: 12,
+    text: `<p><strong>FUNDAMENTOS PRÁCTICOS</strong></p>
+
+    <ul>
+        <li><strong>AP SOGUI ARE MAKI:</strong> Defensa abajo con la pierna adelantada.</li>
+        <li><strong>AP SOGUI MONTONG AN MAKI:</strong> Defensa al medio, brazo contrario al pie adelantado.</li>
+        <li><strong>AP SOGUI MONTONG MAKI:</strong> Defensa al medio, brazo igual al pie adelantado.</li>
+        <li><strong>AP SOGUI OLGUL MAKI:</strong> Defensa arriba con la pierna adelantada.</li>
+        <li><strong>AP CUBI SOGUI MONTONG BANDE CHIRIGUI:</strong> Golpe de frente al medio, coincidiendo con el pie adelantado.</li>
+        <li><strong>AP SOGUI MONTONG BARO CHIRIGUI:</strong> Golpe de frente al medio, contrario al pie adelantado.</li>
+        <li><strong>AP CUBI SOGUI OLGUL BANDE CHIRIGUI:</strong> Golpe de frente a la cara, coincidiendo con el pie adelantado.</li>
+        <li><strong>AP CUBI SOGUI MONTONG DUBON CHIRIGUI:</strong> Golpe de frente abajo, coincidiendo con el pie adelantado.</li>
+    </ul>
+     `
+  },
+  {
+    name: 'Fundamentos básicos',
+    id_bell: 0,
+    id_category: 11,
+    text: `<p><strong>FUNDAMENTOS BÁSICOS</strong></p>
+
+    <p><strong>MAKI = DEFENSA</strong></p>
+    <ul>
+        <li><strong>Are Maki:</strong> Defensa abajo.</li>
+        <li><strong>Montong Maki:</strong> Defensa al medio, brazo igual al pie adelantado.</li>
+        <li><strong>Montong an Maki:</strong> Defensa al medio, brazo contrario al pie adelantado.</li>
+        <li><strong>Olgul Maki:</strong> Defensa arriba.</li>
+    </ul>
+    
+    <p><strong>CHIRIGUI = GOLPE</strong></p>
+    <ul>
+        <li><strong>Montong Bande Chirigui:</strong> Golpe de frente al medio, coincidiendo con el pie adelantado.</li>
+        <li><strong>Montong Baro Chirigui:</strong> Golpe de frente al medio, contrario al pie adelantado.</li>
+        <li><strong>Olgul Bande Chirigui:</strong> Golpe de frente a la cara, coincidiendo con el pie adelantado.</li>
+    </ul>
+    
+    <p><strong>SOGUI = POSICIÓN</strong></p>
+    <ul>
+        <li><strong>Moa Sogui:</strong> Posición de pies juntos.</li>
+        <li><strong>Naranji Sogui:</strong> Posición de pies abiertos al ancho de los hombros.</li>
+        <li><strong>Ap Sogui:</strong> Posición corta de frente, es un paso normal de caminar.</li>
+        <li><strong>Ap Cubi Sogui:</strong> Posición larga de frente (3 a 4 pasos de largo), es un paso y medio, pierna de atrás recta y pierna delantera flexionada.</li>
+    </ul>
+    
+    <p><strong>CHAGUI = PATADA</strong></p>
+    <ul>
+        <li><strong>Ap Chagui:</strong> Patada al frente con la bola del pie.</li>
+        <li><strong>Bandal Chagui:</strong> Patada al medio con empeine.</li>
+        <li><strong>Tolio Chagui:</strong> Patada a la cabeza.</li>
+        <li><strong>Miro Chagui:</strong> Patada de empuje con la planta del pie.</li>
+    </ul>
+    `    
+  },
+
+  {
+    id_category: 10,
+    name: 'Números en coreano',
+    id_bell: 0,
+    text: `
+      <ul>
+        <li>JANA = Uno</li>
+        <li>DUL = Dos</li>
+        <li>SET = Tres</li>
+        <li>NET = Cuatro</li>
+        <li>DASOT = Cinco</li>
+        <li>IOSOT = Seis</li>
+        <li>ILKOP = Siete</li>
+        <li>IODOL = Ocho</li>
+        <li>AJOP = Nueve</li>
+        <li>IOL = Diez</li>
+        <li>SUMUL = Veinte</li>
+        <li>SORUM = Treinta</li>
+      </ul>
+    `
+  },
+  {
+    id_category: 9,
+    name: 'Partes del cuerpo',
+    id_bell: 0,
+    text: `
+      <ul>
+        <li>Mom = Cuerpo</li>
+        <li>Muori = Cabeza</li>
+        <li>Ima = Frente</li>
+        <li>Num = Ojos</li>
+        <li>Ko = Nariz</li>
+        <li>Kwi = Oreja</li>
+        <li>I = Dientes</li>
+        <li>Ip = Boca</li>
+        <li>Ipsul = Labios</li>
+        <li>Tuok = Barbilla</li>
+        <li>Mok = Cuello</li>
+        <li>Oke = Hombro</li>
+        <li>Gasum = Pecho</li>
+        <li>Pal = Brazo</li>
+        <li>Palkup = Codo</li>
+        <li>Palmok = Antebrazo</li>
+        <li>Son = Mano</li>
+        <li>Sonmok = Muñeca</li>
+        <li>Sonnal = Canto de la mano</li>
+        <li>Sonkarat = Dedos de la mano</li>
+        <li>Chumok = Puño</li>
+        <li>Be = Estomago</li>
+        <li>Galbi = Costillas</li>
+        <li>Dung = Espalda</li>
+        <li>Ondungui = Glúteos</li>
+        <li>Dari = Pierna</li>
+        <li>Jiobiokchi = Muslo</li>
+        <li>Murup = Rodilla</li>
+        <li>Jeonggangyi = Espinilla</li>
+        <li>Bal = Pie</li>
+        <li>Balmok = Tobillo</li>
+        <li>Balnal = Canto del pie</li>
+        <li>Baldung = Empeine</li>
+        <li>Balkarat = Dedos del pie</li>
+        <li>Apchuk = Bola del pie</li>
+        <li>Dikumchi = Talón del pie</li>
+      </ul>
+    `
+  },
+  {
+    id_category: 8,
+    name : "Vocabulario General",
+    id_bell: 0,
+    text : `
+    <ul>
+      <li>Sabonim = Profesor</li>
+      <li>Dobok = Uniforme</li>
+      <li>Ti = Cinta</li>
+      <li>Dochang = Salón de clases o Area de combate</li>
+      <li>Kukki = Bandera</li>
+      <li>Chariot = Firmes</li>
+      <li>Kiune = Saludo</li>
+      <li>Chumbi = Preparados o Posición de combate</li>
+      <li>Kiap = Grito</li>
+      <li>Sichak = Empezar</li>
+      <li>Barot = Terminar</li>
+      <li>Kalyo = Detenerse o Separarse</li>
+      <li>Kesok = Continuar</li>
+      <li>Kuman = Alto, No más</li>
+      <li>Chong = Azul</li>
+      <li>Jong = Rojo</li>
+      <li>Sun = Ganador</li>
+      <li>Bijing = Empate</li>
+      <li>Kyongo = Amonestación (Medio punto)</li>
+      <li>Gamchon = Deducción (Un punto)</li>
+      <li>Maki = Defensa</li>
+      <li>Chirigui = Golpe</li>
+      <li>Sogui = Posicion</li>
+      <li>Chagui = Patada</li>
+      <li>Ap = Al frente</li>
+      <li>Iop = De lado</li>
+      <li>Dui = Hacia atrás</li>
+      <li>Bande = Igual</li>
+      <li>Baro = Contrario</li>
+      <li>Uen = Izquierdo</li>
+      <li>Orum = Derecho</li>
+      <li>Anyio = Sentarse</li>
+      <li>Kirits = Levantarse</li>
+      <li>Ap Fro = Avanzar</li>
+      <li>Di Fro = Retroceder</li>
+      <li>Tirodorat = Volverse</li>
+      <li>Sabomin Kie Kiune = Saludo al profesor</li>
+      <li>Kukki Dejadio Kiune = Saludo a las banderas</li>
+      <li>Kansa Jamnida = Muchas gracias</li>
+    </ul>`
   },
   {
     id_category: 7,
@@ -240,6 +413,7 @@ export const info = [
     id_bell : 0,
     videos: [],
     text:  `
+    <img src='~/imgs/red-belt.png' alt="Taekwondo" style="width: 100%; height: auto; margin: 20px 0px;">
     <p>
       El <strong>Taekwondo</strong> es un arte marcial originario de Corea practicado durante miles de años. En este arte, se emplean técnicas de defensa y ataque, convirtiéndolo en uno de los estilos de defensa personal más efectivos en el mundo.
     </p>
