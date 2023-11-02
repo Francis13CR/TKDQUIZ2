@@ -1,54 +1,19 @@
-// taekwondoData.js
+const imageSourceModule = require("@nativescript/core/image-source");
 
-
-//Introducción al Taekwondo:
-
-// Qué es el Taekwondo
-// Origen y historia
-// Principales características y enfoques
-
-// Filosofía y Valores del Taekwondo:
-// Filosofía subyacente
-// Valores y código de honor
-// Significado de los elementos simbólicos (uniforme, cinturón, etc.)
-
-// Taekwondo en la Actualidad:
-// Organizaciones mundiales y nacionales
-// Historia del Taekwondo en una región específica (por ejemplo, Costa Rica)
-// Desarrollo y relevancia moderna
-
-// Taekwondo Fénix:
-// Origen y fundador
-// Significado del nombre
-// Enfoque y objetivos
-
-// Misión y Visión:
-// Misión de Taekwondo Fénix
-// Visión a futuro
-// Objetivos y metas
-
-// Significado del Taekwondo y sus Componentes:
-// Desglose del nombre Taekwondo (TAE, KWON, DO)
-// Espíritus del Taekwondo
-// Significado y orden de los cinturones
-
-// Taeguk y Formas:
-// Explicación de Taeguk
-// Descripción de algunas formas (Taeguk il Chang, Taeguk i Chang)
-// Aspectos para mejorar las formas
-
-// Vocabulario y Conceptos Clave:
-// Vocabulario técnico y términos importantes
-// Números en coreano
-// Acciones y penalizaciones en combate
-
-// Fundamentos y Técnicas del Taekwondo:
-// Descripción de conceptos básicos (Maki, Chirigui, Sogui, Chagui)
-// Ejemplos prácticos de posiciones y movimientos
-
-// Acciones Prohibidas en Combate:
-// Lista de acciones penalizadas
-// Comportamientos no permitidos durante el combate
+function imageToBase64(path) {
+  let imageSource = imageSourceModule.fromFile(path);
+  return imageSource.toBase64String("png");
+}
+let cssContent = `
+ul {
+  text-align: left;
+  margin-bottom: 5px;
+  padding-left: 6px;
+}
+li {
+  margin-bottom: 5px;
+}
+`;
 
 export const categories = [
   { name: 'Introducción al Taekwondo', id: 1 },
@@ -73,37 +38,46 @@ export const info = [
     id_bell: 0,
     id_category: 13, 
     text: `
-    <ul>
-        <li>Evadir al oponente dando la espalda o agachándose</li>
-        <li>Caer al piso intencionalmente</li>
-        <li>Evitar el combate</li>
-        <li>Agarrar, retener o empujar al oponente</li>
-        <li>Atacar por debajo de la cintura</li>
-        <li>Fingir lesión</li>
-        <li>Cabezazo o ataque con la rodilla</li>
-        <li>Golpear la cara del oponente con la mano</li>
-        <li>Cruzar la línea límite</li>
-        <li>Mostrar mala conducta por parte del competidor o coach</li>
-        <li>Levantar la rodilla para evitar un ataque</li>
-        <li>Pasividad de parte de los competidores durante el combate</li>
-        <li>Atacar al oponente después de kalyo</li>
-        <li>Atacar al oponente caído</li>
-        <li>Derribar al oponente, sujetándolo o empujándolo</li>
-        <li>Golpear la cara del oponente con la mano</li>
-        <li>Atacar con intención por debajo de la cintura</li>
-        <li>Interrumpir el combate por parte del competidor o coach</li>
-        <li>Comportamientos violentos del competidor o coach</li>
-        <li>Evitar intencionalmente el combate</li>
-        <li>Manipular el sistema PSS antes de cada round</li>
-    </ul>
+    <style>
+    ${cssContent}
+   </style>
+    <div>
+      <ul>
+          <li>Evadir al oponente dando la espalda o agachándose</li>
+          <li>Caer al piso intencionalmente</li>
+          <li>Evitar el combate</li>
+          <li>Agarrar, retener o empujar al oponente</li>
+          <li>Atacar por debajo de la cintura</li>
+          <li>Fingir lesión</li>
+          <li>Cabezazo o ataque con la rodilla</li>
+          <li>Golpear la cara del oponente con la mano</li>
+          <li>Cruzar la línea límite</li>
+          <li>Mostrar mala conducta por parte del competidor o coach</li>
+          <li>Levantar la rodilla para evitar un ataque</li>
+          <li>Pasividad de parte de los competidores durante el combate</li>
+          <li>Atacar al oponente después de kalyo</li>
+          <li>Atacar al oponente caído</li>
+          <li>Derribar al oponente, sujetándolo o empujándolo</li>
+          <li>Golpear la cara del oponente con la mano</li>
+          <li>Atacar con intención por debajo de la cintura</li>
+          <li>Interrumpir el combate por parte del competidor o coach</li>
+          <li>Comportamientos violentos del competidor o coach</li>
+          <li>Evitar intencionalmente el combate</li>
+          <li>Manipular el sistema PSS antes de cada round</li>
+      </ul>
+    </div>
     `
   },
   {
     name: 'Fundamentos Practicos',
     id_bell: 0,
     id_category: 12,
-    text: `<p><strong>FUNDAMENTOS PRÁCTICOS</strong></p>
-
+    text: `
+    <style>
+      ${cssContent}
+    </style>
+    <div>
+    <p><strong>FUNDAMENTOS PRÁCTICOS</strong></p>
     <ul>
         <li><strong>AP SOGUI ARE MAKI:</strong> Defensa abajo con la pierna adelantada.</li>
         <li><strong>AP SOGUI MONTONG AN MAKI:</strong> Defensa al medio, brazo contrario al pie adelantado.</li>
@@ -114,13 +88,19 @@ export const info = [
         <li><strong>AP CUBI SOGUI OLGUL BANDE CHIRIGUI:</strong> Golpe de frente a la cara, coincidiendo con el pie adelantado.</li>
         <li><strong>AP CUBI SOGUI MONTONG DUBON CHIRIGUI:</strong> Golpe de frente abajo, coincidiendo con el pie adelantado.</li>
     </ul>
+    </div>
      `
   },
   {
     name: 'Fundamentos básicos',
     id_bell: 0,
     id_category: 11,
-    text: `<p><strong>FUNDAMENTOS BÁSICOS</strong></p>
+    text: `
+    <style>
+      ${cssContent}
+    </style>
+    <div>
+    <p><strong>FUNDAMENTOS BÁSICOS</strong></p>
 
     <p><strong>MAKI = DEFENSA</strong></p>
     <ul>
@@ -129,6 +109,7 @@ export const info = [
         <li><strong>Montong an Maki:</strong> Defensa al medio, brazo contrario al pie adelantado.</li>
         <li><strong>Olgul Maki:</strong> Defensa arriba.</li>
     </ul>
+    <img src='data:image/png;base64,${imageToBase64("~/imgs/defensas.jpg")}' alt="defensas" style="width: 100%; height: auto; margin: 20px 0px;">
     
     <p><strong>CHIRIGUI = GOLPE</strong></p>
     <ul>
@@ -152,6 +133,7 @@ export const info = [
         <li><strong>Tolio Chagui:</strong> Patada a la cabeza.</li>
         <li><strong>Miro Chagui:</strong> Patada de empuje con la planta del pie.</li>
     </ul>
+    </div>
     `    
   },
 
@@ -160,6 +142,10 @@ export const info = [
     name: 'Números en coreano',
     id_bell: 0,
     text: `
+    <style>
+      ${cssContent}
+    </style>
+    <div>
       <ul>
         <li>JANA = Uno</li>
         <li>DUL = Dos</li>
@@ -174,6 +160,7 @@ export const info = [
         <li>SUMUL = Veinte</li>
         <li>SORUM = Treinta</li>
       </ul>
+    </div>
     `
   },
   {
@@ -181,6 +168,10 @@ export const info = [
     name: 'Partes del cuerpo',
     id_bell: 0,
     text: `
+    <style>
+    ${cssContent}
+   </style>
+      <div>
       <ul>
         <li>Mom = Cuerpo</li>
         <li>Muori = Cabeza</li>
@@ -219,6 +210,7 @@ export const info = [
         <li>Apchuk = Bola del pie</li>
         <li>Dikumchi = Talón del pie</li>
       </ul>
+      </div>
     `
   },
   {
@@ -226,8 +218,12 @@ export const info = [
     name : "Vocabulario General",
     id_bell: 0,
     text : `
+    <style>
+    ${cssContent}
+   </style>
+    <div>
     <ul>
-      <li>Sabonim = Profesor</li>
+      <li style="text-align: left;">Sabonim = Profesor</li>
       <li>Dobok = Uniforme</li>
       <li>Ti = Cinta</li>
       <li>Dochang = Salón de clases o Area de combate</li>
@@ -266,13 +262,18 @@ export const info = [
       <li>Sabomin Kie Kiune = Saludo al profesor</li>
       <li>Kukki Dejadio Kiune = Saludo a las banderas</li>
       <li>Kansa Jamnida = Muchas gracias</li>
-    </ul>`
+    </ul>
+    </div>`
   },
   {
     id_category: 7,
     name: `Aspectos para Mejorar las Formas`,
     id_bell: 0,
     text: `
+    <style>
+    ${cssContent}
+   </style>
+    <div>
     <ul>
         <li>Foco</li>
         <li>Respeto de posiciones</li>
@@ -287,10 +288,11 @@ export const info = [
         <li>Terminar en el punto donde se empezó</li>
         <li>Coordinación</li>
         <li>Buena postura</li>
-    </ul>`
+    </ul>
+    </div>`
   },
   {
-    name: 'Taeguk',
+    name: '¿Qué son las Taeguk?',
     id_category: 6,
     id_bell: 2,
     videos: [
@@ -305,17 +307,24 @@ export const info = [
       // ... Puedes agregar hasta 10 videos aquí
     ],
     text: `
+    <style>
+    ${cssContent}
+   </style>
+    <div>
     <p>Las Taeguk son una serie de movimientos coordinados y sistematizados que simulan un combate con varios oponentes.</p>
     <p><strong>Tae:</strong> Grandeza</p>
     <p><strong>Guk:</strong> Eternidad</p>
     
     <h2>Taeguk Básicas</h2>
     <ul>
-        <li><strong>Taeguk il Chang:</strong> Cielo y Luz (18 movimientos) <br><a href="https://www.youtube.com/embed/bP_5GYMC0GQ?si=0fUM3nb4emd2Bnvb"> Ver video </a>
+        <li><strong>Taeguk il Chang:</strong> Cielo y Luz (18 movimientos) <br><a href="https://www.youtube.com/embed/bP_5GYMC0GQ?si=0fUM3nb4emd2Bnvb"> Ver video </a> <br><br>
+        <iframe width="320" height="320" src="https://www.youtube.com/embed/bP_5GYMC0GQ?si=u6XZx5kjpJwQepmv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </li>
-        <li><strong>Taeguk i Chang:</strong> Júbilo y Alegría (18 movimientos) <br>  <a href="https://www.youtube.com/embed/hAjxTL4p2mQ?si=0Wg4vpNZJR3jbWzL"> Ver video </a></li>
+        <li><strong>Taeguk i Chang:</strong> Júbilo y Alegría (18 movimientos) <br>  <a href="https://www.youtube.com/embed/hAjxTL4p2mQ?si=0Wg4vpNZJR3jbWzL"> Ver video </a> <br><br> 
+        <iframe width="320" height="310" src="https://www.youtube.com/embed/hAjxTL4p2mQ?si=m_V6gK9Fz3Bbd7sh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </li>
     </ul>
-    <a href="" style=" font-weight: bold;color: #FF5733;text-align: center;margin-top: 20px;">¡Tambien puedes ver los  videos de referencia al final de esta sección!</a>
+    </div>
     `
   },
 
@@ -326,12 +335,17 @@ export const info = [
     id_bell: 0,
     videos: [],
     text: `
+    <style>
+     ${cssContent}
+    </style>
+    <div>
     <h2>Significado del Taekwondo</h2>
     <p><strong>TAE:</strong> Saltar, patear, majar</p>
     <p><strong>KWON:</strong> Golpe con la mano</p>
     <p><strong>DO:</strong> Camino, vocación o forma de arte marcial</p>
-    
-    <h2>Valores del Taekwondo</h2>
+    </div>
+    <div>
+    <h2 >Valores del Taekwondo</h2>
     <ul>
         <li>Honor</li>
         <li>Autocontrol</li>
@@ -340,7 +354,8 @@ export const info = [
         <li>Paciencia</li>
         <li>Modestia</li>
     </ul>
-    
+    </div>
+    <div>
     <h2>Nombres y Significados de los Cinturones</h2>
     <ul>
         <li>
@@ -362,6 +377,7 @@ export const info = [
             <strong>Cinturón Negro (Juk-ti)</strong>: El cinturón negro simboliza el honor y la maestría en el Taekwondo.
         </li>
     </ul>
+    </div>
     `
   },
  
@@ -371,6 +387,10 @@ export const info = [
     id_bell: 0,
     videos: [],
     text: `
+    <style>
+    ${cssContent}
+   </style>
+   <div>
     <p>
       <strong>Taekwondo Fénix</strong> surge del compromiso de un grupo de entrenadores liderados por el profesor y fundador <strong>Luis Lobo Rojas</strong>, con el objetivo de llevar el taekwondo y sus estudiantes a otro nivel deportivo y marcial. Se enfocan en potenciar las habilidades de cada estudiante y consolidar estrategias, promoviendo el trabajo duro y el esfuerzo continuo.
     </p>
@@ -387,6 +407,7 @@ export const info = [
     <p>
         Nuestra visión es convertirnos en una academia de taekwondo de renombre, reconocida por su excelencia en la enseñanza y formación de jóvenes. Aspiramos a ser un referente en la comunidad, donde los y las jóvenes encuentren un espacio seguro y motivador para desarrollar habilidades físicas, fortalecer su carácter y cultivar una mentalidad positiva. Nos esforzamos por formar campeones no solo en el arte marcial, sino también en la vida, guiándolos hacia un camino de autodisciplina, resiliencia y liderazgo.
     </p>
+    </div>
     `
   },
   {
@@ -394,7 +415,11 @@ export const info = [
     id_category: 3,
     id_bell: 0,
     videos: [],
-    text : `   
+    text : `  
+    <style>
+    ${cssContent}
+   </style> 
+   <div>
       <p>
         La Federación Mundial de Taekwondo (WTF) es el ente rector del Taekwondo en todo el mundo, está ubicada en Seúl, Corea y fue fundada en 1973.
       </p>
@@ -405,7 +430,9 @@ export const info = [
       
       <p>
         La Federación Costarricense de Taekwondo es el ente rector del taekwondo a nivel nacional y es liderada por el presidente Wilmar Alvarado.
-      </p>`
+      </p>
+    </div> 
+      `
   },
   { 
     name: '¿Qué es el Taekwondo?', 
@@ -413,7 +440,10 @@ export const info = [
     id_bell : 0,
     videos: [],
     text:  `
-    <img src='~/imgs/red-belt.png' alt="Taekwondo" style="width: 100%; height: auto; margin: 20px 0px;">
+    <style>
+    ${cssContent}
+   </style>
+    <div>
     <p>
       El <strong>Taekwondo</strong> es un arte marcial originario de Corea practicado durante miles de años. En este arte, se emplean técnicas de defensa y ataque, convirtiéndolo en uno de los estilos de defensa personal más efectivos en el mundo.
     </p>
@@ -433,6 +463,7 @@ export const info = [
     <p>
       Aunque el Taekwondo proporciona al practicante la habilidad de herir a un adversario, este no es el objetivo buscado. En cambio, se busca la paz y la convivencia armoniosa con los demás. Como dice el lema: <strong>"Aprender a pelear para no pelear"</strong>.
     </p>
+    </div>
     ` 
   },
   { name: 'Filosofía y honor subyacente', 
@@ -440,6 +471,9 @@ export const info = [
     videos: [],
     id_bell : 0,
     text: `
+    <style>
+    ${cssContent}
+    </style>
     <p>
       El Taekwondo es un arte marcial que tiene su origen en <strong>Corea</strong>, por lo que a lo largo de su historia ha desarrollado una gran tradición filosófica y espiritual.
     </p>
