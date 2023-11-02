@@ -4,14 +4,28 @@ function imageToBase64(path) {
   let imageSource = imageSourceModule.fromFile(path);
   return imageSource.toBase64String("png");
 }
+
+const utils = require("@nativescript/core/utils");
+
+function openYoutubeLink(link) {
+  let youtubeLink = link;
+  utils.openUrl(youtubeLink);
+}
+
+
+
 let cssContent = `
+div {
+  font-family: Arial, sans-serif;
+}
 ul {
   text-align: left;
   margin-bottom: 5px;
   padding-left: 6px;
+  list-style-type: disc;
 }
 li {
-  margin-bottom: 5px;
+  margin: 5px 0;
 }
 `;
 
@@ -68,16 +82,87 @@ export const info = [
     </div>
     `
   },
+  //********* fundamentos practicos     ******** */
+  {
+    //rojo
+    name: 'Fundamentos Practicos',
+    id_bell: 5,
+    id_category: 12,
+    text: `
+    <style>
+    ${cssContent}
+    </style>
+    <div>
+
+    </div>
+    `
+  },
+
+
+  {
+    //azul
+    name: 'Fundamentos Practicos',
+    id_bell: 4,
+    id_category: 12,
+    text: `
+    <style>
+    ${cssContent}
+    </style>
+    <div>
+      <ul>
+          <li>DI CUBI SOGUI SONNAL MONTONG MAKI</li>
+          <li>AP CUBI SOGUI JAN SONNAL OLGUL BITURO MAKI</li>
+          <li>AP CUBI SOGUI OLGUL BAKAT MAKI</li>
+          <li>AP CUBI SOGUI BATANGSON MONTONG MAKI</li>
+          <li>AP CUBI SOGUI DUNG CHUMOK AP CHIGUI</li>
+          <li>UEN - ORUN SOGUI ME CHUMOK NERIO CHIGUI</li>
+          <li>AP CUBI SOGUI PALKUP TOLIO CHIGUI</li>
+          <li>AP CUBI SOGUI PALKUP PIOCHOCK CHIGUI</li>
+          <li>AP CHAGUI</li>
+          <li>IOP CHAGUI</li>
+          <li>TOLIO CHAGUI</li>
+      </ul>
+
+    </div>
+
+    `
+  },
+
+  {
+    //verde
+    name: 'Fundamentos Practicos',
+    id_bell: 3,
+    id_category: 12,
+    text: `
+    <style>
+    ${cssContent}
+    </style>
+    <div>
+      <ul>
+        <li>AP SOGUI MONTONG AN MAKI</li>
+        <li>DI CUBI SOGUI JAN SONNAL MONTONG BAKAT MAKI</li>
+        <li>DI CUBI SOGUI SONNAL MONTONG MAKI</li>
+        <li>DI CUBI SOGUI MONTONG BAKAT MAKI</li>
+        <li>AP SOGUI JAN SONNAL MOK CHIGUI</li>
+        <li>AP CUBI SOGUI NULO MAKI PION SONKUT SEWO CHIGUI</li>
+        <li>AP CUBI SOGUI CHEBIPUM MOK CHIGUI</li>
+        <li>AP CUBI SOGUI DUNG CHUMOK APE CHIGUI</li>
+        <li>AP CHAGUI</li>
+        <li>IOP CHAGU</li>
+      </ul>
+    </div>
+    `
+  },
+
   {
     name: 'Fundamentos Practicos',
-    id_bell: 0,
+    id_bell: 2,
     id_category: 12,
     text: `
     <style>
       ${cssContent}
     </style>
     <div>
-    <p><strong>FUNDAMENTOS PRÁCTICOS</strong></p>
     <ul>
         <li><strong>AP SOGUI ARE MAKI:</strong> Defensa abajo con la pierna adelantada.</li>
         <li><strong>AP SOGUI MONTONG AN MAKI:</strong> Defensa al medio, brazo contrario al pie adelantado.</li>
@@ -91,9 +176,129 @@ export const info = [
     </div>
      `
   },
+
+  /*****Fundamentos basicos */
   {
+    //rojo
+    name: 'Fundamentos Basicos',
+    id_bell: 5,
+    id_category: 11,
+    text: `
+    <style>
+    ${cssContent}
+    </style>
+    
+    `
+  },
+
+
+  {
+    //azul
+    name: 'Fundamentos Basicos',
+    id_bell: 4,
+    id_category: 11,
+    text: `
+    <style>
+    ${cssContent}
+    </style>
+    <div>
+        <h2>FUNDAMENTOS BASICOS</h2>
+        <p class="defensa">MAKI = DEFENSA</p>
+        <ul>
+            <li>Jan Sonnal Montong Bakat Maki = Defensa al medio con el canto de la mano.</li>
+            <li>Sonnal Montong Maki = Defensa al medio de lado con el canto de la mano asistida por el brazo contrario que protege la zona media.</li>
+            <li>Montong Bakat Maki = Defensa al medio hacia afuera.</li>
+            <li>Jan Sonnal Olgul Bituro Maki = Defensa a la cara con el canto de la mano, con torsión del cuerpo.</li>
+            <li>Batangson Montong Maki = Defensa al medio con la base de la mano.</li>
+        </ul>
+
+        <h2 class="golpe">CHIRIGUI = GOLPE</h2>
+        <ul>
+            <li>Jan Sonnal Mok Chigui = Golpe al cuello con el canto de la mano, contrario al pie adelantado.</li>
+            <li>Chebipum Mok Chigui = Golpe al cuello con el canto de la mano asistido por el brazo contrario que protege la cara con la mano abierta.</li>
+            <li>Dung Chumok Ap Chigui = Golpe a la cara con el reverso del puño.</li>
+            <li>Palkup Tolio Chigui = Golpe a la cara con el codo.</li>
+            <li>Palkup Piochock Chigui = Golpe al medio con el codo, sujetando con el brazo contrario (choque).</li>
+        </ul>
+
+        <h2 class="position">SOGUI = POSICION</h2>
+        <ul>
+            <li>Moa Sogui = Posición de pies juntos.</li>
+            <li>Naranji Sogui = Posición de frente, pies abiertos al ancho de los hombros.</li>
+            <li>Ap Sogui = Posición de frente, es un paso normal de caminar.</li>
+            <li>Ap Cubi Sogui = Posición larga de frente, es un paso y medio, pierna de atrás recta y pierna delantera flexionada.</li>
+            <li>Di Cubi Sogui = Posición de lado, formando un ángulo de 90 grados y ambas piernas flexionadas.</li>
+            <li>Koa Sogui = Posición de pies cruzados.</li>
+        </ul>
+
+        <h2 class="patada">CHAGUI = PATADA</h2>
+        <ul>
+            <li>Ap Chagui = Patada al frente con la bola del pie.</li>
+            <li>Iop Chagui = Patada de lado con el canto del pie.</li>
+            <li>Tolio Chagui = Patada a la cara con empeine.</li>
+        </ul>
+    </div>
+
+    `
+  },
+  {
+    //verde
     name: 'Fundamentos básicos',
-    id_bell: 0,
+    id_bell: 3,
+    id_category: 11,
+    text: `
+    <style>
+      ${cssContent}
+    </style>
+    <div>
+      <h3>MAKI = DEFENSA</h3>
+      <ul>
+        <li><strong>Are Maki:</strong> Defensa abajo.</li>
+        <li><strong>Montong Maki:</strong> Defensa al medio, brazo igual al pie adelantado.</li>
+        <li><strong>Montong An Maki:</strong> Defensa al medio, brazo contrario al pie adelantado.</li>
+        <li><strong>Olgul Maki:</strong> Defensa arriba.</li>
+        <li><strong>Jan Sonnal Montong Bakat Maki:</strong> Defensa al medio de lado con el canto de la mano.</li>
+        <li><strong>Sonnal Montong Maki:</strong> Defensa al medio de lado con el canto de la mano asistida por el brazo contrario que protege la zona media.</li>
+        <li><strong>Montong Bakat Maki:</strong> Defensa al medio hacia afuera con el puño cerrado.</li>
+      </ul>
+
+      <h3>CHIRIGUI = GOLPE</h3>
+      <ul>
+        <li><strong>Montong Bande Chirigui:</strong> Golpe de frente al medio, coincidiendo con el pie adelantado.</li>
+        <li><strong>Montong Baro Chirigui:</strong> Golpe de frente al medio, contrario al pie adelantado.</li>
+        <li><strong>Olgul Bande Chirigui:</strong> Golpe de frente a la cara, coincidiendo con el pie adelantado.</li>
+        <li><strong>Montong Dubon Chirigui:</strong> Doble golpe al frente.</li>
+        <li><strong>Jan Sonnal Mok Chigui:</strong> Golpe al cuello con el canto de la mano, contrario al pie adelantado.</li>
+        <li><strong>Batason nulo maki Pion Sonkut Sewo Chigui:</strong> Golpe al medio con la punta de los dedos con apoyo del brazo contrario.</li>
+        <li><strong>Chebipum Mok Chigui:</strong> Golpe al cuello con el canto de la mano asistido por el brazo contrario que protege la cara con la mano abierta.</li>
+        <li><strong>Dung Chumok Ape Chigui:</strong> Golpe a la cara con el reverso del puño.</li>
+      </ul>
+
+      <h3>SOGUI = POSICIÓN</h3>
+      <ul>
+        <li><strong>Moa Sogui:</strong> Posición de pies juntos.</li>
+        <li><strong>Naranji Sogui:</strong> Posición de frente, pies abiertos al ancho de los hombros.</li>
+        <li><strong>Ap Sogui:</strong> Posición de frente, es un paso normal de caminar.</li>
+        <li><strong>Ap Cubi Sogui:</strong> Posición larga de frente, es un paso y medio, pierna de atrás recta y pierna delantera flexionada.</li>
+        <li><strong>Di Cubi Sogui:</strong> Posición de lado, formando un ángulo de 90 grados y ambas piernas flexionadas.</li>
+      </ul>
+
+      <h3>CHAGUI = PATADA</h3>
+      <ul>
+        <li><strong>Ap Chagui:</strong> Patada al frente con la bola del pie.</li>
+        <li><strong>Bandal Chagui:</strong> Patada al medio con empeine.</li>
+        <li><strong>Tolio Chagui:</strong> Patada a la cabeza.</li>
+        <li><strong>Miro Chagui:</strong> Patada de empuje con la planta del pie.</li>
+      </ul>
+    </div>
+    `
+  },
+
+
+  {
+    //amarillo
+    name: 'Fundamentos básicos',
+    id_bell: 2,
     id_category: 11,
     text: `
     <style>
@@ -123,9 +328,9 @@ export const info = [
         <li><strong>Moa Sogui:</strong> Posición de pies juntos.</li>
         <li><strong>Naranji Sogui:</strong> Posición de pies abiertos al ancho de los hombros.</li>
         <li><strong>Ap Sogui:</strong> Posición corta de frente, es un paso normal de caminar.</li>
-        <li><strong>Ap Cubi Sogui:</strong> Posición larga de frente (3 a 4 pasos de largo), es un paso y medio, pierna de atrás recta y pierna delantera flexionada.</li>
+        <li><strong>Ap Cubi Sogui:</strong> Posición larga de frente, pierna de atrás recta y pierna delantera flexionada.</li>
     </ul>
-    
+    <img src='data:image/png;base64,${imageToBase64("~/imgs/posicionesAmarillo.png")}' alt="posicionesAmarillo" style="width: 100%; height: auto; margin: 20px 0px;">
     <p><strong>CHAGUI = PATADA</strong></p>
     <ul>
         <li><strong>Ap Chagui:</strong> Patada al frente con la bola del pie.</li>
@@ -145,7 +350,7 @@ export const info = [
     <style>
       ${cssContent}
     </style>
-    <div>
+    <body>
       <ul>
         <li>JANA = Uno</li>
         <li>DUL = Dos</li>
@@ -159,8 +364,10 @@ export const info = [
         <li>IOL = Diez</li>
         <li>SUMUL = Veinte</li>
         <li>SORUM = Treinta</li>
+        <li>MAJUM = Cuarenta</li>
+        <li>SHUN = Cincuenta</li>
       </ul>
-    </div>
+    </body>
     `
   },
   {
@@ -291,6 +498,102 @@ export const info = [
     </ul>
     </div>`
   },
+
+  //********* poomsae     ******** */ 
+  {
+    //azul
+    name: '¿Qué son las Taeguk?',
+    id_category: 6,
+    id_bell: 4,
+    text: `
+    <style>
+    ${cssContent}
+   </style>
+    <div>
+    <p>Las Taeguk son una serie de movimientos coordinados y sistematizados que simulan un combate con varios oponentes.</p>
+    <p><strong>Tae:</strong> Grandeza</p>
+    <p><strong>Guk:</strong> Eternidad</p>
+    
+    <h3>Taeguk Básicas</h3>
+    <ul>
+        <li><strong>Taeguk il Chang:</strong> Cielo y Luz (18 movimientos) <br>
+       
+        <iframe width="320" height="320" src="https://www.youtube.com/embed/bP_5GYMC0GQ?si=u6XZx5kjpJwQepmv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </li>
+        <li><strong>Taeguk i Chang:</strong> Júbilo y Alegría (18 movimientos) <br>
+        <iframe width="320" height="320" src="https://www.youtube.com/embed/hAjxTL4p2mQ?si=m_V6gK9Fz3Bbd7sh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </li>
+        <li>
+          <strong>Taeguk Sam Chang:</strong> Fuego y Sol (20 movimientos) <br>
+      
+          <iframe width="320" height="320" src="https://www.youtube.com/embed/AZOUybZRQhs?si=yuqHe_uybRP5fkbu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </li>
+        <li>
+          <strong>Taeguk Sa Chang:</strong> El trueno (20 movimientos) <br>
+        
+          <iframe width="320" height="320" src="https://www.youtube.com/embed/k2bCmkfA0CQ?si=7m_4xcoAPjQOiPaY"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowfullscreen></iframe>
+        </li>
+        <li>
+          <strong>Taeguk O Chang:</strong> El viento (20 movimientos) <br>
+       
+          <iframe width="320" height="320" src="https://www.youtube.com/embed/Ua7sjvk8OBs?si=9wfQKgRW0IcvtAGM"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowfullscreen></iframe>
+        </li>
+        <li>
+          <strong>Taeguk Yuk Chang:</strong> El agua (20 movimientos) <br>
+      
+          <iframe width="320" height="320" src="https://www.youtube.com/embed/nxgqnhhK2P0?si=Ou4CJz46G_lHuPa_"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowfullscreen></iframe>
+        </li>
+        <li>
+          <strong>Taeguk Chil Chang:</strong> Parada en la cima (25 movimientos) <br>
+      
+          <iframe width="320" height="320" src="https://www.youtube.com/embed/irxYm7HonI8?si=C8iD4TkDpxmV4KCS"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowfullscreen></iframe>
+        </li>
+        <li>
+          <strong>Taeguk Pal Chang:</strong> La tierra (27 movimientos) <br>
+         
+          <iframe width="320" height="320" src="https://www.youtube.com/embed/hh3QEjfj8WA?si=Be0LKHD1kNjdaY5T"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowfullscreen></iframe>
+        </li>
+
+    </ul>
+    </div>
+    `
+  },
+  //amarillo
+  {
+    name: '¿Qué son las Taeguk?',
+    id_category: 6,
+    id_bell: 3,
+    text: `
+    <style>
+    ${cssContent}
+   </style>
+    <div>
+    <p>Las Taeguk son una serie de movimientos coordinados y sistematizados que simulan un combate con varios oponentes.</p>
+    <p><strong>Tae:</strong> Grandeza</p>
+    <p><strong>Guk:</strong> Eternidad</p>
+    
+    <h3>Taeguk Básicas</h3>
+    <ul>
+        <li><strong>Taeguk il Chang:</strong> Cielo y Luz (18 movimientos) <br> 
+        <iframe width="320" height="320" src="https://www.youtube.com/embed/bP_5GYMC0GQ?si=u6XZx5kjpJwQepmv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </li>
+        <li><strong>Taeguk i Chang:</strong> Júbilo y Alegría (18 movimientos) <br>  
+        <iframe width="320" height="320" src="https://www.youtube.com/embed/hAjxTL4p2mQ?si=m_V6gK9Fz3Bbd7sh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </li>
+        <li>
+          <strong>Taeguk Sam Chang:</strong> Fuego y Sol (20 movimientos) <br>
+          
+          <iframe width="320" height="320" src="https://www.youtube.com/embed/AZOUybZRQhs?si=yuqHe_uybRP5fkbu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </li>
+        <li>
+          <strong>Taeguk Sa Chang:</strong> El trueno (20 movimientos) <br>
+       
+          <iframe width="320" height="320" src="https://www.youtube.com/embed/k2bCmkfA0CQ?si=7m_4xcoAPjQOiPaY"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowfullscreen></iframe>
+        </li>
+    </ul>
+    </div>
+    `
+  },
   {
     name: '¿Qué son las Taeguk?',
     id_category: 6,
@@ -315,12 +618,12 @@ export const info = [
     <p><strong>Tae:</strong> Grandeza</p>
     <p><strong>Guk:</strong> Eternidad</p>
     
-    <h2>Taeguk Básicas</h2>
+    <h3>Taeguk Básicas</h3>
     <ul>
-        <li><strong>Taeguk il Chang:</strong> Cielo y Luz (18 movimientos) <br><a href="https://www.youtube.com/embed/bP_5GYMC0GQ?si=0fUM3nb4emd2Bnvb"> Ver video </a> <br><br>
+        <li><strong>Taeguk il Chang:</strong> Cielo y Luz (18 movimientos) <br> 
         <iframe width="320" height="320" src="https://www.youtube.com/embed/bP_5GYMC0GQ?si=u6XZx5kjpJwQepmv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </li>
-        <li><strong>Taeguk i Chang:</strong> Júbilo y Alegría (18 movimientos) <br>  <a href="https://www.youtube.com/embed/hAjxTL4p2mQ?si=0Wg4vpNZJR3jbWzL"> Ver video </a> <br><br> 
+        <li><strong>Taeguk i Chang:</strong> Júbilo y Alegría (18 movimientos) <br> 
         <iframe width="320" height="310" src="https://www.youtube.com/embed/hAjxTL4p2mQ?si=m_V6gK9Fz3Bbd7sh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </li>
     </ul>
@@ -339,13 +642,13 @@ export const info = [
      ${cssContent}
     </style>
     <div>
-    <h2>Significado del Taekwondo</h2>
+    <h3>Significado del Taekwondo</h3>
     <p><strong>TAE:</strong> Saltar, patear, majar</p>
     <p><strong>KWON:</strong> Golpe con la mano</p>
     <p><strong>DO:</strong> Camino, vocación o forma de arte marcial</p>
     </div>
     <div>
-    <h2 >Valores del Taekwondo</h2>
+    <h3 >Valores del Taekwondo</h3>
     <ul>
         <li>Honor</li>
         <li>Autocontrol</li>
@@ -356,25 +659,25 @@ export const info = [
     </ul>
     </div>
     <div>
-    <h2>Nombres y Significados de los Cinturones</h2>
+    <h3>Nombres y Significados de los Cinturones</h3>
     <ul>
         <li>
             <strong>Cinturón Blanco (Bek-ti)</strong>: Representa la pureza y marca el comienzo del viaje en el Taekwondo.
         </li>
         <li>
-            <strong>Cinturón Amarillo (Kwang-ti)</strong>: Simboliza el amanecer, el crecimiento y el desarrollo.
+            <strong style="color:yellow;"   >Cinturón Amarillo (Kwang-ti)</strong>: Simboliza el amanecer, el crecimiento y el desarrollo.
         </li>
         <li>
-            <strong>Cinturón Verde (Rok-ti)</strong>: Representa la primavera, el progreso y el florecimiento.
+            <strong style="color:green;">Cinturón Verde (Rok-ti)</strong>: Representa la primavera, el progreso y el florecimiento.
         </li>
         <li>
-            <strong>Cinturón Azul (Chong-ti)</strong>: Simboliza la fluidez del agua y la adaptabilidad en el Taekwondo.
+            <strong style="color:blue;">Cinturón Azul (Chong-ti)</strong>: Simboliza la fluidez del agua y la adaptabilidad en el Taekwondo.
         </li>
         <li>
-            <strong>Cinturón Rojo (Jong-ti)</strong>: Representa el fuego y la pasión por el arte marcial.
+            <strong style="color:red;">Cinturón Rojo (Jong-ti)</strong>: Representa el fuego y la pasión por el arte marcial.
         </li>
         <li>
-            <strong>Cinturón Negro (Juk-ti)</strong>: El cinturón negro simboliza el honor y la maestría en el Taekwondo.
+            <strong style="color:black;">Cinturón Negro (Juk-ti)</strong>: El cinturón negro simboliza el honor y la maestría en el Taekwondo.
         </li>
     </ul>
     </div>
@@ -398,12 +701,12 @@ export const info = [
     <p>
       El nombre de <strong>Taekwondo Fénix</strong> se inspira en el ave Fénix, que simboliza la <em>resiliencia</em>. Al igual que el Fénix que puede sobrevivir a la destrucción y resurgir, en el deporte, la resiliencia es una cualidad fundamental. Los atletas enfrentan obstáculos, fracasos y lesiones, pero aquellos que son capaces de levantarse y continuar con determinación son los que logran alcanzar el éxito. Además, en el deporte, los atletas pueden experimentar transformaciones significativas a medida que desarrollan habilidades, mejoran su condición física y superan sus propios límites. Este proceso de entrenamiento y competencia puede moldear a los deportistas en personas más fuertes, disciplinadas y capaces, no solo en el deporte, sino también en la vida. El objetivo es crear seres humanos más integrales.
     </p>
-    <h2 class="text-center">Misión</h2>
+    <h3 class="text-center">Misión</h3>
     <p>
         Nuestra misión es fomentar el desarrollo integral de los y las jóvenes a través de la práctica del taekwondo. Buscamos brindarles una formación sólida en esta disciplina marcial y promover valores positivos como el respeto, la disciplina, la perseverancia y la autoconfianza. Nuestro objetivo es ayudar a nuestros y nuestras estudiantes a alcanzar su máximo potencial físico y mental.
     </p>
 
-    <h2 class="text-center">Visión</h2>
+    <h3 class="text-center">Visión</h3>
     <p>
         Nuestra visión es convertirnos en una academia de taekwondo de renombre, reconocida por su excelencia en la enseñanza y formación de jóvenes. Aspiramos a ser un referente en la comunidad, donde los y las jóvenes encuentren un espacio seguro y motivador para desarrollar habilidades físicas, fortalecer su carácter y cultivar una mentalidad positiva. Nos esforzamos por formar campeones no solo en el arte marcial, sino también en la vida, guiándolos hacia un camino de autodisciplina, resiliencia y liderazgo.
     </p>
@@ -524,21 +827,29 @@ export const belts = [
     name: 'Verde (Rok-ti)', 
     color: 'green' ,
     img: '~/imgs/green-belt.png',
-    text: '<p>El Cinturón Amarillo es el inicio del aprendizaje, el nacimiento. El amarillo representa las riquezas físicas y espirituales. Este cinturón representa el amanecer.<p>' 
-  },
-  { 
-    id: 5 , 
-    name: 'Azul (Chong-ti)', 
-    color: 'blue' ,
-    img: '~/imgs/blue-belt.png',
-    text: '<p>El Cinturón Amarillo es el inicio del aprendizaje, el nacimiento. El amarillo representa las riquezas físicas y espirituales. Este cinturón representa el amanecer.<p>' 
+    text: '<p>El Cinturón Verde es la consolidación del aprendizaje básico. El verde representa el florecimiento de una nueva vida. Este cinturón representa la primavera<p>' 
   },
   { 
     id: 4 , 
+    name: 'Azul (Chong-ti)', 
+    color: 'blue' ,
+    img: '~/imgs/blue-belt.png',
+    text: `<p>El Cinturón Azul es uno de los más importantes 
+    ya que se comienza la búsqueda de la esencia. 
+    El azul representa el color generado 
+    por la unión del cielo y el mar. 
+    Este cinturón representa el agua<p>`
+  },
+  { 
+    id: 5 , 
     name: 'Rojo (Jong-ti)', 
     color: 'red' ,
     img: '~/imgs/red-belt.png',
-    text: '<p>El Cinturón Amarillo es el inicio del aprendizaje, el nacimiento. El amarillo representa las riquezas físicas y espirituales. Este cinturón representa el amanecer.<p>' 
+    text: `<p>El Cinturón Rojo es uno de los más difíciles 
+    ya que se pone a prueba todo lo aprendido. 
+    El rojo representa el esfuerzo realizado a 
+    través de los años para llegar a ese nivel. 
+    Este cinturón representa el fuego<p>`
   },
   
 ];

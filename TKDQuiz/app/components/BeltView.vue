@@ -13,7 +13,7 @@
               <SegmentedBarItem v-for="(category, index) in categories" :key="category.id" :title="category.name" class="text-center"/>
           </SegmentedBar>
         </ScrollView>
-        <ListView for="(section, index) in filterInfo" height="80%">
+        <ListView ref="listview" for="(section, index) in filterInfo" height="80%">
           <v-template >
             <StackLayout >
               <Label :text="section.name" class="section-title text-center" margin="10" />
@@ -80,6 +80,10 @@
                   const selectedCategoryIndex = this.categories.findIndex(category => category.id === this.selectedCategoryId) * 2.5;
                   const itemWidth = scrollView.getMeasuredWidth() / this.categories.length;
                   scrollView.scrollToHorizontalOffset(selectedCategoryIndex * itemWidth, true);
+                  //subir el scroll al inicio del webview dentro del listview
+                  const listview = this.$refs.listview.nativeView;
+                  listview.scrollToIndex(0);
+
               });
           }
         },
@@ -92,6 +96,8 @@
               const selectedCategoryIndex = this.categories.findIndex(category => category.id === this.selectedCategoryId) * 2.5;
               const itemWidth = scrollView.getMeasuredWidth() / this.categories.length;
               scrollView.scrollToHorizontalOffset(selectedCategoryIndex * itemWidth, true);
+              const listview = this.$refs.listview.nativeView;
+              listview.scrollToIndex(0);
             });
           }
         }
