@@ -1,5 +1,5 @@
 {
-  "name": "TKDQuiz",
+  "name": "TKD FENIX",
   "main": "app/app.js",
   "version": "1.0.0",
   "private": true,
@@ -11,7 +11,7 @@
     "rxjs": "~7.6.0"
   },
   "devDependencies": {
-    "@nativescript/android": "8.5.1",
+    "@nativescript/android": "8.5.4",
     "@nativescript/webpack": "~5.0.14",
     "nativescript-vue-template-compiler": "~2.9.3"
   }
