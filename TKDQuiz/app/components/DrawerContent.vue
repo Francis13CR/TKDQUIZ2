@@ -15,12 +15,12 @@
                     <Label col="1" text="Cinturones" class="p-r-10"/>
                 </GridLayout>
 
-                <GridLayout columns="auto, *"
+                <!-- <GridLayout columns="auto, *"
                             :class="'nt-drawer__list-item' + (selectedPage === 'Browse' ? ' -selected': '')"
                             @tap="onNavigationItemTap(Browse)">
                     <Label col="0" text.decode="&#xf1ea;" class="nt-icon far"/>
                     <Label col="1" text="Noticias" class="p-r-10"/>
-                </GridLayout>
+                </GridLayout> -->
 
                 <GridLayout columns="auto, *"
                             :class="'nt-drawer__list-item' + (selectedPage === 'Quiz' ? ' -selected': '')"
@@ -38,12 +38,12 @@
 
                 <StackLayout class="hr"/>
 
-                <GridLayout columns="auto, *"
+                <!-- <GridLayout columns="auto, *"
                             :class="'nt-drawer__list-item' + (selectedPage === 'Settings' ? ' -selected': '')"
                             @tap="onNavigationItemTap(Settings)">
                     <Label col="0" text.decode="&#xf013;" class="nt-icon fas"/>
                     <Label col="1" text="Configuracion" class="p-r-10"/>
-                </GridLayout>
+                </GridLayout> -->
             </StackLayout>
         </ScrollView>
     </GridLayout>

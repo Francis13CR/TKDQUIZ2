@@ -11,7 +11,7 @@
 
         <GridLayout class="page__content">
             <Label class="page__content-icon far" text.decode="&#xf1ea;"/>
-            <HtmlView  :html="message" class="text-center text-secondary" />
+            <HtmlView margin="10" :html="message" class="text-center text-secondary" />
         </GridLayout>
     </Page>
 </template>

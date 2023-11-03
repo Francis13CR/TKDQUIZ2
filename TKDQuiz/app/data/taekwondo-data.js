@@ -5,12 +5,6 @@ function imageToBase64(path) {
   return imageSource.toBase64String("png");
 }
 
-const utils = require("@nativescript/core/utils");
-
-function openYoutubeLink(link) {
-  let youtubeLink = link;
-  utils.openUrl(youtubeLink);
-}
 
 
 
@@ -26,6 +20,20 @@ ul {
 }
 li {
   margin: 5px 0;
+}
+.responsive-iframe {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* Ratio 16:9 (9 / 16 = 56.25%) */
+}
+
+.responsive-iframe iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 `;
 
@@ -93,7 +101,31 @@ export const info = [
     ${cssContent}
     </style>
     <div>
-
+      
+      <ul>
+        <li>Bom Sogui Batangson Montong An Maki</li>
+        <li>Di Cubi Sogui Sonnal Are Maki</li>
+        <li>Ap Cubi Sogui Gawi Maki</li>
+        <li>Ap Cubi Sogui Montong Gecho Maki</li>
+        <li>Ap Cubi Sogui Are Okgoro Maki</li>
+        <li>Di Cubi Sogui Goduro Montong Bakat Maki</li>
+        <li>Ap Cubi Sogui Oe Santul Maki</li>
+        <li>Di Cubi Sogui Goduro Are Maki</li>
+        <li>Di Koa Sogui Du Chumok Checho Chirigui</li>
+        <li>Ap Sogui Dung Chumok Olgul Bakat Chigui</li>
+        <li>Chuchum Sogui Iop Chirigui</li>
+        <li>Ap Cubi Sogui Dankiok Tuok Chigui</li>
+      </ul>
+    
+      
+      <ul>
+        <li>Ap Chagui</li>
+        <li>Dui Chagui</li>
+        <li>Iop Chagui</li>
+        <li>Tolio Chagui</li>
+        <li>Nerio Chagui</li>
+        <li>Montolio Chagui</li>
+      </ul>
     </div>
     `
   },
@@ -187,6 +219,45 @@ export const info = [
     <style>
     ${cssContent}
     </style>
+    <div>
+      <h1>MAKI = DEFENSA</h1>
+      <ul>
+        <li><strong>Jan Sonnal Montong Bakat Maki:</strong> Defensa al medio con el canto de la mano.</li>
+        <li><strong>Sonnal Montong Maki:</strong> Defensa al medio de lado con el canto de la mano asistida por el brazo contrario que protege la zona media.</li>
+        <li><strong>Batangson Montong An Maki:</strong> Defensa al medio con la base de la mano, contrario al pie adelantado.</li>
+        <li><strong>Montong Gecho Maki:</strong> Defensa al medio para agarre, con brazos cruzados.</li>
+        <li><strong>Goduro Montong Bakat Maki:</strong> Defensa doble al medio (defensa de combate).</li>
+        <li><strong>Oe Santul Maki:</strong> Defensa doble, una mano defiende abajo y la otra mano defiende arriba, en sentido contrario.</li>
+      </ul>
+    
+      <h1>CHIRIGUI = GOLPE</h1>
+      <ul>
+        <li><strong>Jan Sonnal Mok Chigui:</strong> Golpe al cuello con canto de la mano, contrario al pie.</li>
+        <li><strong>Chebipum Mok Chigui:</strong> Golpe al cuello con el canto de la mano asistido por el brazo contrario que protege la cara con la mano abierta.</li>
+        <li><strong>Dung Chumok Ap Chigui:</strong> Golpe a la cara con el reverso del puño.</li>
+        <li><strong>Dung Chumok Olgul Bakat Chigui:</strong> Golpe a la cara, hacia afuera, con el reverso del puño.</li>
+        <li><strong>Iop Chirigui:</strong> Golpe de lado.</li>
+        <li><strong>Dankiok Tuok Chigui:</strong> Golpe a la barbilla, sujetando con el brazo contrario.</li>
+      </ul>
+    
+      <h1>SOGUI = POSICION</h1>
+      <ul>
+        <li><strong>Moa Sogui:</strong> Posición de pies juntos.</li>
+        <li><strong>Naranji Sogui:</strong> Posición de frente, pies abiertos al ancho de los hombros.</li>
+        <li><strong>Ap Sogui:</strong> Posición de frente, es un paso normal de caminar.</li>
+        <li><strong>Ap Cubi Sogui:</strong> Posición larga de frente, es un paso y medio, pierna de atrás recta y pierna delantera flexionada con un 70% del peso.</li>
+        <li><strong>Di Cubi Sogui:</strong> Posición de lado, formando un ángulo de 90 grados y ambas piernas flexionadas, la pierna de atrás apoyada con un 70% del peso.</li>
+        <li><strong>Koa Sogui:</strong> Posición de pies cruzados.</li>
+        <li><strong>Bom Sogui:</strong> Posición del tigre, con el pie delantero recogido apoyado sobre la bola del pie, la pierna de atrás totalmente apoyada con un 90% del peso.</li>
+      </ul>
+    
+      <h1>CHAGUI = PATADA</h1>
+      <ul>
+        <li><strong>Ap Chagui:</strong> Patada al frente con la bola del pie.</li>
+        <li><strong>Iop Chagui:</strong> Patada de lado con el canto del pie.</li>
+        <li><strong>Dui Chagui:</strong> Patada hacia atrás con el talón.</li>
+      </ul>
+    </div>
     
     `
   },
@@ -366,6 +437,11 @@ export const info = [
         <li>SORUM = Treinta</li>
         <li>MAJUM = Cuarenta</li>
         <li>SHUN = Cincuenta</li>
+        <li>IESHUM = Sesenta</li>
+        <li>IRUM = Setenta</li>
+        <li>IODUM = Ochenta</li>
+        <li>AjUm = Noventa</li>
+        <li>BEK = Cien</li>
       </ul>
     </body>
     `
@@ -501,6 +577,74 @@ export const info = [
 
   //********* poomsae     ******** */ 
   {
+    //ROJO
+    name: '¿Qué son las Taeguk?',
+    id_category: 6,
+    id_bell: 5,
+    text: `
+    <style>
+    ${cssContent}
+   </style>
+    <div>
+    <p>Las Taeguk son una serie de movimientos coordinados y sistematizados que simulan un combate con varios oponentes.</p>
+    <p><strong>Tae:</strong> Grandeza</p>
+    <p><strong>Guk:</strong> Eternidad</p>
+    
+    <h3>Taeguk Básicas</h3>
+    <p>Para reproducir los videos, es necesario estar conectado a internet.</p>
+    <ul>
+        <li><strong>Taeguk il Chang:</strong> Cielo y Luz (18 movimientos) <br>
+        <div class="responsive-iframe">
+          <iframe  src="https://www.youtube.com/embed/bP_5GYMC0GQ?si=u6XZx5kjpJwQepmv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        </li>
+        <li><strong>Taeguk i Chang:</strong> Júbilo y Alegría (18 movimientos) <br>
+        <div class="responsive-iframe">
+        <iframe  src="https://www.youtube.com/embed/hAjxTL4p2mQ?si=m_V6gK9Fz3Bbd7sh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        </li>
+        <li>
+          <strong>Taeguk Sam Chang:</strong> Fuego y Sol (20 movimientos) <br>
+          <div class="responsive-iframe">
+          <iframe  src="https://www.youtube.com/embed/AZOUybZRQhs?si=yuqHe_uybRP5fkbu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          </li>
+        <li>
+          <strong>Taeguk Sa Chang:</strong> El trueno (20 movimientos) <br>
+          <div class="responsive-iframe">
+          <iframe  src="https://www.youtube.com/embed/k2bCmkfA0CQ?si=7m_4xcoAPjQOiPaY"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowfullscreen></iframe>
+          </div>
+          </li>
+        <li>
+          <strong>Taeguk O Chang:</strong> El viento (20 movimientos) <br>
+          <div class="responsive-iframe">
+          <iframe  src="https://www.youtube.com/embed/Ua7sjvk8OBs?si=9wfQKgRW0IcvtAGM"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowfullscreen></iframe>
+          </div>
+          </li>
+        <li>
+          <strong>Taeguk Yuk Chang:</strong> El agua (20 movimientos) <br>
+          <div class="responsive-iframe">
+          <iframe  src="https://www.youtube.com/embed/nxgqnhhK2P0?si=Ou4CJz46G_lHuPa_"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowfullscreen></iframe>
+          </div>
+          </li>
+        <li>
+          <strong>Taeguk Chil Chang:</strong> Parada en la cima (25 movimientos) <br>
+          <div class="responsive-iframe">
+          <iframe  src="https://www.youtube.com/embed/irxYm7HonI8?si=C8iD4TkDpxmV4KCS"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowfullscreen></iframe>
+          </div>
+          </li>
+        <li>
+          <strong>Taeguk Pal Chang:</strong> La tierra (27 movimientos) <br>
+          <div class="responsive-iframe">
+          <iframe  src="https://www.youtube.com/embed/hh3QEjfj8WA?si=Be0LKHD1kNjdaY5T"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowfullscreen></iframe>
+          </div>
+          </li>
+
+    </ul>
+    </div>
+    `
+  },
+  {
     //azul
     name: '¿Qué son las Taeguk?',
     id_category: 6,
@@ -515,44 +659,54 @@ export const info = [
     <p><strong>Guk:</strong> Eternidad</p>
     
     <h3>Taeguk Básicas</h3>
+    <p>Para reproducir los videos, es necesario estar conectado a internet.</p>
     <ul>
         <li><strong>Taeguk il Chang:</strong> Cielo y Luz (18 movimientos) <br>
-       
-        <iframe width="320" height="320" src="https://www.youtube.com/embed/bP_5GYMC0GQ?si=u6XZx5kjpJwQepmv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="responsive-iframe">
+          <iframe  src="https://www.youtube.com/embed/bP_5GYMC0GQ?si=u6XZx5kjpJwQepmv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
         </li>
         <li><strong>Taeguk i Chang:</strong> Júbilo y Alegría (18 movimientos) <br>
-        <iframe width="320" height="320" src="https://www.youtube.com/embed/hAjxTL4p2mQ?si=m_V6gK9Fz3Bbd7sh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="responsive-iframe">
+        <iframe  src="https://www.youtube.com/embed/hAjxTL4p2mQ?si=m_V6gK9Fz3Bbd7sh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
         </li>
         <li>
           <strong>Taeguk Sam Chang:</strong> Fuego y Sol (20 movimientos) <br>
-      
-          <iframe width="320" height="320" src="https://www.youtube.com/embed/AZOUybZRQhs?si=yuqHe_uybRP5fkbu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </li>
+          <div class="responsive-iframe">
+          <iframe  src="https://www.youtube.com/embed/AZOUybZRQhs?si=yuqHe_uybRP5fkbu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          </li>
         <li>
           <strong>Taeguk Sa Chang:</strong> El trueno (20 movimientos) <br>
-        
-          <iframe width="320" height="320" src="https://www.youtube.com/embed/k2bCmkfA0CQ?si=7m_4xcoAPjQOiPaY"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowfullscreen></iframe>
-        </li>
+          <div class="responsive-iframe">
+          <iframe  src="https://www.youtube.com/embed/k2bCmkfA0CQ?si=7m_4xcoAPjQOiPaY"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowfullscreen></iframe>
+          </div>
+          </li>
         <li>
           <strong>Taeguk O Chang:</strong> El viento (20 movimientos) <br>
-       
-          <iframe width="320" height="320" src="https://www.youtube.com/embed/Ua7sjvk8OBs?si=9wfQKgRW0IcvtAGM"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowfullscreen></iframe>
-        </li>
+          <div class="responsive-iframe">
+          <iframe  src="https://www.youtube.com/embed/Ua7sjvk8OBs?si=9wfQKgRW0IcvtAGM"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowfullscreen></iframe>
+          </div>
+          </li>
         <li>
           <strong>Taeguk Yuk Chang:</strong> El agua (20 movimientos) <br>
-      
-          <iframe width="320" height="320" src="https://www.youtube.com/embed/nxgqnhhK2P0?si=Ou4CJz46G_lHuPa_"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowfullscreen></iframe>
-        </li>
+          <div class="responsive-iframe">
+          <iframe  src="https://www.youtube.com/embed/nxgqnhhK2P0?si=Ou4CJz46G_lHuPa_"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowfullscreen></iframe>
+          </div>
+          </li>
         <li>
           <strong>Taeguk Chil Chang:</strong> Parada en la cima (25 movimientos) <br>
-      
-          <iframe width="320" height="320" src="https://www.youtube.com/embed/irxYm7HonI8?si=C8iD4TkDpxmV4KCS"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowfullscreen></iframe>
-        </li>
+          <div class="responsive-iframe">
+          <iframe  src="https://www.youtube.com/embed/irxYm7HonI8?si=C8iD4TkDpxmV4KCS"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowfullscreen></iframe>
+          </div>
+          </li>
         <li>
           <strong>Taeguk Pal Chang:</strong> La tierra (27 movimientos) <br>
-         
-          <iframe width="320" height="320" src="https://www.youtube.com/embed/hh3QEjfj8WA?si=Be0LKHD1kNjdaY5T"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowfullscreen></iframe>
-        </li>
+          <div class="responsive-iframe">
+          <iframe  src="https://www.youtube.com/embed/hh3QEjfj8WA?si=Be0LKHD1kNjdaY5T"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowfullscreen></iframe>
+          </div>
+          </li>
 
     </ul>
     </div>
@@ -573,23 +727,30 @@ export const info = [
     <p><strong>Guk:</strong> Eternidad</p>
     
     <h3>Taeguk Básicas</h3>
+    <p>Para reproducir los videos, es necesario estar conectado a internet.</p>
     <ul>
         <li><strong>Taeguk il Chang:</strong> Cielo y Luz (18 movimientos) <br> 
-        <iframe width="320" height="320" src="https://www.youtube.com/embed/bP_5GYMC0GQ?si=u6XZx5kjpJwQepmv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="responsive-iframe">
+        <iframe  src="https://www.youtube.com/embed/bP_5GYMC0GQ?si=u6XZx5kjpJwQepmv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
         </li>
         <li><strong>Taeguk i Chang:</strong> Júbilo y Alegría (18 movimientos) <br>  
-        <iframe width="320" height="320" src="https://www.youtube.com/embed/hAjxTL4p2mQ?si=m_V6gK9Fz3Bbd7sh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="responsive-iframe">
+        <iframe  src="https://www.youtube.com/embed/hAjxTL4p2mQ?si=m_V6gK9Fz3Bbd7sh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
         </li>
         <li>
           <strong>Taeguk Sam Chang:</strong> Fuego y Sol (20 movimientos) <br>
-          
-          <iframe width="320" height="320" src="https://www.youtube.com/embed/AZOUybZRQhs?si=yuqHe_uybRP5fkbu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </li>
+          <div class="responsive-iframe"> 
+          <iframe  src="https://www.youtube.com/embed/AZOUybZRQhs?si=yuqHe_uybRP5fkbu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          </li>
         <li>
           <strong>Taeguk Sa Chang:</strong> El trueno (20 movimientos) <br>
-       
-          <iframe width="320" height="320" src="https://www.youtube.com/embed/k2bCmkfA0CQ?si=7m_4xcoAPjQOiPaY"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowfullscreen></iframe>
-        </li>
+          <div class="responsive-iframe">
+          <iframe  src="https://www.youtube.com/embed/k2bCmkfA0CQ?si=7m_4xcoAPjQOiPaY"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowfullscreen></iframe>
+          </div>
+          </li>
     </ul>
     </div>
     `
@@ -619,12 +780,17 @@ export const info = [
     <p><strong>Guk:</strong> Eternidad</p>
     
     <h3>Taeguk Básicas</h3>
+    <p>Para reproducir los videos, es necesario estar conectado a internet.</p>
     <ul>
         <li><strong>Taeguk il Chang:</strong> Cielo y Luz (18 movimientos) <br> 
-        <iframe width="320" height="320" src="https://www.youtube.com/embed/bP_5GYMC0GQ?si=u6XZx5kjpJwQepmv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="responsive-iframe">
+        <iframe  src="https://www.youtube.com/embed/bP_5GYMC0GQ?si=u6XZx5kjpJwQepmv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
         </li>
-        <li><strong>Taeguk i Chang:</strong> Júbilo y Alegría (18 movimientos) <br> 
+        <li><strong>Taeguk i Chang:</strong> Júbilo y Alegría (18 movimientos) <br>
+        <div class="responsive-iframe"> 
         <iframe width="320" height="310" src="https://www.youtube.com/embed/hAjxTL4p2mQ?si=m_V6gK9Fz3Bbd7sh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
         </li>
     </ul>
     </div>

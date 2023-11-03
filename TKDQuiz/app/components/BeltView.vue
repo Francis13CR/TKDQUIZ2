@@ -17,7 +17,7 @@
           <v-template >
             <StackLayout >
               <Label :text="section.name" class="section-title text-center" margin="10" />
-              <WebView  disableZoom:true builtInZoomControls="false" :src="section.text" class="text-center text-secondary m0"   backgroundColor="transparent"/>
+              <WebView  v-if="showWebView" disableZoom:true builtInZoomControls="false" :src="section.text" class="text-center text-secondary m0" @loadFinished="onLoadFinished"  backgroundColor="transparent"/>
               <!-- <StackLayout v-for="(video, index) in section.videos" id="videos" >
                 <Label :text="video.title" class="section-title text-center" margin="10" />
                 <WebView :src="video.url" height="300" />
@@ -39,9 +39,10 @@
 </template>
 
 <script>
-  import * as utils from "~/shared/utils";
+ 
   import { categories } from '../data/taekwondo-data.js';
   import { info }  from '../data/taekwondo-data.js';
+  import * as utils from "@nativescript/core/utils";
   export default {
     props: ['belt'],
     data() {
@@ -51,6 +52,7 @@
             info: info,
             currentSectionIndex: 0,
             filterInfo : [],
+            showWebView: true
         }
     },
     mounted() {
@@ -63,6 +65,22 @@
       }
     },
     methods: {
+      onLoadFinished(args) {
+        const webview = args.object;
+        if (webview.android) {
+            webview.android.getSettings().setBuiltInZoomControls(false);
+            //abrir los links fuera del webview
+            webview.android.getSettings().setJavaScriptEnabled(true);
+            webview.android.getSettings().setSupportZoom(false);
+            const WebViewClient = android.webkit.WebViewClient.extend({
+              shouldOverrideUrlLoading: function(view, url) {
+                utils.openUrl(url);
+                return true;
+              },
+            });
+            webview.android.setWebViewClient(new WebViewClient());
+            }
+      },
         onDrawerButtonTap() {
             utils.showDrawer();
         },
@@ -74,6 +92,9 @@
         goToNextSection() {
           if (this.currentSectionIndex < this.categories.length - 1) {
               this.currentSectionIndex++;
+              //eliminar el webview existente
+              this.showWebView = false;
+
               this.selectedCategoryId = this.categories[this.currentSectionIndex].id;
               this.$nextTick(() => {
                   const scrollView = this.$refs.scrollView.nativeView;
@@ -83,13 +104,15 @@
                   //subir el scroll al inicio del webview dentro del listview
                   const listview = this.$refs.listview.nativeView;
                   listview.scrollToIndex(0);
-
+                  //volver a mostrar el webview
+                  this.showWebView = true;
               });
           }
         },
         goToPreviousSection() {
           if (this.currentSectionIndex > 0) {
             this.currentSectionIndex--;
+            this.showWebView = false;
             this.selectedCategoryId = this.categories[this.currentSectionIndex].id;
             this.$nextTick(() => {
               const scrollView = this.$refs.scrollView.nativeView;
@@ -98,6 +121,7 @@
               scrollView.scrollToHorizontalOffset(selectedCategoryIndex * itemWidth, true);
               const listview = this.$refs.listview.nativeView;
               listview.scrollToIndex(0);
+              this.showWebView = true;
             });
           }
         }
