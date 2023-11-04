@@ -17,7 +17,7 @@
           <v-template >
             <StackLayout >
               <Label :text="section.name" class="section-title text-center" margin="10" />
-              <WebView  v-if="showWebView" disableZoom:true builtInZoomControls="false" :src="section.text" class="text-center text-secondary m0" @loadFinished="onLoadFinished"  backgroundColor="transparent"/>
+              <WebView  v-if="showWebView" disableZoom=true  :src="section.text" class="text-center text-secondary m0" @loadFinished="onLoadFinished"  backgroundColor="transparent"/>
               <!-- <StackLayout v-for="(video, index) in section.videos" id="videos" >
                 <Label :text="video.title" class="section-title text-center" margin="10" />
                 <WebView :src="video.url" height="300" />

@@ -33,7 +33,8 @@
                   fontSize="18"
                   :text="belt.name"
               />
-              <HtmlView margin="0 10" :html="belt.text" class="text-center text-secondary" />
+              <Label margin="5" :text="belt.text" textWrap="true" class="text-center text-secondary" />
+              <Button class="btn btn-primary btn-sm " :borderColor="belt.color"  @tap="onBeltsTap(belt)"> Ver información </Button>
           </FlexboxLayout>
         </FlexboxLayout>
       </ScrollView>

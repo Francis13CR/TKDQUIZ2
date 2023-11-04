@@ -986,41 +986,62 @@ export const belts = [
     name: 'Amarillo (KWANG TI)', 
     color: 'yellow' ,
     img: '~/imgs/yellow-belt.png',
-    text: '<p>El Cinturón Amarillo es el inicio del aprendizaje, el nacimiento. El amarillo representa las riquezas físicas y espirituales. Este cinturón representa el amanecer.<p>' 
+    text: 'El Cinturón Amarillo es el inicio del aprendizaje, el nacimiento. El amarillo representa las riquezas físicas y espirituales. Este cinturón representa el amanecer.' 
   },
   { 
     id: 3 , 
     name: 'Verde (Rok-ti)', 
     color: 'green' ,
     img: '~/imgs/green-belt.png',
-    text: '<p>El Cinturón Verde es la consolidación del aprendizaje básico. El verde representa el florecimiento de una nueva vida. Este cinturón representa la primavera<p>' 
+    text: 'El Cinturón Verde es la consolidación del aprendizaje básico. El verde representa el florecimiento de una nueva vida. Este cinturón representa la primavera' 
   },
   { 
     id: 4 , 
     name: 'Azul (Chong-ti)', 
     color: 'blue' ,
     img: '~/imgs/blue-belt.png',
-    text: `<p>El Cinturón Azul es uno de los más importantes 
+    text: `El Cinturón Azul es uno de los más importantes 
     ya que se comienza la búsqueda de la esencia. 
     El azul representa el color generado 
     por la unión del cielo y el mar. 
-    Este cinturón representa el agua<p>`
+    Este cinturón representa el agua`
   },
   { 
     id: 5 , 
     name: 'Rojo (Jong-ti)', 
     color: 'red' ,
     img: '~/imgs/red-belt.png',
-    text: `<p>El Cinturón Rojo es uno de los más difíciles 
+    text: `El Cinturón Rojo es uno de los más difíciles 
     ya que se pone a prueba todo lo aprendido. 
     El rojo representa el esfuerzo realizado a 
     través de los años para llegar a ese nivel. 
-    Este cinturón representa el fuego<p>`
+    Este cinturón representa el fuego`
   },
   
 ];
 
-
+//<StackLayout v-for="(info, index) in section.info" id="" >
+// <!-- si es de tipo imagen mostrar imagen -->
+// <Image v-if="info.type == 'image'" :src="info.url" stretch="aspectFill" />
+// <!-- si es de tipo ul mostrar ul -->
+// <StackLayout v-if="info.type == 'ul'" >
+//   <Label :text="info.title" class="section-title text-center" margin="10" />
+//   <ListView for="(item, index) in info.items" >
+//     <v-template>
+//       <StackLayout orientation="horizontal" >
+//         <Label :text="item.content" class="text-center text-secondary m0" />
+//       </StackLayout>
+//     </v-template>
+//   </ListView>
+// </StackLayout>
+// <StackLayout v-if="info.type == 'text'" class="m0" >
+//   <Label :text="info.title" class="section-title text-center" margin="10" />
+//   <ListView for="(item, index) in info.items" class="m0" >
+//     <v-template>
+//       <Label :text="item.content" class="textInfo text-secondary m0" />
+//     </v-template>
+//   </ListView>
+// </StackLayout>
 
 
 
