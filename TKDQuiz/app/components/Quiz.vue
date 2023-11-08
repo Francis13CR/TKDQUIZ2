@@ -10,7 +10,7 @@
       </ActionBar>
 
         <GridLayout class="page__content">
-            <Label class="page__content-icon fas" text.decode="&#xf128;"/>
+            <!-- <Label class="page__content-icon fas" text.decode="&#xf128;"/> -->
             <HtmlView margin="10" :html="message" class="text-center text-secondary" />
         </GridLayout>
     </Page>
