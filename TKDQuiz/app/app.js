@@ -1,6 +1,32 @@
 import Vue from 'nativescript-vue'
 import RadSideDrawer from 'nativescript-ui-sidedrawer/vue'
 
+import { firebase } from '@nativescript/firebase-core'
+import '@nativescript/firebase-messaging'
+
+
+// Envuelve la inicialización de Firebase en una función asíncrona autoejecutable
+(async () => {
+  const defaultApp = await firebase().initializeApp()
+  firebase().messaging().showNotificationsWhenInForeground = true
+
+  firebase()
+  .messaging()
+  .onMessage(async remoteMessage => {
+    alert({
+      title: remoteMessage.notification.title,
+      message: remoteMessage.notification.body,
+      okButtonText: 'OK'
+    })
+  })
+
+  firebase()
+  .messaging()
+  .onToken((token) => {
+    console.log('Token received: ', token);
+  })
+})()
+
 Vue.use(RadSideDrawer)
 
 import App from './components/App'
