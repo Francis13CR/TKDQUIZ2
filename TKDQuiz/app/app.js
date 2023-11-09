@@ -10,6 +10,12 @@ import '@nativescript/firebase-messaging'
   const defaultApp = await firebase().initializeApp()
   firebase().messaging().showNotificationsWhenInForeground = true
 
+  // Request permission for notifications
+  const granted = await firebase().messaging().requestPermission();
+  if (granted) {
+    console.log('User granted permissions for notifications');
+  }
+
   firebase()
   .messaging()
   .onMessage(async remoteMessage => {
