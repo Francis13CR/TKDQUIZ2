@@ -35,6 +35,18 @@ li {
   width: 100%;
   height: 100%;
 }
+.outlined-text {
+  color: black;
+  text-shadow: 1px 0 0 white, -1px 0 0 white, 0 1px 0 white, 0 -1px 0 white, 1px 1px white, -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white;
+}
+div * {
+  color: white;
+  font-family: Arial, sans-serif;
+}
+body * {
+  color: white;
+  font-family: Arial, sans-serif;
+}
 `;
 
 export const categories = [
@@ -591,7 +603,11 @@ export const info = [
     <p><strong>Guk:</strong> Eternidad</p>
     
     <h3>Taeguk Básicas</h3>
-    <p>Para reproducir los videos, es necesario estar conectado a internet.</p>
+    <p>
+  Para reproducir los videos, es necesario estar conectado a internet.
+  <em>Pronto estaremos utilizando videos propios de la academia.</em>
+</p>
+
     <ul>
         <li><strong>Taeguk il Chang:</strong> Cielo y Luz (18 movimientos) <br>
         <div class="responsive-iframe">
@@ -659,7 +675,11 @@ export const info = [
     <p><strong>Guk:</strong> Eternidad</p>
     
     <h3>Taeguk Básicas</h3>
-    <p>Para reproducir los videos, es necesario estar conectado a internet.</p>
+    <p>
+  Para reproducir los videos, es necesario estar conectado a internet.
+  <em>Pronto estaremos utilizando videos propios de la academia.</em>
+</p>
+
     <ul>
         <li><strong>Taeguk il Chang:</strong> Cielo y Luz (18 movimientos) <br>
         <div class="responsive-iframe">
@@ -727,7 +747,11 @@ export const info = [
     <p><strong>Guk:</strong> Eternidad</p>
     
     <h3>Taeguk Básicas</h3>
-    <p>Para reproducir los videos, es necesario estar conectado a internet.</p>
+    <p>
+  Para reproducir los videos, es necesario estar conectado a internet.
+  <em>Pronto estaremos utilizando videos propios de la academia.</em>
+</p>
+
     <ul>
         <li><strong>Taeguk il Chang:</strong> Cielo y Luz (18 movimientos) <br> 
         <div class="responsive-iframe">
@@ -780,7 +804,11 @@ export const info = [
     <p><strong>Guk:</strong> Eternidad</p>
     
     <h3>Taeguk Básicas</h3>
-    <p>Para reproducir los videos, es necesario estar conectado a internet.</p>
+    <p>
+  Para reproducir los videos, es necesario estar conectado a internet.
+  <em>Pronto estaremos utilizando videos propios de la academia.</em>
+</p>
+
     <ul>
         <li><strong>Taeguk il Chang:</strong> Cielo y Luz (18 movimientos) <br> 
         <div class="responsive-iframe">
@@ -837,13 +865,13 @@ export const info = [
             <strong style="color:green;">Cinturón Verde (Rok-ti)</strong>: Representa la primavera, el progreso y el florecimiento.
         </li>
         <li>
-            <strong style="color:blue;">Cinturón Azul (Chong-ti)</strong>: Simboliza la fluidez del agua y la adaptabilidad en el Taekwondo.
+            <strong style="color: rgb(0, 0, 255)!important;">Cinturón Azul (Chong-ti)</strong>: Simboliza la fluidez del agua y la adaptabilidad en el Taekwondo.
         </li>
         <li>
             <strong style="color:red;">Cinturón Rojo (Jong-ti)</strong>: Representa el fuego y la pasión por el arte marcial.
         </li>
         <li>
-            <strong style="color:black;">Cinturón Negro (Juk-ti)</strong>: El cinturón negro simboliza el honor y la maestría en el Taekwondo.
+            <strong class="outlined-text">Cinturón Negro (Juk-ti)</strong>: El cinturón negro simboliza el honor y la maestría en el Taekwondo.
         </li>
     </ul>
     </div>
@@ -943,6 +971,7 @@ export const info = [
     <style>
     ${cssContent}
     </style>
+    <div>
     <p>
       El Taekwondo es un arte marcial que tiene su origen en <strong>Corea</strong>, por lo que a lo largo de su historia ha desarrollado una gran tradición filosófica y espiritual.
     </p>
@@ -971,6 +1000,7 @@ export const info = [
         <li>El valor.</li>
       </ul>
     </p>
+    </div>
     `
   }
 ]

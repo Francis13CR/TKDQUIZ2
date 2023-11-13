@@ -51,7 +51,7 @@
 }
   
 .border-yellow {
-  border-color: white!important;
+  border-color: yellow!important;
 }
   
 .border-green {
@@ -67,16 +67,16 @@
   // applied when device is in light mode
 .ns-light {
   .bg-primary {
-    background-color: #fdfdfd;
+    background-color: #212121;
   }
   .bg-secondary {
-    background-color: #ffffff;
+    background-color: #383838;
   }
   .text-primary {
-    color: #444;
+    color: #eee;
   }
   .text-secondary {
-    color: #777;
+    color: #ccc;
   }
 }
 
