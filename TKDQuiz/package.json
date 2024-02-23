@@ -8,6 +8,7 @@
     "@nativescript/firebase-core": "^3.2.0",
     "@nativescript/firebase-messaging": "^3.2.0",
     "@nativescript/theme": "~3.0.2",
+    "nativescript-fancyalert": "^3.1.1",
     "nativescript-plugin-firebase": "^10.6.3",
     "nativescript-ui-sidedrawer": "~15.2.0",
     "nativescript-vue": "~2.9.3",
