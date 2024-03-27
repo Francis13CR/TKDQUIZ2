@@ -36,7 +36,7 @@
               <Label margin="5" :text="belt.text" textWrap="true" class="text-center text-secondary" />
               
               <Button class="btn btn-primary btn-sm " :borderColor="belt.color"  @tap="onBeltsTap(belt)"> Ver información </Button>
-              <Button class="btn btn-info btn-sm " :borderColor="belt.color"  @tap="onQuizTap(belt)"> Quiz </Button>
+              <!-- <Button class="btn btn-info btn-sm " :borderColor="belt.color"  @tap="onQuizTap(belt)"> Quiz </Button> -->
           </FlexboxLayout>
         </FlexboxLayout>
       </ScrollView>
@@ -49,6 +49,7 @@
   import * as utils from "~/shared/utils";
   import BeltView from "./BeltView.vue";
   import Quiz from "./Quiz.vue";
+  
   export default {
     data() {
         return {
@@ -66,7 +67,7 @@
     }, 
     components: {
       BeltView,
-      Quiz
+      Quiz,
     },
     methods: {
         onBeltsTap(event){

@@ -3,7 +3,7 @@ import RadSideDrawer from 'nativescript-ui-sidedrawer/vue'
 
 import { firebase } from '@nativescript/firebase-core'
 import '@nativescript/firebase-messaging'
-
+import '@nativescript/firebase-database' // only needs to be imported 1x
 
 // Envuelve la inicialización de Firebase en una función asíncrona autoejecutable
 (async () => {
