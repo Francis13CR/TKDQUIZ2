@@ -1,9 +1,48 @@
+
 const imageSourceModule = require("@nativescript/core/image-source");
 
 function imageToBase64(path) {
   let imageSource = imageSourceModule.fromFile(path);
   return imageSource.toBase64String("png");
 }
+/*
+let dark = false;
+const application = require("@nativescript/core/application");
+
+function getSystemAppearance() {
+    const currentAppearance = application.systemAppearance();
+    console.log("Current system appearance:", currentAppearance);
+
+    if (currentAppearance === "dark") {
+        // El sistema está en modo oscuro
+        dark = true;
+        console.log("El sistema está en modo oscuro");
+    } else {
+        dark = false;
+        // El sistema está en modo claro
+        console.log("El sistema está en modo claro");
+    }
+}
+
+// Llama a la función para verificar el tema actual
+getSystemAppearance();
+
+// Escucha cambios en el tema del sistema (por si cambia mientras la app está en ejecución)
+application.on("systemAppearanceChanged", (args) => {
+    console.log("System appearance changed to:", args.newValue);
+    if (args.newValue === "dark") {
+        dark = true;
+        // El sistema ha cambiado a modo oscuro
+        console.log("El sistema ha cambiado a modo oscuro");
+    } else {
+        dark = false;
+        // El sistema ha cambiado a modo claro
+        console.log("El sistema ha cambiado a modo claro");
+    }
+});
+
+
+*/
 
 
 
@@ -39,14 +78,15 @@ li {
   color: black;
   text-shadow: 1px 0 0 white, -1px 0 0 white, 0 1px 0 white, 0 -1px 0 white, 1px 1px white, -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white;
 }
-div * {
-  color: white;
+
+div *, body * {
+  color: #808080;
+
   font-family: Arial, sans-serif;
 }
-body * {
-  color: white;
-  font-family: Arial, sans-serif;
-}
+
+
+
 `;
 
 export const categories = [

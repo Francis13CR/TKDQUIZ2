@@ -22,12 +22,12 @@
                     <Label col="1" text="Noticias" class="p-r-10"/>
                 </GridLayout> -->
 
-                <GridLayout columns="auto, *"
+                 <!-- <GridLayout columns="auto, *"
                             :class="'nt-drawer__list-item' + (selectedPage === 'Table' ? ' -selected': '')"
                             @tap="onNavigationItemTap(Table)">
                     <Label col="0" text.decode="&#xf128;" class="nt-icon fas"/>
                     <Label col="1" text="Ranking" class="p-r-10"/>
-                </GridLayout>
+                </GridLayout> -->
                 <!-- <GridLayout columns="auto, *"
                             :class="'nt-drawer__list-item' + (selectedPage === 'Quiz' ? ' -selected': '')"
                             @tap="onNavigationItemTap(Quiz)">
