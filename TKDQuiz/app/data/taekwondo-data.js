@@ -106,6 +106,168 @@ export const categories = [
   { name: 'Acciones Prohibidas en Combate', id: 13 },
 ];
 
+
+export const fundamentosPracticos = 
+  {
+    id_bell: 5,
+    id_category: 12,
+    fundamentos: [
+      {
+        name: 'Bom Sogui Batangson Montong An Maki',
+        description: 'Defensa al medio con la base de la mano, contrario al pie adelantado.',
+      },
+      {
+        name: 'Di Cubi Sogui Sonnal Are Maki',
+        description: 'Defensa al medio con el canto de la mano.',
+      },
+      {
+        name: 'Ap Cubi Sogui Gawi Maki',
+        description: 'Defensa al medio con el canto de la mano.',
+      },
+      {
+        name: 'Ap Cubi Sogui Montong Gecho Maki',
+        description: 'Defensa al medio para agarre, con brazos cruzados.',
+      },
+      {
+        name: 'Ap Cubi Sogui Are Okgoro Maki',
+        description: 'Defensa al medio con el canto de la mano.',
+      },
+      {
+        name: 'Di Cubi Sogui Goduro Montong Bakat Maki',
+        description: 'Defensa doble al medio (defensa de combate).',
+      },
+      {
+        name: 'Ap Cubi Sogui Oe Santul Maki',
+        description: 'Defensa doble, una mano defiende abajo y la otra mano defiende arriba, en sentido contrario.',
+      },
+      {
+        name: 'Di Cubi Sogui Goduro Are Maki',
+        description: 'Defensa doble al medio (defensa de combate).',
+      },
+      {
+        name: 'Di Koa Sogui Du Chumok Checho Chirigui',
+        description: 'Golpe a la cara con el puño cerrado.',
+      },
+      {
+        name: 'Ap Sogui Dung Chumok Olgul Bakat Chigui',
+        description: 'Golpe a la cara con el reverso del puño.',
+      },
+      {
+        name: 'Chuchum Sogui Iop Chirigui',
+        description: 'Golpe de lado.',
+      },
+      {
+        name: 'Ap Cubi Sogui Dankiok Tuok Chigui',
+        description: 'Golpe a la barbilla, sujetando con el brazo contrario.',
+      },
+      {
+        name: 'Ap Chagui',
+        description: 'Patada al frente con la bola del pie.',
+      },
+      {
+        name: 'Dui Chagui',
+        description: 'Patada hacia atrás con el talón.',
+      },
+      {
+        name: 'Iop Chagui',
+        description: 'Patada de lado con el canto del pie.',
+      },
+      {
+        name: 'Tolio Chagui',
+        description: 'Patada a la cara con el empeine.',
+      },
+      {
+        name: 'Nerio Chagui',
+        description: 'Patada a la cara con el empeine.',
+      },
+      {
+        name: 'Montolio Chagui',
+        description: 'Patada a la cara con el empeine.',
+      },
+    ]
+  };
+
+
+
+export const taeguks = [
+  {
+    title: 'Taeguk il Chang',
+    description: 'Cielo y Luz (18 movimientos)',
+    videoUrl: 'https://www.youtube.com/embed/bP_5GYMC0GQ?si=u6XZx5kjpJwQepmv'
+  },
+  {
+    title: 'Taeguk i Chang',
+    description: 'Júbilo y Alegría (18 movimientos)',
+    videoUrl: 'https://www.youtube.com/embed/hAjxTL4p2mQ?si=m_V6gK9Fz3Bbd7sh'
+  },
+  {
+    title: 'Taeguk Sam Chang',
+    description: 'Fuego y Sol (20 movimientos)',
+    videoUrl: 'https://www.youtube.com/embed/AZOUybZRQhs?si=yuqHe_uybRP5fkbu'
+  },
+  {
+    title: 'Taeguk Sa Chang',
+    description: 'El trueno (20 movimientos)',
+    videoUrl: 'https://www.youtube.com/embed/k2bCmkfA0CQ?si=7m_4xcoAPjQOiPaY'
+  },
+  {
+    title: 'Taeguk O Chang',
+    description: 'El viento (20 movimientos)',
+    videoUrl: 'https://www.youtube.com/embed/Ua7sjvk8OBs?si=9wfQKgRW0IcvtAGM'
+  },
+  {
+    title: 'Taeguk Yuk Chang',
+    description: 'El agua (20 movimientos)',
+    videoUrl: 'https://www.youtube.com/embed/nxgqnhhK2P0?si=Ou4CJz46G_lHuPa_'
+  },
+  {
+    title: 'Taeguk Chil Chang',
+    description: 'Parada en la cima (25 movimientos)',
+    videoUrl: 'https://www.youtube.com/embed/irxYm7HonI8?si=C8iD4TkDpxmV4KCS'
+  },
+  {
+    title: 'Taeguk Pal Chang',
+    description: 'La tierra (27 movimientos)',
+    videoUrl: 'https://www.youtube.com/embed/hh3QEjfj8WA?si=Be0LKHD1kNjdaY5T'
+  }
+];
+
+export const prohibitedActions = [
+  {
+    name: 'Acciones Prohibidas GAMCHON',
+    id_category: 13,
+    actions: [
+      'Evadir al oponente dando la espalda o agachándose',
+      'Caer al piso intencionalmente',
+      'Evitar el combate',
+      'Agarrar, retener o empujar al oponente',
+      'Atacar por debajo de la cintura',
+      'Fingir lesión',
+      'Cabezazo o ataque con la rodilla',
+      'Golpear la cara del oponente con la mano',
+      'Cruzar la línea límite',
+      'Mostrar mala conducta por parte del competidor o coach',
+      'Levantar la rodilla para evitar un ataque',
+      'Pasividad de parte de los competidores durante el combate',
+      'Atacar al oponente después de kalyo',
+      'Atacar al oponente caído',
+      'Derribar al oponente, sujetándolo o empujándolo',
+      'Golpear la cara del oponente con la mano',
+      'Atacar con intención por debajo de la cintura',
+      'Interrumpir el combate por parte del competidor o coach',
+      'Comportamientos violentos del competidor o coach',
+      'Evitar intencionalmente el combate',
+      'Manipular el sistema PSS antes de cada round'
+    ]
+  }
+];
+
+
+
+
+
+
+
 export const info = [
   {
     name: 'Acciones Prohibidas GAMCHON ',
@@ -626,245 +788,6 @@ export const info = [
     </ul>
     </div>`
   },
-
-  //********* poomsae     ******** */ 
-  {
-    //ROJO
-    name: '¿Qué son las Taeguk?',
-    id_category: 6,
-    id_bell: 5,
-    text: `
-    <style>
-    ${cssContent}
-   </style>
-    <div>
-    <p>Las Taeguk son una serie de movimientos coordinados y sistematizados que simulan un combate con varios oponentes.</p>
-    <p><strong>Tae:</strong> Grandeza</p>
-    <p><strong>Guk:</strong> Eternidad</p>
-    
-    <h3>Taeguk Básicas</h3>
-    <p>
-  Para reproducir los videos, es necesario estar conectado a internet.
-  <em>Pronto estaremos utilizando videos propios de la academia.</em>
-</p>
-
-    <ul>
-        <li><strong>Taeguk il Chang:</strong> Cielo y Luz (18 movimientos) <br>
-        <div class="responsive-iframe">
-          <iframe  src="https://www.youtube.com/embed/bP_5GYMC0GQ?si=u6XZx5kjpJwQepmv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-        </li>
-        <li><strong>Taeguk i Chang:</strong> Júbilo y Alegría (18 movimientos) <br>
-        <div class="responsive-iframe">
-        <iframe  src="https://www.youtube.com/embed/hAjxTL4p2mQ?si=m_V6gK9Fz3Bbd7sh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-        </li>
-        <li>
-          <strong>Taeguk Sam Chang:</strong> Fuego y Sol (20 movimientos) <br>
-          <div class="responsive-iframe">
-          <iframe  src="https://www.youtube.com/embed/AZOUybZRQhs?si=yuqHe_uybRP5fkbu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
-          </li>
-        <li>
-          <strong>Taeguk Sa Chang:</strong> El trueno (20 movimientos) <br>
-          <div class="responsive-iframe">
-          <iframe  src="https://www.youtube.com/embed/k2bCmkfA0CQ?si=7m_4xcoAPjQOiPaY"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowfullscreen></iframe>
-          </div>
-          </li>
-        <li>
-          <strong>Taeguk O Chang:</strong> El viento (20 movimientos) <br>
-          <div class="responsive-iframe">
-          <iframe  src="https://www.youtube.com/embed/Ua7sjvk8OBs?si=9wfQKgRW0IcvtAGM"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowfullscreen></iframe>
-          </div>
-          </li>
-        <li>
-          <strong>Taeguk Yuk Chang:</strong> El agua (20 movimientos) <br>
-          <div class="responsive-iframe">
-          <iframe  src="https://www.youtube.com/embed/nxgqnhhK2P0?si=Ou4CJz46G_lHuPa_"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowfullscreen></iframe>
-          </div>
-          </li>
-        <li>
-          <strong>Taeguk Chil Chang:</strong> Parada en la cima (25 movimientos) <br>
-          <div class="responsive-iframe">
-          <iframe  src="https://www.youtube.com/embed/irxYm7HonI8?si=C8iD4TkDpxmV4KCS"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowfullscreen></iframe>
-          </div>
-          </li>
-        <li>
-          <strong>Taeguk Pal Chang:</strong> La tierra (27 movimientos) <br>
-          <div class="responsive-iframe">
-          <iframe  src="https://www.youtube.com/embed/hh3QEjfj8WA?si=Be0LKHD1kNjdaY5T"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowfullscreen></iframe>
-          </div>
-          </li>
-
-    </ul>
-    </div>
-    `
-  },
-  {
-    //azul
-    name: '¿Qué son las Taeguk?',
-    id_category: 6,
-    id_bell: 4,
-    text: `
-    <style>
-    ${cssContent}
-   </style>
-    <div>
-    <p>Las Taeguk son una serie de movimientos coordinados y sistematizados que simulan un combate con varios oponentes.</p>
-    <p><strong>Tae:</strong> Grandeza</p>
-    <p><strong>Guk:</strong> Eternidad</p>
-    
-    <h3>Taeguk Básicas</h3>
-    <p>
-  Para reproducir los videos, es necesario estar conectado a internet.
-  <em>Pronto estaremos utilizando videos propios de la academia.</em>
-</p>
-
-    <ul>
-        <li><strong>Taeguk il Chang:</strong> Cielo y Luz (18 movimientos) <br>
-        <div class="responsive-iframe">
-          <iframe  src="https://www.youtube.com/embed/bP_5GYMC0GQ?si=u6XZx5kjpJwQepmv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-        </li>
-        <li><strong>Taeguk i Chang:</strong> Júbilo y Alegría (18 movimientos) <br>
-        <div class="responsive-iframe">
-        <iframe  src="https://www.youtube.com/embed/hAjxTL4p2mQ?si=m_V6gK9Fz3Bbd7sh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-        </li>
-        <li>
-          <strong>Taeguk Sam Chang:</strong> Fuego y Sol (20 movimientos) <br>
-          <div class="responsive-iframe">
-          <iframe  src="https://www.youtube.com/embed/AZOUybZRQhs?si=yuqHe_uybRP5fkbu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
-          </li>
-        <li>
-          <strong>Taeguk Sa Chang:</strong> El trueno (20 movimientos) <br>
-          <div class="responsive-iframe">
-          <iframe  src="https://www.youtube.com/embed/k2bCmkfA0CQ?si=7m_4xcoAPjQOiPaY"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowfullscreen></iframe>
-          </div>
-          </li>
-        <li>
-          <strong>Taeguk O Chang:</strong> El viento (20 movimientos) <br>
-          <div class="responsive-iframe">
-          <iframe  src="https://www.youtube.com/embed/Ua7sjvk8OBs?si=9wfQKgRW0IcvtAGM"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowfullscreen></iframe>
-          </div>
-          </li>
-        <li>
-          <strong>Taeguk Yuk Chang:</strong> El agua (20 movimientos) <br>
-          <div class="responsive-iframe">
-          <iframe  src="https://www.youtube.com/embed/nxgqnhhK2P0?si=Ou4CJz46G_lHuPa_"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowfullscreen></iframe>
-          </div>
-          </li>
-        <li>
-          <strong>Taeguk Chil Chang:</strong> Parada en la cima (25 movimientos) <br>
-          <div class="responsive-iframe">
-          <iframe  src="https://www.youtube.com/embed/irxYm7HonI8?si=C8iD4TkDpxmV4KCS"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowfullscreen></iframe>
-          </div>
-          </li>
-        <li>
-          <strong>Taeguk Pal Chang:</strong> La tierra (27 movimientos) <br>
-          <div class="responsive-iframe">
-          <iframe  src="https://www.youtube.com/embed/hh3QEjfj8WA?si=Be0LKHD1kNjdaY5T"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowfullscreen></iframe>
-          </div>
-          </li>
-
-    </ul>
-    </div>
-    `
-  },
-  //amarillo
-  {
-    name: '¿Qué son las Taeguk?',
-    id_category: 6,
-    id_bell: 3,
-    text: `
-    <style>
-    ${cssContent}
-   </style>
-    <div>
-    <p>Las Taeguk son una serie de movimientos coordinados y sistematizados que simulan un combate con varios oponentes.</p>
-    <p><strong>Tae:</strong> Grandeza</p>
-    <p><strong>Guk:</strong> Eternidad</p>
-    
-    <h3>Taeguk Básicas</h3>
-    <p>
-  Para reproducir los videos, es necesario estar conectado a internet.
-  <em>Pronto estaremos utilizando videos propios de la academia.</em>
-</p>
-
-    <ul>
-        <li><strong>Taeguk il Chang:</strong> Cielo y Luz (18 movimientos) <br> 
-        <div class="responsive-iframe">
-        <iframe  src="https://www.youtube.com/embed/bP_5GYMC0GQ?si=u6XZx5kjpJwQepmv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-        </li>
-        <li><strong>Taeguk i Chang:</strong> Júbilo y Alegría (18 movimientos) <br>  
-        <div class="responsive-iframe">
-        <iframe  src="https://www.youtube.com/embed/hAjxTL4p2mQ?si=m_V6gK9Fz3Bbd7sh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-        </li>
-        <li>
-          <strong>Taeguk Sam Chang:</strong> Fuego y Sol (20 movimientos) <br>
-          <div class="responsive-iframe"> 
-          <iframe  src="https://www.youtube.com/embed/AZOUybZRQhs?si=yuqHe_uybRP5fkbu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
-          </li>
-        <li>
-          <strong>Taeguk Sa Chang:</strong> El trueno (20 movimientos) <br>
-          <div class="responsive-iframe">
-          <iframe  src="https://www.youtube.com/embed/k2bCmkfA0CQ?si=7m_4xcoAPjQOiPaY"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowfullscreen></iframe>
-          </div>
-          </li>
-    </ul>
-    </div>
-    `
-  },
-  {
-    name: '¿Qué son las Taeguk?',
-    id_category: 6,
-    id_bell: 2,
-    videos: [
-      {
-        title: 'Taeguk 1',
-        url: 'https://www.youtube.com/embed/bP_5GYMC0GQ?si=0fUM3nb4emd2Bnvb',
-      },
-      {
-        title: 'Taeguk 2',
-        url: 'https://www.youtube.com/embed/hAjxTL4p2mQ?si=0Wg4vpNZJR3jbWzL',
-      },
-      // ... Puedes agregar hasta 10 videos aquí
-    ],
-    text: `
-    <style>
-    ${cssContent}
-   </style>
-    <div>
-    <p>Las Taeguk son una serie de movimientos coordinados y sistematizados que simulan un combate con varios oponentes.</p>
-    <p><strong>Tae:</strong> Grandeza</p>
-    <p><strong>Guk:</strong> Eternidad</p>
-    
-    <h3>Taeguk Básicas</h3>
-    <p>
-  Para reproducir los videos, es necesario estar conectado a internet.
-  <em>Pronto estaremos utilizando videos propios de la academia.</em>
-</p>
-
-    <ul>
-        <li><strong>Taeguk il Chang:</strong> Cielo y Luz (18 movimientos) <br> 
-        <div class="responsive-iframe">
-        <iframe  src="https://www.youtube.com/embed/bP_5GYMC0GQ?si=u6XZx5kjpJwQepmv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-        </li>
-        <li><strong>Taeguk i Chang:</strong> Júbilo y Alegría (18 movimientos) <br>
-        <div class="responsive-iframe"> 
-        <iframe width="320" height="310" src="https://www.youtube.com/embed/hAjxTL4p2mQ?si=m_V6gK9Fz3Bbd7sh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-        </li>
-    </ul>
-    </div>
-    `
-  },
-
 
   {
     name: 'Significados',
