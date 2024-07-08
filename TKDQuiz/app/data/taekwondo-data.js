@@ -879,6 +879,26 @@ export const prohibitedActions = [
   }
 ];
 
+export const IntroduccionTaekwondo =
+{
+  id_category: 1,
+  name: 'Introducción al Taekwondo',
+  id_bell: 0,
+  text: `
+  El Taekwondo es un arte marcial originario de Corea practicado durante miles de años. 
+  En este arte, se emplean técnicas de defensa y ataque, convirtiéndolo en uno de los estilos de defensa personal más efectivos en el mundo.
+
+  Utiliza la fuerza, velocidad, coordinación, potencia, precisión y la resistencia cardiovascular y muscular. Más que un deporte, el Taekwondo es una disciplina que ayuda a formar el carácter, brinda seguridad en uno mismo y enseña a convivir con otras personas. 
+  Además, permite liberar tensiones y agresividad, promoviendo un estado de relajación que beneficia al practicante en su vida cotidiana, estudios y relaciones interpersonales.
+  El Taekwondo busca la plenitud total del individuo, fomentando un cuerpo sano en armonía con un espíritu limpio y generoso.
+
+  Se trata de un deporte que ofrece una mejora significativa en la condición física de sus practicantes debido a la intensidad de los entrenamientos.
+  Aunque el Taekwondo proporciona al practicante la habilidad de herir a un adversario, este no es el objetivo buscado. 
+  En cambio, se busca la paz y la convivencia armoniosa con los demás. Como dice el lema: "Aprender a pelear para no pelear".
+  `
+};
+
+
 
 
 
@@ -1154,38 +1174,7 @@ export const info = [
     </div> 
       `
   },
-  { 
-    name: '¿Qué es el Taekwondo?', 
-    id_category: 1, 
-    id_bell : 0,
-    videos: [],
-    text:  `
-    <style>
-    ${cssContent}
-   </style>
-    <div>
-    <p>
-      El <strong>Taekwondo</strong> es un arte marcial originario de Corea practicado durante miles de años. En este arte, se emplean técnicas de defensa y ataque, convirtiéndolo en uno de los estilos de defensa personal más efectivos en el mundo.
-    </p>
-    
-    <p>
-      Utiliza la fuerza, velocidad, coordinación, potencia, precisión y la resistencia cardiovascular y muscular. Más que un deporte, el Taekwondo es una disciplina que ayuda a formar el carácter, brinda seguridad en uno mismo y enseña a convivir con otras personas. Además, permite liberar tensiones y agresividad, promoviendo un estado de relajación que beneficia al practicante en su vida cotidiana, estudios y relaciones interpersonales.
-    </p>
-    
-    <p>
-      El Taekwondo busca la plenitud total del individuo, fomentando un cuerpo sano en armonía con un espíritu limpio y generoso.
-    </p>
-    
-    <p>
-      Se trata de un deporte que ofrece una mejora significativa en la condición física de sus practicantes debido a la intensidad de los entrenamientos.
-    </p>
-    
-    <p>
-      Aunque el Taekwondo proporciona al practicante la habilidad de herir a un adversario, este no es el objetivo buscado. En cambio, se busca la paz y la convivencia armoniosa con los demás. Como dice el lema: <strong>"Aprender a pelear para no pelear"</strong>.
-    </p>
-    </div>
-    ` 
-  },
+ 
   { name: 'Filosofía y honor subyacente', 
     id_category: 2,
     videos: [],

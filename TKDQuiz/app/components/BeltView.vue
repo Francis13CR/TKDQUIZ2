@@ -13,7 +13,7 @@
             <SegmentedBarItem v-for="(category, index) in categories" :key="category.id" :title="category.name" class="text-center"/>
         </SegmentedBar>
       </ScrollView>
-      <ListView v-show="selectedCategoryId != 6 && selectedCategoryId != 13 && selectedCategoryId != 12 && selectedCategoryId != 11 " ref="listview" for="(section, index) in filterInfo" height="80%">
+      <ListView v-show="selectedCategoryId != 6 && selectedCategoryId != 13 && selectedCategoryId != 12 && selectedCategoryId != 11  && selectedCategoryId != 1" ref="listview" for="(section, index) in filterInfo" height="80%">
         <v-template>
           <StackLayout>
             <Label :text="section.name" class="section-title text-center" margin="10" />
@@ -49,6 +49,13 @@
         </ListView>
       </StackLayout>
 
+      <StackLayout v-show="selectedCategoryId == 1">
+        <Label :text="IntroduccionTaekwondo.name" textWrap="true" class="title text-center text-primary" />
+        <ScrollView orientation="vertical">
+          <Label class="m-5 text-primary" :text="IntroduccionTaekwondo.text.split('\n').map(line => line.trim()).join('\n')" textWrap="true" />
+        </ScrollView>
+      </StackLayout>
+
       <StackLayout v-show="selectedCategoryId == 12">
         <Label class="text-center text-primary section-title" textWrap="true" text="Fundamentos Prácticos" />
         <ListView :items="fundamentosPracticos.fundamentos" height="80%">
@@ -67,7 +74,7 @@
           <v-template>
             <StackLayout orientation="vertical">
               <Label class="text-center text-primary section-subtitle" :text="item.type" textWrap="true" />
-              <Label v-for="(subItem, index) in item.items" :class="index === 0 ? 'text-center' : ''" :text="subItem" textWrap="true" />
+              <Label v-for="(subItem, index) in item.items" :class="index === 0 ? 'text-center text-primary' : 'text-primary'" :text="subItem" textWrap="true" />
             </StackLayout>
           </v-template>
         </ListView> 
@@ -83,7 +90,7 @@
 </template>
 
 <script>
-import { categories, info, taeguks,prohibitedActions, fundamentosPracticos, fundamentosBasicos } from '../data/taekwondo-data.js';
+import { categories, info, taeguks,prohibitedActions, fundamentosPracticos, fundamentosBasicos, IntroduccionTaekwondo } from '../data/taekwondo-data.js';
 import * as utils from "@nativescript/core/utils";
 
 export default {
@@ -100,7 +107,8 @@ data() {
     prohibitedActions,
     fundamentosPracticos,
     fundamentosBasicos,
-    fundamentosPorSeccion: {}
+    fundamentosPorSeccion: {},
+    IntroduccionTaekwondo
   };
 },
 mounted() {
@@ -255,5 +263,16 @@ methods: {
   left: 0;
   width: 100%;
   height: 100%;
+}
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.content {
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: justify;
 }
 </style>
