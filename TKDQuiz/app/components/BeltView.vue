@@ -13,7 +13,7 @@
             <SegmentedBarItem v-for="(category, index) in categories" :key="category.id" :title="category.name" class="text-center"/>
         </SegmentedBar>
       </ScrollView>
-      <ListView v-show="selectedCategoryId != 6 && selectedCategoryId != 13 " ref="listview" for="(section, index) in filterInfo" height="80%">
+      <ListView v-show="selectedCategoryId != 6 && selectedCategoryId != 13 && selectedCategoryId != 12 && selectedCategoryId != 11 " ref="listview" for="(section, index) in filterInfo" height="80%">
         <v-template>
           <StackLayout>
             <Label :text="section.name" class="section-title text-center" margin="10" />
@@ -40,7 +40,7 @@
 
       <StackLayout v-show="selectedCategoryId == 13">
         <Label class="text-center text-primary section-title" textWrap="true" :text="prohibitedActions.name" />
-        <ListView :items="prohibitedActions.actions">
+        <ListView :items="prohibitedActions.actions" height="80%">
           <v-template>
             <StackLayout orientation="vertical">
               <Label class="m-5 fs-12 text-primary" :text="item" textWrap="true" />
@@ -48,10 +48,34 @@
           </v-template>
         </ListView>
       </StackLayout>
+
+      <StackLayout v-show="selectedCategoryId == 12">
+        <Label class="text-center text-primary section-title" textWrap="true" text="Fundamentos Prácticos" />
+        <ListView :items="fundamentosPracticos.fundamentos" height="80%">
+          <v-template>
+            <StackLayout orientation="vertical">
+              <Label class="m-5 fs-12 text-primary" :text="item.name" textWrap="true" />
+            </StackLayout>
+          </v-template>
+        </ListView>
+      </StackLayout>
+
+      
+      <StackLayout v-show="selectedCategoryId == 11">
+        <Label class="text-center text-primary section-title" textWrap="true" text="Fundamentos Básicos" />
+        <ListView :items="fundamentosAgrupados" height="80%">
+          <v-template>
+            <StackLayout orientation="vertical">
+              <Label class="text-center text-primary section-subtitle" :text="item.type" textWrap="true" />
+              <Label v-for="(subItem, index) in item.items" :class="index === 0 ? 'text-center' : ''" :text="subItem" textWrap="true" />
+            </StackLayout>
+          </v-template>
+        </ListView> 
+      </StackLayout>
  
       <StackLayout orientation="horizontal" horizontalAlignment="right">
-        <Button class="bg-secondary" v-show="currentSectionIndex > 0" text="Atrás" @tap="goToPreviousSection" width="50" />
-        <Button class="bg-primary" text=" Siguiente " @tap="goToNextSection" width="50" /> 
+        <Button class="bg-secondary" v-show="currentSectionIndex > 0" text="Atrás" @tap="goToPreviousSection" width="100" />
+        <Button class="bg-primary" text=" Siguiente " @tap="goToNextSection" width="100" /> 
       </StackLayout>
       
     </StackLayout>
@@ -59,7 +83,7 @@
 </template>
 
 <script>
-import { categories, info, taeguks,prohibitedActions } from '../data/taekwondo-data.js';
+import { categories, info, taeguks,prohibitedActions, fundamentosPracticos, fundamentosBasicos } from '../data/taekwondo-data.js';
 import * as utils from "@nativescript/core/utils";
 
 export default {
@@ -73,13 +97,30 @@ data() {
     filterInfo: [],
     showWebView: true,
     taeguks,
-    prohibitedActions
+    prohibitedActions,
+    fundamentosPracticos,
+    fundamentosBasicos,
+    fundamentosPorSeccion: {}
   };
 },
 mounted() {
   this.onCategorySelected({ value: 0 });
-  this.prohibitedActions = this.prohibitedActions[0]
-  console.log(this.belt.id, this.prohibitedActions[0]);
+  this.prohibitedActions = this.prohibitedActions[0];
+  this.fundamentosPracticos = this.fundamentosPracticos.find(item => item.id_bell == this.belt.id);
+  this.fundamentosBasicos = this.fundamentosBasicos.find(item => item.id_bell == this.belt.id);
+  // ELIMINAMOS EL id_bell DE LOS FUNDAMENTOS BASICOS
+  this.fundamentosBasicos = this.fundamentosBasicos.fundamentos;
+  //ordenar el array de fundamentos por seccion
+  this.fundamentosPorSeccion = this.fundamentosBasicos.reduce((acc, item) => {
+    if (!acc[item.section]) {
+      acc[item.section] = [];
+    }
+  if(item.description == null) item.description = '';
+  acc[item.section].push(item.name + (item.description ? ' - ' + item.description : ''));
+    return acc;
+  }, {});
+  
+  console.log(this.fundamentosPorSeccion.Defensas)
   if(this.belt.id == 2) {
     //solo agarrar las primeras dos taeguks
     this.taeguks = this.taeguks.slice(0, 2);
@@ -89,6 +130,28 @@ mounted() {
     this.taeguks = this.taeguks.slice(0, 8);
   } else if (this.belt.id == 5) {
     this.taeguks = this.taeguks.slice(0, 8);
+  }
+},
+computed: {
+  fundamentosAgrupados() {
+    return [
+      {
+        type: 'Defensas',
+        items: this.fundamentosPorSeccion.Defensas
+      },
+      {
+        type: 'Golpes',
+        items: this.fundamentosPorSeccion.Golpes
+      },
+      {
+        type: 'Patadas',
+        items: this.fundamentosPorSeccion.Patadas
+      },
+      {
+        type: 'Posiciones',
+        items: this.fundamentosPorSeccion.Posiciones
+      }
+    ];
   }
 },
 methods: {
@@ -142,6 +205,7 @@ methods: {
     this.filterInfo = this.info.filter(item => item.id_category === this.selectedCategoryId && (this.belt.id == item.id_bell || item.id_bell == 0));
   },
   goToNextSection() {
+    console.log(this.fundamentosPorSeccion)
     if (this.currentSectionIndex < this.categories.length - 1) {
       this.currentSectionIndex++;
       this.showWebView = false;

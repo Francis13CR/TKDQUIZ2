@@ -106,86 +106,703 @@ export const categories = [
   { name: 'Acciones Prohibidas en Combate', id: 13 },
 ];
 
-
-export const fundamentosPracticos = 
+export const fundamentosBasicos = [
   {
     id_bell: 5,
-    id_category: 12,
     fundamentos: [
       {
-        name: 'Bom Sogui Batangson Montong An Maki',
+        section: 'Defensas',
+        name: 'Maki = Defensa',
+      },
+      {
+        section: 'Defensas',
+        name: 'Jan Sonnal Montong Bakat Maki',
+        description: 'Defensa al medio con el canto de la mano.',
+      },
+      {
+        section: 'Defensas',
+        name: 'Sonnal Montong Maki',
+        description: 'Defensa al medio de lado con el canto de la mano asistida por el brazo contrario que protege la zona media.',
+      },
+      {
+        section: 'Defensas',
+        name: 'Batangson Montong An Maki',
         description: 'Defensa al medio con la base de la mano, contrario al pie adelantado.',
       },
       {
-        name: 'Di Cubi Sogui Sonnal Are Maki',
-        description: 'Defensa al medio con el canto de la mano.',
-      },
-      {
-        name: 'Ap Cubi Sogui Gawi Maki',
-        description: 'Defensa al medio con el canto de la mano.',
-      },
-      {
-        name: 'Ap Cubi Sogui Montong Gecho Maki',
+        section: 'Defensas',
+        name: 'Montong Gecho Maki',
         description: 'Defensa al medio para agarre, con brazos cruzados.',
       },
       {
-        name: 'Ap Cubi Sogui Are Okgoro Maki',
-        description: 'Defensa al medio con el canto de la mano.',
-      },
-      {
-        name: 'Di Cubi Sogui Goduro Montong Bakat Maki',
+        section: 'Defensas',
+        name: 'Goduro Montong Bakat Maki',
         description: 'Defensa doble al medio (defensa de combate).',
       },
       {
-        name: 'Ap Cubi Sogui Oe Santul Maki',
+        section: 'Defensas',
+        name: 'Oe Santul Maki',
         description: 'Defensa doble, una mano defiende abajo y la otra mano defiende arriba, en sentido contrario.',
       },
       {
-        name: 'Di Cubi Sogui Goduro Are Maki',
-        description: 'Defensa doble al medio (defensa de combate).',
+        section: 'Golpes',
+        name: 'Chirigui = Golpe',
       },
       {
-        name: 'Di Koa Sogui Du Chumok Checho Chirigui',
-        description: 'Golpe a la cara con el puño cerrado.',
+        section: 'Golpes',
+        name: 'Jan Sonnal Mok Chigui',
+        description: 'Golpe al cuello con canto de la mano, contrario al pie.',
       },
       {
-        name: 'Ap Sogui Dung Chumok Olgul Bakat Chigui',
+        section: 'Golpes',
+        name: 'Chebipum Mok Chigui',
+        description: 'Golpe al cuello con el canto de la mano asistido por el brazo contrario que protege la cara con la mano abierta.',
+      },
+      {
+        section: 'Golpes',
+        name: 'Dung Chumok Ap Chigui',
         description: 'Golpe a la cara con el reverso del puño.',
       },
       {
-        name: 'Chuchum Sogui Iop Chirigui',
+        section: 'Golpes',
+        name: 'Dung Chumok Olgul Bakat Chigui',
+        description: 'Golpe a la cara, hacia afuera, con el reverso del puño.',
+      },
+      {
+        section: 'Golpes',
+        name: 'Iop Chirigui',
         description: 'Golpe de lado.',
       },
       {
-        name: 'Ap Cubi Sogui Dankiok Tuok Chigui',
+        section: 'Golpes',
+        name: 'Dankiok Tuok Chigui',
         description: 'Golpe a la barbilla, sujetando con el brazo contrario.',
       },
       {
+        section: 'Posiciones',
+        name: 'Sogui = Posición',
+      },
+      {
+        section: 'Posiciones',
+        name: 'Moa Sogui',
+        description: 'Posición de pies juntos.',
+      },
+      {
+        section: 'Posiciones',
+        name: 'Naranji Sogui',
+        description: 'Posición de frente, pies abiertos al ancho de los hombros.',
+      },
+      {
+        section: 'Posiciones',
+        name: 'Ap Sogui',
+        description: 'Posición de frente, es un paso normal de caminar.',
+      },
+      {
+        section: 'Posiciones',
+        name: 'Ap Cubi Sogui',
+        description: 'Posición larga de frente, es un paso y medio, pierna de atrás recta y pierna delantera flexionada con un 70% del peso.',
+      },
+      {
+        section: 'Posiciones',
+        name: 'Di Cubi Sogui',
+        description: 'Posición de lado, formando un ángulo de 90 grados y ambas piernas flexionadas, la pierna de atrás apoyada con un 70% del peso.',
+      },
+      {
+        section: 'Posiciones',
+        name: 'Koa Sogui',
+        description: 'Posición de pies cruzados.',
+      },
+      {
+        section: 'Posiciones',
+        name: 'Bom Sogui',
+        description: 'Posición del tigre, con el pie delantero recogido apoyado sobre la bola del pie, la pierna de atrás totalmente apoyada con un 90% del peso.',
+      },
+      {
+        section: 'Patadas',
+        name: 'Chagui = Patada',
+      },
+      {
+        section: 'Patadas',
         name: 'Ap Chagui',
         description: 'Patada al frente con la bola del pie.',
       },
       {
-        name: 'Dui Chagui',
-        description: 'Patada hacia atrás con el talón.',
-      },
-      {
+        section: 'Patadas',
         name: 'Iop Chagui',
         description: 'Patada de lado con el canto del pie.',
       },
       {
+        section: 'Patadas',
+        name: 'Dui Chagui',
+        description: 'Patada hacia atrás con el talón.',
+      },
+    ]
+  },
+  {
+    id_bell: 4,
+    fundamentos: [
+      {
+        section: 'Defensas',
+        name: 'Maki = Defensa',
+      },
+      {
+        section: 'Defensas',
+        name: 'Jan Sonnal Montong Bakat Maki',
+        description: 'Defensa al medio con el canto de la mano.',
+      },
+      {
+        section: 'Defensas',
+        name: 'Sonnal Montong Maki',
+        description: 'Defensa al medio de lado con el canto de la mano asistida por el brazo contrario que protege la zona media.',
+      },
+      {
+        section: 'Defensas',
+        name: 'Batangson Montong Maki',
+        description: 'Defensa al medio con la base de la mano.',
+      },
+      {
+        section: 'Defensas',
+        name: 'Montong Bakat Maki',
+        description: 'Defensa al medio hacia afuera.',
+      },
+      {
+        section: 'Defensas',
+        name: 'Jan Sonnal Olgul Bituro Maki',
+        description: 'Defensa a la cara con el canto de la mano, con torsión del cuerpo.',
+      },
+      {
+        section: 'Golpes',
+        name: 'Chirigui = Golpe',
+      },
+      {
+        section: 'Golpes',
+        name: 'Jan Sonnal Mok Chigui',
+        description: 'Golpe al cuello con canto de la mano, contrario al pie.',
+      },
+      {
+        section: 'Golpes',
+        name: 'Chebipum Mok Chigui',
+        description: 'Golpe al cuello con el canto de la mano asistido por el brazo contrario que protege la cara con la mano abierta.',
+      },
+      {
+        section: 'Golpes',
+        name: 'Dung Chumok Ap Chigui',
+        description: 'Golpe a la cara con el reverso del puño.',
+      },
+      {
+        section: 'Golpes',
+        name: 'Palkup Tolio Chigui',
+        description: 'Golpe a la cara con el codo.',
+      },
+      {
+        section: 'Golpes',
+        name: 'Palkup Piochock Chigui',
+        description: 'Golpe al medio con el codo, sujetando con el brazo contrario (choque).',
+      },
+      {
+        section: 'Posiciones',
+        name: 'Sogui = Posición',
+      },
+      {
+        section: 'Posiciones',
+        name: 'Moa Sogui',
+        description: 'Posición de pies juntos.',
+      },
+      {
+        section: 'Posiciones',
+        name: 'Naranji Sogui',
+        description: 'Posición de frente, pies abiertos al ancho de los hombros.',
+      },
+      {
+        section: 'Posiciones',
+        name: 'Ap Sogui',
+        description: 'Posición de frente, es un paso normal de caminar.',
+      },
+      {
+        section: 'Posiciones',
+        name: 'Ap Cubi Sogui',
+        description: 'Posición larga de frente, es un paso y medio, pierna de atrás recta y pierna delantera flexionada.',
+      },
+      {
+        section: 'Posiciones',
+        name: 'Di Cubi Sogui',
+        description: 'Posición de lado, formando un ángulo de 90 grados y ambas piernas flexionadas.',
+      },
+      {
+        section: 'Posiciones',
+        name: 'Koa Sogui',
+        description: 'Posición de pies cruzados.',
+      },
+      {
+        section: 'Patadas',
+        name: 'Chagui = Patada',
+      },
+      {
+        section: 'Patadas',
+        name: 'Ap Chagui',
+        description: 'Patada al frente con la bola del pie.',
+      },
+      {
+        section: 'Patadas',
+        name: 'Iop Chagui',
+        description: 'Patada de lado con el canto del pie.',
+      },
+      {
+        section: 'Patadas',
         name: 'Tolio Chagui',
         description: 'Patada a la cara con el empeine.',
       },
+    ]
+  },
+  {
+    id_bell: 3,
+    fundamentos: [
+      {
+        section: 'Defensas',
+        name: 'Maki = Defensa',
+      },
+      {
+        section: 'Defensas',
+        name: 'Are Maki',
+        description: 'Defensa abajo.',
+      },
+      {
+        section: 'Defensas',
+        name: 'Montong Maki',
+        description: 'Defensa al medio, brazo igual al pie adelantado.',
+      },
+      {
+        section: 'Defensas',
+        name: 'Montong An Maki',
+        description: 'Defensa al medio, brazo contrario al pie adelantado.',
+      },
+      {
+        section: 'Defensas',
+        name: 'Olgul Maki',
+        description: 'Defensa arriba.',
+      },
+      {
+        section: 'Defensas',
+        name: 'Jan Sonnal Montong Bakat Maki',
+        description: 'Defensa al medio de lado con el canto de la mano.',
+      },
+      {
+        section: 'Defensas',
+        name: 'Sonnal Montong Maki',
+        description: 'Defensa al medio de lado con el canto de la mano asistida por el brazo contrario que protege la zona media.',
+      },
+      {
+        section: 'Defensas',
+        name: 'Montong Bakat Maki',
+        description: 'Defensa al medio hacia afuera con el puño cerrado.',
+      },
+      {
+        section: 'Golpes',
+        name: 'Chirigui = Golpe',
+      },
+      {
+        section: 'Golpes',
+        name: 'Montong Bande Chirigui',
+        description: 'Golpe de frente al medio, coincidiendo con el pie adelantado.',
+      },
+      {
+        section: 'Golpes',
+        name: 'Montong Baro Chirigui',
+        description: 'Golpe de frente al medio, contrario al pie adelantado.',
+      },
+      {
+        section: 'Golpes',
+        name: 'Olgul Bande Chirigui',
+        description: 'Golpe de frente a la cara, coincidiendo con el pie adelantado.',
+      },
+      {
+        section: 'Golpes',
+        name: 'Montong Dubon Chirigui',
+        description: 'Doble golpe al frente',
+      },
+      {
+        section: 'Golpes',
+        name: 'Jan Sonnal Mok Chigui',
+        description: 'Golpe al cuello con canto de la mano, contrario al pie adelantado.',
+      },
+      {
+        section: 'Golpes',
+        name: 'Batason nulo maki Pion Sonkut Sewo Chigui',
+        description: 'Golpe al medio con la punta de los dedos con apoyo del brazo contrario.',
+      },
+      {
+        section: 'Golpes',
+        name: 'Chebipum Mok Chigui',
+        description: 'Golpe al cuello con el canto de la mano asistido por el brazo contrario que protege la cara con la mano abierta.',
+      },
+      {
+        section: 'Golpes',
+        name: 'Dung Chumok Ape Chigui',
+        description: 'Golpe a la cara con el reverso del puño.',
+      },
+      {
+        section: 'Patadas',
+        name: 'Chagui = Patada',
+      },
+      {
+        section: 'Patadas',
+        name: 'Ap Chagui',
+        description: 'Patada al frente con la bola del pie.',
+      },
+      {
+        section: 'Patadas',
+        name: 'Bandal Chagui',
+        description: 'Patada al frente con el empeine.',
+      },
+      {
+        section: 'Patadas',
+        name: 'Tolio Chagui',
+        description: 'Patada a la cabeza',
+      },
+      {
+        section: 'Patadas',
+        name: 'Miro Chagui',
+        description: 'Patada de empuje con la planta del pie.',
+      },
+      {
+        section: 'Posiciones',
+        name: 'Sogui = Posición',
+      },
+      {
+        section: 'Posiciones',
+        name: 'Moa Sogui',
+        description: 'Posición de pies juntos.',
+      },
+      {
+        section: 'Posiciones',
+        name: 'Naranji Sogui',
+        description: 'Posición de frente, pies abiertos al ancho de los hombros.',
+      },
+      {
+        section: 'Posiciones',
+        name: 'Ap Sogui',
+        description: 'Posición de frente, es un paso normal de caminar.',
+      },
+      {
+        section: 'Posiciones',
+        name: 'Ap Cubi Sogui',
+        description: 'Posición larga de frente, es un paso y medio, pierna de atrás recta y pierna delantera flexionada.',
+      },
+      {
+        section: 'Posiciones',
+        name: 'Di Cubi Sogui',
+        description: 'Posición de lado, formando un ángulo de 90 grados y ambas piernas flexionadas.',
+      },
+    ]
+  },
+  {
+    id_bell: 2,
+    fundamentos: [
+      {
+        section: 'Defensas',
+        name: 'Maki = Defensa',
+      },
+      {
+        section: 'Defensas',
+        name: 'Are Maki',
+        description: 'Defensa abajo.',
+      },
+      {
+        section: 'Defensas',
+        name: 'Montong An Maki',
+        description: 'Defensa al medio, brazo contrario al pie adelantado..',
+      },
+      {
+        section: 'Defensas',
+        name: 'Montong Maki',
+        description: 'Defensa al medio, brazo igual al pie adelantado.',
+      },
+      {
+        section: 'Defensas',
+        name: 'Olgul Maki',
+        description: 'Defensa arriba.',
+      },
+      {
+        section: 'Golpes',
+        name: 'Chirigui = Golpe',
+      },
+      {
+        section: 'Golpes',
+        name: 'Montong Bande Chirigui',
+        description: 'Golpe de frente al medio, coincidiendo con el pie adelantado.',
+      },
+      {
+        section: 'Golpes',
+        name: 'Montong Baro Chirigui',
+        description: 'Golpe de frente al medio, contrario al pie adelantado.',
+      },
+      {
+        section: 'Golpes',
+        name: 'Olgul Bande Chirigui',
+        description: 'Golpe de frente a la cara, coincidiendo con el pie adelantado.',
+      },
+      {
+        section: 'Posiciones',
+        name: 'Sogui = Posición',
+      },
+      {
+        section: 'Posiciones',
+        name: 'Moa Sogui',
+        description: 'Posición de pies juntos.',
+      },
+      {
+        section: 'Posiciones',
+        name: 'Naranji Sogui',
+        description: 'Posición de frente, pies abiertos al ancho de los hombros.',
+      },
+      {
+        section: 'Posiciones',
+        name: 'Ap Sogui',
+        description: 'Posición de frente, es un paso normal de caminar.',
+      },
+      {
+        section: 'Posiciones',
+        name: 'Ap Cubi Sogui',
+        description: 'Posición larga de frente, es un paso y medio, pierna de atrás recta y pierna delantera flexionada.',
+      },
+      {
+        section: 'Patadas',
+        name: 'Chagui = Patada',
+      },
+      {
+        section: 'Patadas',
+        name: 'Ap Chagui',
+        description: 'Patada al frente con la bola del pie.',
+      },
+      {
+        section: 'Patadas',
+        name: 'Bandal Chagui',
+        description: 'Patada al frente con la bola del pie.',
+      },
+      {
+        section: 'Patadas',
+        name: 'Tolio Chagui',
+        description: 'Patada a la cabeza.',
+      },
+      {
+        section: 'Patadas',
+        name: 'Miro Chagui',
+        description: 'Patada de empuje con la planta del pie.',
+      },
+    ]
+  }
+];
+
+export const fundamentosPracticos = [
+  {
+    id_bell: 5,
+    fundamentos: [
+      {
+        name: 'Bom Sogui Batangson Montong An Maki',
+        description: '',
+      },
+      {
+        name: 'Di Cubi Sogui Sonnal Are Maki',
+        description: '',
+      },
+      {
+        name: 'Ap Cubi Sogui Gawi Maki',
+        description: '',
+      },
+      {
+        name: 'Ap Cubi Sogui Montong Gecho Maki',
+        description: '',
+      },
+      {
+        name: 'Ap Cubi Sogui Are Okgoro Maki',
+        description: '',
+      },
+      {
+        name: 'Di Cubi Sogui Goduro Montong Bakat Maki',
+        description: '',
+      },
+      {
+        name: 'Ap Cubi Sogui Oe Santul Maki',
+        description: '',
+      },
+      {
+        name: 'Di Cubi Sogui Goduro Are Maki',
+        description: '',
+      },
+      {
+        name: 'Di Koa Sogui Du Chumok Checho Chirigui',
+        description: '',
+      },
+      {
+        name: 'Ap Sogui Dung Chumok Olgul Bakat Chigui',
+        description: '',
+      },
+      {
+        name: 'Chuchum Sogui Iop Chirigui',
+        description: '',
+      },
+      {
+        name: 'Ap Cubi Sogui Dankiok Tuok Chigui',
+        description: '.',
+      },
+      {
+        name: 'Ap Chagui',
+        description: '',
+      },
+      {
+        name: 'Dui Chagui',
+        description: '.',
+      },
+      {
+        name: 'Iop Chagui',
+        description: '.',
+      },
+      {
+        name: 'Tolio Chagui',
+        description: '',
+      },
       {
         name: 'Nerio Chagui',
-        description: 'Patada a la cara con el empeine.',
+        description: '',
       },
       {
         name: 'Montolio Chagui',
-        description: 'Patada a la cara con el empeine.',
+        description: '',
       },
     ]
-  };
+  },
+  {
+    id_bell: 4,
+    fundamentos: [
+      {
+        name: 'DI CUBI SOGUI SONNAL MONTONG MAKI',
+        description: '',
+      },
+      {
+        name: 'AP CUBI SOGUI JAN SONNAL OLGUL BITURO MAKI',
+        description: '',
+      },
+      {
+        name: 'AP CUBI SOGUI OLGUL BAKAT MAKI',
+        description: '',
+      },
+      {
+        name: 'AP CUBI SOGUI BATANGSON MONTONG MAKI',
+        description: '',
+      },
+      {
+        name: 'AP CUBI SOGUI DUNG CHUMOK AP CHIGUI',
+        description: '',
+      },
+      {
+        name: 'UEN - ORUN SOGUI ME CHUMOK NERIO CHIGUI',
+        description: '',
+      },
+      {
+        name: 'AP CUBI SOGUI PALKUP TOLIO CHIGUI',
+        description: '',
+      },
+      {
+        name: 'AP CUBI SOGUI PALKUP PIOCHOCK CHIGUI',
+        description: '',
+      },
+      {
+        name: 'AP CHAGUI',
+        description: '',
+      },
+      {
+        name: 'IOP CHAGUI',
+        description: '',
+      },
+      {
+        name: 'TOLIO CHAGUI',
+        description: '',
+      },
+    ]
+  },
+  {
+    id_bell: 3,
+    fundamentos: [
+      {
+        name: 'AP SOGUI MONTONG AN MAKI',
+        description: '',
+      },
+      {
+        name: 'DI CUBI SOGUI JAN SONNAL MONTONG BAKAT MAKI',
+        description: '',
+      },
+      {
+        name: 'DI CUBI SOGUI SONNAL MONTONG MAKI',
+        description: '',
+      },
+      {
+        name: 'DI CUBI SOGUI MONTONG BAKAT MAKI',
+        description: '',
+      },
+      {
+        name: 'AP SOGUI JAN SONNAL MOK CHIGUI',
+        description: '',
+      },
+      {
+        name: 'AP CUBI SOGUI NULO MAKI PION SONKUT SEWO CHIGUI',
+        description: '',
+      },
+      {
+        name: 'AP CUBI SOGUI CHEBIPUM MOK CHIGUI',
+        description: '',
+      },
+      {
+        name: 'AP CUBI SOGUI DUNG CHUMOK APE CHIGUI',
+        description: '',
+      },
+      {
+        name: 'AP CHAGUI',
+        description: '',
+      },
+      {
+        name: 'IOP CHAGUI',
+        description: '',
+      },
+    ]
+  },
+  {
+    id_bell: 2,
+    fundamentos: [
+      {
+        name: 'AP SOGUI ARE MAKI',
+        description: '',
+      },
+      {
+        name: 'AP SOGUI MONTONG AN MAKI',
+        description: '',
+      },
+      {
+        name: 'AP SOGUI MONTONG MAKI',
+        description: '',
+      },
+      {
+        name: 'AP SOGUI OLGUL MAKI',
+        description: '',
+      },
+      {
+        name: 'AP CUBI SOGUI MONTONG BANDE CHIRIGUI',
+        description: '',
+      },
+      {
+        name: 'AP SOGUI MONTONG BARO CHIRIGUI',
+        description: '',
+      },
+      {
+        name: 'AP CUBI SOGUI OLGUL BANDE CHIRIGUI',
+        description: '',
+      },
+      {
+        name: 'AP CUBI SOGUI MONTONG DUBON CHIRIGUI',
+        description: '',
+      },
+    ]
+  }
+];
 
 
 
@@ -269,364 +886,7 @@ export const prohibitedActions = [
 
 
 export const info = [
-  {
-    name: 'Acciones Prohibidas GAMCHON ',
-    id_bell: 0,
-    id_category: 13, 
-    text: `
-    <style>
-    ${cssContent}
-   </style>
-    <div>
-      <ul>
-          <li>Evadir al oponente dando la espalda o agachándose</li>
-          <li>Caer al piso intencionalmente</li>
-          <li>Evitar el combate</li>
-          <li>Agarrar, retener o empujar al oponente</li>
-          <li>Atacar por debajo de la cintura</li>
-          <li>Fingir lesión</li>
-          <li>Cabezazo o ataque con la rodilla</li>
-          <li>Golpear la cara del oponente con la mano</li>
-          <li>Cruzar la línea límite</li>
-          <li>Mostrar mala conducta por parte del competidor o coach</li>
-          <li>Levantar la rodilla para evitar un ataque</li>
-          <li>Pasividad de parte de los competidores durante el combate</li>
-          <li>Atacar al oponente después de kalyo</li>
-          <li>Atacar al oponente caído</li>
-          <li>Derribar al oponente, sujetándolo o empujándolo</li>
-          <li>Golpear la cara del oponente con la mano</li>
-          <li>Atacar con intención por debajo de la cintura</li>
-          <li>Interrumpir el combate por parte del competidor o coach</li>
-          <li>Comportamientos violentos del competidor o coach</li>
-          <li>Evitar intencionalmente el combate</li>
-          <li>Manipular el sistema PSS antes de cada round</li>
-      </ul>
-    </div>
-    `
-  },
-  //********* fundamentos practicos     ******** */
-  {
-    //rojo
-    name: 'Fundamentos Practicos',
-    id_bell: 5,
-    id_category: 12,
-    text: `
-    <style>
-    ${cssContent}
-    </style>
-    <div>
-      
-      <ul>
-        <li>Bom Sogui Batangson Montong An Maki</li>
-        <li>Di Cubi Sogui Sonnal Are Maki</li>
-        <li>Ap Cubi Sogui Gawi Maki</li>
-        <li>Ap Cubi Sogui Montong Gecho Maki</li>
-        <li>Ap Cubi Sogui Are Okgoro Maki</li>
-        <li>Di Cubi Sogui Goduro Montong Bakat Maki</li>
-        <li>Ap Cubi Sogui Oe Santul Maki</li>
-        <li>Di Cubi Sogui Goduro Are Maki</li>
-        <li>Di Koa Sogui Du Chumok Checho Chirigui</li>
-        <li>Ap Sogui Dung Chumok Olgul Bakat Chigui</li>
-        <li>Chuchum Sogui Iop Chirigui</li>
-        <li>Ap Cubi Sogui Dankiok Tuok Chigui</li>
-      </ul>
-    
-      
-      <ul>
-        <li>Ap Chagui</li>
-        <li>Dui Chagui</li>
-        <li>Iop Chagui</li>
-        <li>Tolio Chagui</li>
-        <li>Nerio Chagui</li>
-        <li>Montolio Chagui</li>
-      </ul>
-    </div>
-    `
-  },
-
-
-  {
-    //azul
-    name: 'Fundamentos Practicos',
-    id_bell: 4,
-    id_category: 12,
-    text: `
-    <style>
-    ${cssContent}
-    </style>
-    <div>
-      <ul>
-          <li>DI CUBI SOGUI SONNAL MONTONG MAKI</li>
-          <li>AP CUBI SOGUI JAN SONNAL OLGUL BITURO MAKI</li>
-          <li>AP CUBI SOGUI OLGUL BAKAT MAKI</li>
-          <li>AP CUBI SOGUI BATANGSON MONTONG MAKI</li>
-          <li>AP CUBI SOGUI DUNG CHUMOK AP CHIGUI</li>
-          <li>UEN - ORUN SOGUI ME CHUMOK NERIO CHIGUI</li>
-          <li>AP CUBI SOGUI PALKUP TOLIO CHIGUI</li>
-          <li>AP CUBI SOGUI PALKUP PIOCHOCK CHIGUI</li>
-          <li>AP CHAGUI</li>
-          <li>IOP CHAGUI</li>
-          <li>TOLIO CHAGUI</li>
-      </ul>
-
-    </div>
-
-    `
-  },
-
-  {
-    //verde
-    name: 'Fundamentos Practicos',
-    id_bell: 3,
-    id_category: 12,
-    text: `
-    <style>
-    ${cssContent}
-    </style>
-    <div>
-      <ul>
-        <li>AP SOGUI MONTONG AN MAKI</li>
-        <li>DI CUBI SOGUI JAN SONNAL MONTONG BAKAT MAKI</li>
-        <li>DI CUBI SOGUI SONNAL MONTONG MAKI</li>
-        <li>DI CUBI SOGUI MONTONG BAKAT MAKI</li>
-        <li>AP SOGUI JAN SONNAL MOK CHIGUI</li>
-        <li>AP CUBI SOGUI NULO MAKI PION SONKUT SEWO CHIGUI</li>
-        <li>AP CUBI SOGUI CHEBIPUM MOK CHIGUI</li>
-        <li>AP CUBI SOGUI DUNG CHUMOK APE CHIGUI</li>
-        <li>AP CHAGUI</li>
-        <li>IOP CHAGU</li>
-      </ul>
-    </div>
-    `
-  },
-
-  {
-    name: 'Fundamentos Practicos',
-    id_bell: 2,
-    id_category: 12,
-    text: `
-    <style>
-      ${cssContent}
-    </style>
-    <div>
-    <ul>
-        <li><strong>AP SOGUI ARE MAKI:</strong> Defensa abajo con la pierna adelantada.</li>
-        <li><strong>AP SOGUI MONTONG AN MAKI:</strong> Defensa al medio, brazo contrario al pie adelantado.</li>
-        <li><strong>AP SOGUI MONTONG MAKI:</strong> Defensa al medio, brazo igual al pie adelantado.</li>
-        <li><strong>AP SOGUI OLGUL MAKI:</strong> Defensa arriba con la pierna adelantada.</li>
-        <li><strong>AP CUBI SOGUI MONTONG BANDE CHIRIGUI:</strong> Golpe de frente al medio, coincidiendo con el pie adelantado.</li>
-        <li><strong>AP SOGUI MONTONG BARO CHIRIGUI:</strong> Golpe de frente al medio, contrario al pie adelantado.</li>
-        <li><strong>AP CUBI SOGUI OLGUL BANDE CHIRIGUI:</strong> Golpe de frente a la cara, coincidiendo con el pie adelantado.</li>
-        <li><strong>AP CUBI SOGUI MONTONG DUBON CHIRIGUI:</strong> Golpe de frente abajo, coincidiendo con el pie adelantado.</li>
-    </ul>
-    </div>
-     `
-  },
-
-  /*****Fundamentos basicos */
-  {
-    //rojo
-    name: 'Fundamentos Basicos',
-    id_bell: 5,
-    id_category: 11,
-    text: `
-    <style>
-    ${cssContent}
-    </style>
-    <div>
-      <h1>MAKI = DEFENSA</h1>
-      <ul>
-        <li><strong>Jan Sonnal Montong Bakat Maki:</strong> Defensa al medio con el canto de la mano.</li>
-        <li><strong>Sonnal Montong Maki:</strong> Defensa al medio de lado con el canto de la mano asistida por el brazo contrario que protege la zona media.</li>
-        <li><strong>Batangson Montong An Maki:</strong> Defensa al medio con la base de la mano, contrario al pie adelantado.</li>
-        <li><strong>Montong Gecho Maki:</strong> Defensa al medio para agarre, con brazos cruzados.</li>
-        <li><strong>Goduro Montong Bakat Maki:</strong> Defensa doble al medio (defensa de combate).</li>
-        <li><strong>Oe Santul Maki:</strong> Defensa doble, una mano defiende abajo y la otra mano defiende arriba, en sentido contrario.</li>
-      </ul>
-    
-      <h1>CHIRIGUI = GOLPE</h1>
-      <ul>
-        <li><strong>Jan Sonnal Mok Chigui:</strong> Golpe al cuello con canto de la mano, contrario al pie.</li>
-        <li><strong>Chebipum Mok Chigui:</strong> Golpe al cuello con el canto de la mano asistido por el brazo contrario que protege la cara con la mano abierta.</li>
-        <li><strong>Dung Chumok Ap Chigui:</strong> Golpe a la cara con el reverso del puño.</li>
-        <li><strong>Dung Chumok Olgul Bakat Chigui:</strong> Golpe a la cara, hacia afuera, con el reverso del puño.</li>
-        <li><strong>Iop Chirigui:</strong> Golpe de lado.</li>
-        <li><strong>Dankiok Tuok Chigui:</strong> Golpe a la barbilla, sujetando con el brazo contrario.</li>
-      </ul>
-    
-      <h1>SOGUI = POSICION</h1>
-      <ul>
-        <li><strong>Moa Sogui:</strong> Posición de pies juntos.</li>
-        <li><strong>Naranji Sogui:</strong> Posición de frente, pies abiertos al ancho de los hombros.</li>
-        <li><strong>Ap Sogui:</strong> Posición de frente, es un paso normal de caminar.</li>
-        <li><strong>Ap Cubi Sogui:</strong> Posición larga de frente, es un paso y medio, pierna de atrás recta y pierna delantera flexionada con un 70% del peso.</li>
-        <li><strong>Di Cubi Sogui:</strong> Posición de lado, formando un ángulo de 90 grados y ambas piernas flexionadas, la pierna de atrás apoyada con un 70% del peso.</li>
-        <li><strong>Koa Sogui:</strong> Posición de pies cruzados.</li>
-        <li><strong>Bom Sogui:</strong> Posición del tigre, con el pie delantero recogido apoyado sobre la bola del pie, la pierna de atrás totalmente apoyada con un 90% del peso.</li>
-      </ul>
-    
-      <h1>CHAGUI = PATADA</h1>
-      <ul>
-        <li><strong>Ap Chagui:</strong> Patada al frente con la bola del pie.</li>
-        <li><strong>Iop Chagui:</strong> Patada de lado con el canto del pie.</li>
-        <li><strong>Dui Chagui:</strong> Patada hacia atrás con el talón.</li>
-      </ul>
-    </div>
-    
-    `
-  },
-
-
-  {
-    //azul
-    name: 'Fundamentos Basicos',
-    id_bell: 4,
-    id_category: 11,
-    text: `
-    <style>
-    ${cssContent}
-    </style>
-    <div>
-        <h2>FUNDAMENTOS BASICOS</h2>
-        <p class="defensa">MAKI = DEFENSA</p>
-        <ul>
-            <li>Jan Sonnal Montong Bakat Maki = Defensa al medio con el canto de la mano.</li>
-            <li>Sonnal Montong Maki = Defensa al medio de lado con el canto de la mano asistida por el brazo contrario que protege la zona media.</li>
-            <li>Montong Bakat Maki = Defensa al medio hacia afuera.</li>
-            <li>Jan Sonnal Olgul Bituro Maki = Defensa a la cara con el canto de la mano, con torsión del cuerpo.</li>
-            <li>Batangson Montong Maki = Defensa al medio con la base de la mano.</li>
-        </ul>
-
-        <h2 class="golpe">CHIRIGUI = GOLPE</h2>
-        <ul>
-            <li>Jan Sonnal Mok Chigui = Golpe al cuello con el canto de la mano, contrario al pie adelantado.</li>
-            <li>Chebipum Mok Chigui = Golpe al cuello con el canto de la mano asistido por el brazo contrario que protege la cara con la mano abierta.</li>
-            <li>Dung Chumok Ap Chigui = Golpe a la cara con el reverso del puño.</li>
-            <li>Palkup Tolio Chigui = Golpe a la cara con el codo.</li>
-            <li>Palkup Piochock Chigui = Golpe al medio con el codo, sujetando con el brazo contrario (choque).</li>
-        </ul>
-
-        <h2 class="position">SOGUI = POSICION</h2>
-        <ul>
-            <li>Moa Sogui = Posición de pies juntos.</li>
-            <li>Naranji Sogui = Posición de frente, pies abiertos al ancho de los hombros.</li>
-            <li>Ap Sogui = Posición de frente, es un paso normal de caminar.</li>
-            <li>Ap Cubi Sogui = Posición larga de frente, es un paso y medio, pierna de atrás recta y pierna delantera flexionada.</li>
-            <li>Di Cubi Sogui = Posición de lado, formando un ángulo de 90 grados y ambas piernas flexionadas.</li>
-            <li>Koa Sogui = Posición de pies cruzados.</li>
-        </ul>
-
-        <h2 class="patada">CHAGUI = PATADA</h2>
-        <ul>
-            <li>Ap Chagui = Patada al frente con la bola del pie.</li>
-            <li>Iop Chagui = Patada de lado con el canto del pie.</li>
-            <li>Tolio Chagui = Patada a la cara con empeine.</li>
-        </ul>
-    </div>
-
-    `
-  },
-  {
-    //verde
-    name: 'Fundamentos básicos',
-    id_bell: 3,
-    id_category: 11,
-    text: `
-    <style>
-      ${cssContent}
-    </style>
-    <div>
-      <h3>MAKI = DEFENSA</h3>
-      <ul>
-        <li><strong>Are Maki:</strong> Defensa abajo.</li>
-        <li><strong>Montong Maki:</strong> Defensa al medio, brazo igual al pie adelantado.</li>
-        <li><strong>Montong An Maki:</strong> Defensa al medio, brazo contrario al pie adelantado.</li>
-        <li><strong>Olgul Maki:</strong> Defensa arriba.</li>
-        <li><strong>Jan Sonnal Montong Bakat Maki:</strong> Defensa al medio de lado con el canto de la mano.</li>
-        <li><strong>Sonnal Montong Maki:</strong> Defensa al medio de lado con el canto de la mano asistida por el brazo contrario que protege la zona media.</li>
-        <li><strong>Montong Bakat Maki:</strong> Defensa al medio hacia afuera con el puño cerrado.</li>
-      </ul>
-
-      <h3>CHIRIGUI = GOLPE</h3>
-      <ul>
-        <li><strong>Montong Bande Chirigui:</strong> Golpe de frente al medio, coincidiendo con el pie adelantado.</li>
-        <li><strong>Montong Baro Chirigui:</strong> Golpe de frente al medio, contrario al pie adelantado.</li>
-        <li><strong>Olgul Bande Chirigui:</strong> Golpe de frente a la cara, coincidiendo con el pie adelantado.</li>
-        <li><strong>Montong Dubon Chirigui:</strong> Doble golpe al frente.</li>
-        <li><strong>Jan Sonnal Mok Chigui:</strong> Golpe al cuello con el canto de la mano, contrario al pie adelantado.</li>
-        <li><strong>Batason nulo maki Pion Sonkut Sewo Chigui:</strong> Golpe al medio con la punta de los dedos con apoyo del brazo contrario.</li>
-        <li><strong>Chebipum Mok Chigui:</strong> Golpe al cuello con el canto de la mano asistido por el brazo contrario que protege la cara con la mano abierta.</li>
-        <li><strong>Dung Chumok Ape Chigui:</strong> Golpe a la cara con el reverso del puño.</li>
-      </ul>
-
-      <h3>SOGUI = POSICIÓN</h3>
-      <ul>
-        <li><strong>Moa Sogui:</strong> Posición de pies juntos.</li>
-        <li><strong>Naranji Sogui:</strong> Posición de frente, pies abiertos al ancho de los hombros.</li>
-        <li><strong>Ap Sogui:</strong> Posición de frente, es un paso normal de caminar.</li>
-        <li><strong>Ap Cubi Sogui:</strong> Posición larga de frente, es un paso y medio, pierna de atrás recta y pierna delantera flexionada.</li>
-        <li><strong>Di Cubi Sogui:</strong> Posición de lado, formando un ángulo de 90 grados y ambas piernas flexionadas.</li>
-      </ul>
-
-      <h3>CHAGUI = PATADA</h3>
-      <ul>
-        <li><strong>Ap Chagui:</strong> Patada al frente con la bola del pie.</li>
-        <li><strong>Bandal Chagui:</strong> Patada al medio con empeine.</li>
-        <li><strong>Tolio Chagui:</strong> Patada a la cabeza.</li>
-        <li><strong>Miro Chagui:</strong> Patada de empuje con la planta del pie.</li>
-      </ul>
-    </div>
-    `
-  },
-
-
-  {
-    //amarillo
-    name: 'Fundamentos básicos',
-    id_bell: 2,
-    id_category: 11,
-    text: `
-    <style>
-      ${cssContent}
-    </style>
-    <div>
-    <p><strong>FUNDAMENTOS BÁSICOS</strong></p>
-
-    <p><strong>MAKI = DEFENSA</strong></p>
-    <ul>
-        <li><strong>Are Maki:</strong> Defensa abajo.</li>
-        <li><strong>Montong Maki:</strong> Defensa al medio, brazo igual al pie adelantado.</li>
-        <li><strong>Montong an Maki:</strong> Defensa al medio, brazo contrario al pie adelantado.</li>
-        <li><strong>Olgul Maki:</strong> Defensa arriba.</li>
-    </ul>
-    <img src='data:image/png;base64,${imageToBase64("~/imgs/defensas.jpg")}' alt="defensas" style="width: 100%; height: auto; margin: 20px 0px;">
-    
-    <p><strong>CHIRIGUI = GOLPE</strong></p>
-    <ul>
-        <li><strong>Montong Bande Chirigui:</strong> Golpe de frente al medio, coincidiendo con el pie adelantado.</li>
-        <li><strong>Montong Baro Chirigui:</strong> Golpe de frente al medio, contrario al pie adelantado.</li>
-        <li><strong>Olgul Bande Chirigui:</strong> Golpe de frente a la cara, coincidiendo con el pie adelantado.</li>
-    </ul>
-    
-    <p><strong>SOGUI = POSICIÓN</strong></p>
-    <ul>
-        <li><strong>Moa Sogui:</strong> Posición de pies juntos.</li>
-        <li><strong>Naranji Sogui:</strong> Posición de pies abiertos al ancho de los hombros.</li>
-        <li><strong>Ap Sogui:</strong> Posición corta de frente, es un paso normal de caminar.</li>
-        <li><strong>Ap Cubi Sogui:</strong> Posición larga de frente, pierna de atrás recta y pierna delantera flexionada.</li>
-    </ul>
-    <img src='data:image/png;base64,${imageToBase64("~/imgs/posicionesAmarillo.png")}' alt="posicionesAmarillo" style="width: 100%; height: auto; margin: 20px 0px;">
-    <p><strong>CHAGUI = PATADA</strong></p>
-    <ul>
-        <li><strong>Ap Chagui:</strong> Patada al frente con la bola del pie.</li>
-        <li><strong>Bandal Chagui:</strong> Patada al medio con empeine.</li>
-        <li><strong>Tolio Chagui:</strong> Patada a la cabeza.</li>
-        <li><strong>Miro Chagui:</strong> Patada de empuje con la planta del pie.</li>
-    </ul>
-    </div>
-    `    
-  },
-
+  
   {
     id_category: 10,
     name: 'Números en coreano',
