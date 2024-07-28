@@ -1,70 +1,80 @@
 <template>
-    <Page class="page">
-      <ActionBar class="action-bar">
-        <NavigationButton visibility="hidden"/>
-        <GridLayout columns="50, *">
-          <Label class="action-bar-title" text="Sobre nosotros" colSpan="2"/>
+  <Page class="page">
+    <ActionBar class="action-bar">
+      <NavigationButton visibility="hidden" />
+      <GridLayout columns="50, *">
+        <Label class="action-bar-title" text="Sobre nosotros" colSpan="2" />
 
-          <Label class="fas" text.decode="&#xf0c9;" @tap="onDrawerButtonTap"/>
-        </GridLayout>
-      </ActionBar>
+        <Label class="fas" text.decode="&#xf0c9;" @tap="onDrawerButtonTap" />
+      </GridLayout>
+    </ActionBar>
+    <ScrollView> 
+      <StackLayout >
+        <Label text="Acerca de Nosotros" class="header section-title text-primary" />
+        <Label
+          text="Esta aplicación es el resultado de una iniciativa que surgió con el propósito de proporcionar información esencial sobre el cambio de cinta en Taekwondo. Nuestra misión es ofrecer a los practicantes de Taekwondo una herramienta confiable y accesible que les permita acceder de manera sencilla a la información que necesitan."
+          class="text"  textWrap="true"/>
+        <Label :text="infoErnesto.fuentes" class="text text-primary"  textWrap="true" />
+        <button @tap="openFace" class="btn btn-sm btn-info"> Facebook Academia Fenix</button>
+        <label class="text text-primary" :text="infoErnesto.objetivo" textWrap="true" />
+        <label class="text text-primary" :text="infoErnesto.grax" textWrap="true" />
 
-        <GridLayout class="page__content">
-         <HtmlView  margin="10" :html="message" class="text-center text-secondary" />
-        </GridLayout>
-    </Page>
+        <Label text="Desarrollador" class="header" />
+        <label class="text text-primary" :text="infoErnesto.developer" textWrap="true" />
+        <Button text="Ver perfil de linkedin" @tap="openLinkedIn" class="btn btn-sm btn-info" />
+      </StackLayout>
+    </ScrollView>
+  </Page>
 </template>
 
 <script>
-  import * as utils from "~/shared/utils";
-  import { SelectedPageService } from "../shared/selected-page-service";
+import * as utils from "~/shared/utils";
+import { SelectedPageService } from "../shared/selected-page-service";
+import { Label, StackLayout } from "@nativescript/core";
+import { infoErnesto } from "~/data/taekwondo-data";
 
-  export default {
-    mounted() {
-      SelectedPageService.getInstance().updateSelectedPage("Featured");
+export default {
+  data() {
+    return {
+      infoErnesto: infoErnesto
+    };
+  },
+  mounted() {
+    SelectedPageService.getInstance().updateSelectedPage("Featured");
+  },
+  methods: {
+    onDrawerButtonTap() {
+      utils.showDrawer();
     },
-    computed: {
-      message() {
-        return `
-        <h1>Acerca de Nosotros</h1>
-        <p>
-          Esta aplicación es el resultado de una iniciativa que surgió con el propósito de proporcionar información esencial sobre el cambio de cinta en Taekwondo. Nuestra misión es ofrecer a los practicantes de Taekwondo una herramienta confiable y accesible que les permita acceder de manera sencilla a la información que necesitan.
-        </p>
-        <p>
-          La información que encontrarás en esta aplicación se basa en la experiencia y el conocimiento del Profesor  <strong>Ernesto Carballo Rodríguez </strong>, Cinturón Negro 2 Dan de la academia Taekwondo Fénix Esparza. Su dedicación y pasión por el Taekwondo han sido fundamentales para impulsar y respaldar el desarrollo de cada miembro de TKD Fénix Esparza.
-        </p>
-        <p> 
-          
-          <a href="https://www.facebook.com/profile.php?id=100054609752257">Facebook de la Academia Taekwondo Fenix Esparza</a>
-        </p>
-        <p>  
-        Nuestro compromiso es seguir mejorándola y expandiéndola para proporcionar aún más funcionalidades y recursos útiles a la comunidad de Taekwondo.
-        </p>
-        <p>
-          ¡Esperamos que disfrutes explorando y aprendiendo a través de nuestra aplicación!
-        </p>
-        <p>
-          Esta aplicación ha sido desarrollada por Francis Meléndez Chaves.
-          <a href="https://www.linkedin.com/in/francis-mel%C3%A9ndez-236b63265?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BLXnGsdy%2BSWql3szSV88FbQ%3D%3D">Ver perfil de linkedin</a>
-        </p>
-        ` 
-      }
-    },
-    methods: {
-      onDrawerButtonTap() {
-        utils.showDrawer();
-      },
-      openLinkedIn() {
-        utils.openUrl('https://www.linkedin.com/in/francis-mel%C3%A9ndez-236b63265/');
-      }
+    openLinkedIn() {
+      utils.openUrl('https://www.linkedin.com/in/francis-mel%C3%A9ndez-236b63265/');
+    }, 
+    openFace(){
+      utils.openUrl('https://www.facebook.com/profile.php?id=10005460975225');
     }
-  };
+  }
+};
 </script>
 
 <style scoped lang="scss">
-    // Start custom common variables
-    @import '@nativescript/theme/scss/variables/blue';
-    // End custom common variables
+// Start custom common variables
+@import '@nativescript/theme/scss/variables/blue';
+@import '../style/styles.scss';
+// End custom common variables
 
-    // Custom styles
+// Custom styles
+.header {
+  font-size: 24;
+  font-weight: bold;
+  margin-bottom: 10;
+}
+
+.text {
+  font-size: 16;
+  margin-bottom: 10;
+}
+
+.link {
+  color: blue;
+}
 </style>
