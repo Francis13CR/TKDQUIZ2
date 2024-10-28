@@ -899,323 +899,413 @@ export const IntroduccionTaekwondo =
 };
 
 
+export const numeros = {
+  id_category: 10,
+  name: 'Números en coreano',
+  id_bell: 0,
+  numeros: [
+    {
+      spa: 'Uno',
+      kor: 'Hana'
+    },
+    {
+      spa: 'Dos',
+      kor: 'Dul'
+    },
+    {
+      spa: 'Tres',
+      kor: 'Set'
+    },
+    {
+      spa: 'Cuatro',
+      kor: 'Net'
+    },
+    {
+      spa: 'Cinco',
+      kor: 'Dasot'
+    },
+    {
+      spa: 'Seis',
+      kor: 'Iosot'
+    },
+    {
+      spa: 'Siete',
+      kor: 'Ilkop'
+    },
+    {
+      spa: 'Ocho',
+      kor: 'Iodol'
+    },
+    {
+      spa: 'Nueve',
+      kor: 'Ajop'
+    },
+    {
+      spa: 'Diez',
+      kor: 'Iol'
+    },
+    {
+      spa: 'Veinte',
+      kor: 'Sumul'
+    },
+    {
+      spa: 'Treinta',
+      kor: 'Sorum'
+    },
+    {
+      spa: 'Cuarenta',
+      kor: 'Majum'
+    },
+    {
+      spa: 'Cincuenta',
+      kor: 'Shun'
+    },
+    {
+      spa: 'Sesenta',
+      kor: 'Ieshum'
+    },
+    {
+      spa: 'Setenta',
+      kor: 'Irum'
+    },
+    {
+      spa: 'Ochenta',
+      kor: 'Iodum'
+    },
+    {
+      spa: 'Noventa',
+      kor: 'Ajum'
+    },
+    {
+      spa: 'Cien',
+      kor: 'Bek'
+    }
+  ]
+}
 
 
+export const bodyParts = {
+  id_category: 9,
+  name: 'Partes del cuerpo',
+  id_bell: 0,
+  bodyParts: [
+    {
+      spa: 'Cuerpo',
+      kor: 'Mom'
+    },
+    {
+      spa: 'Cabeza',
+      kor: 'Muori'
+    },
+    {
+      spa: 'Frente',
+      kor: 'Ima'
+    },
+    {
+      spa: 'Ojos',
+      kor: 'Num'
+    },
+    {
+      spa: 'Nariz',
+      kor: 'Ko'
+    },
+    {
+      spa: 'Oreja',
+      kor: 'Kwi'
+    },
+    {
+      spa: 'Dientes',
+      kor: 'I'
+    },
+    {
+      spa: 'Boca',
+      kor: 'Ip'
+    },
+    {
+      spa: 'Labios',
+      kor: 'Ipsul'
+    },
+    {
+      spa: 'Barbilla',
+      kor: 'Tuok'
+    },
+    {
+      spa: 'Cuello',
+      kor: 'Mok'
+    },
+    {
+      spa: 'Hombro',
+      kor: 'Oke'
+    },
+    {
+      spa: 'Pecho',
+      kor: 'Gasum'
+    },
+    {
+      spa: 'Brazo',
+      kor: 'Pal'
+    },
+    {
+      spa: 'Codo',
+      kor: 'Palkup'
+    },
+    {
+      spa: 'Antebrazo',
+      kor: 'Palmok'
+    },
+    {
+      spa: 'Mano',
+      kor: 'Son'
+    },
+    {
+      spa: 'Muñeca',
+      kor: 'Sonmok'
+    },
+    {
+      spa: 'Canto de la mano',
+      kor: 'Sonnal'
+    },
+    {
+      spa: 'Dedos de la mano',
+      kor: 'Sonkarat'
+    },
+    {
+      spa: 'Puño',
+      kor: 'Chumok'
+    },
+    {
+      spa: 'Estomago',
+      kor: 'Be'
+    },
+    {
+      spa: 'Costillas',
+      kor: 'Galbi'
+    },
+    {
+      spa: 'Espalda',
+      kor: 'Dung'
+    },
+    {
+      spa: 'Glúteos',
+      kor: 'Ondungui'
+    },
+    {
+      spa: 'Pierna',
+      kor: 'Dari'
+    },
+    {
+      spa: 'Muslo',
+      kor: 'Jiobiokchi'
+    },
+    {
+      spa: 'Rodilla',
+      kor: 'Murup'
+    },
+    {
+      spa: 'Espinilla',
+      kor: 'Jeonggangyi'
+    },
+    {
+      spa: 'Pie',
+      kor: 'Bal'
+    },
+    {
+      spa: 'Tobillo',
+      kor: 'Balmok'
+    },
+    {
+      spa: 'Canto del pie',
+      kor: 'Balnal'
+    },
+    {
+      spa: 'Empeine',
+      kor: 'Baldung'
+    },
+    {
+      spa: 'Dedos del pie',
+      kor: 'Balkarat'
+    },
+    {
+      spa: 'Bola del pie',
+      kor: 'Apchuk'
+    },
+    {
+      spa: 'Talón del pie',
+      kor: 'Dikumchi'
+    }
+  ]
+};
+
+export const generalVocabulary = {
+  id_category: 8,
+  name: 'Vocabulario General',
+  id_bell: 0,
+  vocabulary: [
+    {
+      spa: 'Sabonim',
+      kor: 'Profesor'
+    },
+    {
+      spa: 'Uniforme',
+      kor: 'Dobok'
+    },
+    {
+      spa: 'Cinta',
+      kor: 'Ti'
+    },
+    {
+      spa: 'Salón de clases o Area de combate',
+      kor: 'Dochang'
+    },
+    {
+      spa: 'Bandera',
+      kor: 'Kukki'
+    },
+    {
+      spa: 'Firmes',
+      kor: 'Chariot'
+    },
+    {
+      spa: 'Saludo',
+      kor: 'Kiune'
+    },
+    {
+      spa: 'Preparados',
+      kor: 'Chumbi'
+    },
+    { spa: 'Grito', kor: 'Kiap' },
+    { spa: 'Empezar', kor: 'Sichak' },
+    { spa: 'Terminar', kor: 'Barot' },
+    { spa: 'Detenerse o Separarse', kor: 'Kalyo' },
+    { spa: 'Continuar', kor: 'Kesok' },
+    { spa: 'Alto, No más', kor: 'Kuman' },
+    { spa: 'Azul', kor: 'Chong' },
+    { spa: 'Rojo', kor: 'Jong' },
+    { spa: 'Ganador', kor: 'Sun' },
+    { spa: 'Empate', kor: 'Bijing' },
+    { spa: 'Amonestación (Medio punto)', kor: 'Kyongo' },
+    { spa: 'Deducción (Un punto)', kor: 'Gamchon' },
+    { spa: 'Defensa', kor: 'Maki' },
+    { spa: 'Golpe', kor: 'Chirigui' },
+    { spa: 'Posición', kor: 'Sogui' },
+    { spa: 'Patada', kor: 'Chagui' },
+    { spa: 'Al frente', kor: 'Ap' },
+    { spa: 'De lado', kor: 'Iop' },
+    { spa: 'Hacia atrás', kor: 'Dui' },
+    { spa: 'Igual', kor: 'Bande' },
+    { spa: 'Contrario', kor: 'Baro' },
+    { spa: 'Izquierdo', kor: 'Uen' },
+    { spa: 'Derecho', kor: 'Orum' },
+    { spa: 'Sentarse', kor: 'Anyio' },
+    { spa: 'Levantarse', kor: 'Kirits' },
+    { spa: 'Avanzar', kor: 'Ap Fro' },
+    { spa: 'Retroceder', kor: 'Di Fro' },
+    { spa: 'Volverse', kor: 'Tirodorat' },
+    { spa: 'Saludo al profesor', kor: 'Sabomin Kie Kiune' },
+    { spa: 'Saludo a las banderas', kor: 'Kukki Dejadio Kiune' },
+    { spa: 'Muchas gracias', kor: 'Kansa Jamnida' }
+  ]
+};
+
+export const aspectsToImproveForms = {
+  id_category: 7,
+  name: 'Aspectos para Mejorar las Formas',
+  id_bell: 0,
+  aspects : [
+    'Foco',
+    'Respeto de posiciones',
+    'Precisión',
+    'Balance (Equilibrio)',
+    'Conocer bien la secuencia',
+    'Concentración',
+    'Potencia',
+    'Respiración',
+    'Velocidad',
+    'Tiempos',
+    'Terminar en el punto donde se empezó',
+    'Coordinación',
+    'Buena postura'
+  ]
+};
 
 
+export const cinturonesValoresTaekwondo = [
+  { name: 'TAE: Saltar, patear, majar' , description: 'sig'},
+  { name: 'KWON: Golpe con la mano' , description: 'sig'},
+  { name: 'DO: Camino, vocación o forma de arte marcial' , description: 'sig'},
+  { name: 'Cinturón Blanco (Bek-ti)', description: 'Representa la pureza y marca el comienzo del viaje en el Taekwondo.' },
+  { name: 'Cinturón Amarillo (Kwang-ti)', description: 'Simboliza el amanecer, el crecimiento y el desarrollo.' },
+  { name: 'Cinturón Verde (Rok-ti)', description: 'Representa la primavera, el progreso y el florecimiento.' },
+  { name: 'Cinturón Azul (Chong-ti)', description: 'Simboliza la fluidez del agua y la adaptabilidad en el Taekwondo.' },
+  { name: 'Cinturón Rojo (Jong-ti)', description: 'Representa el fuego y la pasión por el arte marcial.' },
+  { name: 'Cinturón Negro (Juk-ti)', description: 'El cinturón negro simboliza el honor y la maestría en el Taekwondo.' },
+  { name: 'Honor', description : 'valor'},
+  { name: 'Autocontrol', description : 'valor'},
+  { name: 'Cortesía', description : 'valor'},
+  { name: 'Coraje', description : 'valor'},
+  { name: 'Paciencia', description : 'valor'},
+  { name: 'Modestia', description : 'valor'}
+];
 
 
-export const info = [
-  
-  {
-    id_category: 10,
-    name: 'Números en coreano',
-    id_bell: 0,
-    text: `
-    <style>
-      ${cssContent}
-    </style>
-    <body>
-      <ul>
-        <li>JANA = Uno</li>
-        <li>DUL = Dos</li>
-        <li>SET = Tres</li>
-        <li>NET = Cuatro</li>
-        <li>DASOT = Cinco</li>
-        <li>IOSOT = Seis</li>
-        <li>ILKOP = Siete</li>
-        <li>IODOL = Ocho</li>
-        <li>AJOP = Nueve</li>
-        <li>IOL = Diez</li>
-        <li>SUMUL = Veinte</li>
-        <li>SORUM = Treinta</li>
-        <li>MAJUM = Cuarenta</li>
-        <li>SHUN = Cincuenta</li>
-        <li>IESHUM = Sesenta</li>
-        <li>IRUM = Setenta</li>
-        <li>IODUM = Ochenta</li>
-        <li>AjUm = Noventa</li>
-        <li>BEK = Cien</li>
-      </ul>
-    </body>
-    `
-  },
-  {
-    id_category: 9,
-    name: 'Partes del cuerpo',
-    id_bell: 0,
-    text: `
-    <style>
-    ${cssContent}
-   </style>
-      <div>
-      <ul>
-        <li>Mom = Cuerpo</li>
-        <li>Muori = Cabeza</li>
-        <li>Ima = Frente</li>
-        <li>Num = Ojos</li>
-        <li>Ko = Nariz</li>
-        <li>Kwi = Oreja</li>
-        <li>I = Dientes</li>
-        <li>Ip = Boca</li>
-        <li>Ipsul = Labios</li>
-        <li>Tuok = Barbilla</li>
-        <li>Mok = Cuello</li>
-        <li>Oke = Hombro</li>
-        <li>Gasum = Pecho</li>
-        <li>Pal = Brazo</li>
-        <li>Palkup = Codo</li>
-        <li>Palmok = Antebrazo</li>
-        <li>Son = Mano</li>
-        <li>Sonmok = Muñeca</li>
-        <li>Sonnal = Canto de la mano</li>
-        <li>Sonkarat = Dedos de la mano</li>
-        <li>Chumok = Puño</li>
-        <li>Be = Estomago</li>
-        <li>Galbi = Costillas</li>
-        <li>Dung = Espalda</li>
-        <li>Ondungui = Glúteos</li>
-        <li>Dari = Pierna</li>
-        <li>Jiobiokchi = Muslo</li>
-        <li>Murup = Rodilla</li>
-        <li>Jeonggangyi = Espinilla</li>
-        <li>Bal = Pie</li>
-        <li>Balmok = Tobillo</li>
-        <li>Balnal = Canto del pie</li>
-        <li>Baldung = Empeine</li>
-        <li>Balkarat = Dedos del pie</li>
-        <li>Apchuk = Bola del pie</li>
-        <li>Dikumchi = Talón del pie</li>
-      </ul>
-      </div>
-    `
-  },
-  {
-    id_category: 8,
-    name : "Vocabulario General",
-    id_bell: 0,
-    text : `
-    <style>
-    ${cssContent}
-   </style>
-    <div>
-    <ul>
-      <li style="text-align: left;">Sabonim = Profesor</li>
-      <li>Dobok = Uniforme</li>
-      <li>Ti = Cinta</li>
-      <li>Dochang = Salón de clases o Area de combate</li>
-      <li>Kukki = Bandera</li>
-      <li>Chariot = Firmes</li>
-      <li>Kiune = Saludo</li>
-      <li>Chumbi = Preparados o Posición de combate</li>
-      <li>Kiap = Grito</li>
-      <li>Sichak = Empezar</li>
-      <li>Barot = Terminar</li>
-      <li>Kalyo = Detenerse o Separarse</li>
-      <li>Kesok = Continuar</li>
-      <li>Kuman = Alto, No más</li>
-      <li>Chong = Azul</li>
-      <li>Jong = Rojo</li>
-      <li>Sun = Ganador</li>
-      <li>Bijing = Empate</li>
-      <li>Kyongo = Amonestación (Medio punto)</li>
-      <li>Gamchon = Deducción (Un punto)</li>
-      <li>Maki = Defensa</li>
-      <li>Chirigui = Golpe</li>
-      <li>Sogui = Posicion</li>
-      <li>Chagui = Patada</li>
-      <li>Ap = Al frente</li>
-      <li>Iop = De lado</li>
-      <li>Dui = Hacia atrás</li>
-      <li>Bande = Igual</li>
-      <li>Baro = Contrario</li>
-      <li>Uen = Izquierdo</li>
-      <li>Orum = Derecho</li>
-      <li>Anyio = Sentarse</li>
-      <li>Kirits = Levantarse</li>
-      <li>Ap Fro = Avanzar</li>
-      <li>Di Fro = Retroceder</li>
-      <li>Tirodorat = Volverse</li>
-      <li>Sabomin Kie Kiune = Saludo al profesor</li>
-      <li>Kukki Dejadio Kiune = Saludo a las banderas</li>
-      <li>Kansa Jamnida = Muchas gracias</li>
-    </ul>
-    </div>`
-  },
-  {
-    id_category: 7,
-    name: `Aspectos para Mejorar las Formas`,
-    id_bell: 0,
-    text: `
-    <style>
-    ${cssContent}
-   </style>
-    <div>
-    <ul>
-        <li>Foco</li>
-        <li>Respeto de posiciones</li>
-        <li>Precisión</li>
-        <li>Balance (Equilibrio)</li>
-        <li>Conocer bien la secuencia</li>
-        <li>Concentración</li>
-        <li>Potencia</li>
-        <li>Respiración</li>
-        <li>Velocidad</li>
-        <li>Tiempos</li>
-        <li>Terminar en el punto donde se empezó</li>
-        <li>Coordinación</li>
-        <li>Buena postura</li>
-    </ul>
-    </div>`
-  },
+export const AcademiaFenix =
+{
+  id_category: 4,
+  name: 'Academia Fenix',
+  id_bell: 0,
+  text: `
+    Taekwondo Fénix surge del compromiso de un grupo de entrenadores liderados por el profesor y fundador Luis Lobo Rojas, con el objetivo de llevar el taekwondo y sus estudiantes a otro nivel deportivo y marcial. Se enfocan en potenciar las habilidades de cada estudiante y consolidar estrategias, promoviendo el trabajo duro y el esfuerzo continuo.
 
-  {
-    name: 'Significados',
-    id_category: 5,
-    id_bell: 0,
-    videos: [],
-    text: `
-    <style>
-     ${cssContent}
-    </style>
-    <div>
-    <h3>Significado del Taekwondo</h3>
-    <p><strong>TAE:</strong> Saltar, patear, majar</p>
-    <p><strong>KWON:</strong> Golpe con la mano</p>
-    <p><strong>DO:</strong> Camino, vocación o forma de arte marcial</p>
-    </div>
-    <div>
-    <h3 >Valores del Taekwondo</h3>
-    <ul>
-        <li>Honor</li>
-        <li>Autocontrol</li>
-        <li>Cortesía</li>
-        <li>Coraje</li>
-        <li>Paciencia</li>
-        <li>Modestia</li>
-    </ul>
-    </div>
-    <div>
-    <h3>Nombres y Significados de los Cinturones</h3>
-    <ul>
-        <li>
-            <strong>Cinturón Blanco (Bek-ti)</strong>: Representa la pureza y marca el comienzo del viaje en el Taekwondo.
-        </li>
-        <li>
-            <strong style="color:yellow;"   >Cinturón Amarillo (Kwang-ti)</strong>: Simboliza el amanecer, el crecimiento y el desarrollo.
-        </li>
-        <li>
-            <strong style="color:green;">Cinturón Verde (Rok-ti)</strong>: Representa la primavera, el progreso y el florecimiento.
-        </li>
-        <li>
-            <strong style="color: rgb(0, 0, 255)!important;">Cinturón Azul (Chong-ti)</strong>: Simboliza la fluidez del agua y la adaptabilidad en el Taekwondo.
-        </li>
-        <li>
-            <strong style="color:red;">Cinturón Rojo (Jong-ti)</strong>: Representa el fuego y la pasión por el arte marcial.
-        </li>
-        <li>
-            <strong class="outlined-text">Cinturón Negro (Juk-ti)</strong>: El cinturón negro simboliza el honor y la maestría en el Taekwondo.
-        </li>
-    </ul>
-    </div>
-    `
-  },
- 
-  {
-    name: 'Academia Fenix',
-    id_category: 4,
-    id_bell: 0,
-    videos: [],
-    text: `
-    <style>
-    ${cssContent}
-   </style>
-   <div>
-    <p>
-      <strong>Taekwondo Fénix</strong> surge del compromiso de un grupo de entrenadores liderados por el profesor y fundador <strong>Luis Lobo Rojas</strong>, con el objetivo de llevar el taekwondo y sus estudiantes a otro nivel deportivo y marcial. Se enfocan en potenciar las habilidades de cada estudiante y consolidar estrategias, promoviendo el trabajo duro y el esfuerzo continuo.
-    </p>
+    El nombre de Taekwondo Fénix se inspira en el ave Fénix, que simboliza la resiliencia. Al igual que el Fénix, que puede sobrevivir a la destrucción y resurgir, en el deporte la resiliencia es una cualidad fundamental. Los atletas enfrentan obstáculos, fracasos y lesiones, pero aquellos que son capaces de levantarse y continuar con determinación son los que logran alcanzar el éxito. Además, en el deporte, los atletas pueden experimentar transformaciones significativas a medida que desarrollan habilidades, mejoran su condición física y superan sus propios límites. Este proceso de entrenamiento y competencia puede moldear a los deportistas en personas más fuertes, disciplinadas y capaces, no solo en el deporte, sino también en la vida. El objetivo es crear seres humanos más integrales.
 
-    <p>
-      El nombre de <strong>Taekwondo Fénix</strong> se inspira en el ave Fénix, que simboliza la <em>resiliencia</em>. Al igual que el Fénix que puede sobrevivir a la destrucción y resurgir, en el deporte, la resiliencia es una cualidad fundamental. Los atletas enfrentan obstáculos, fracasos y lesiones, pero aquellos que son capaces de levantarse y continuar con determinación son los que logran alcanzar el éxito. Además, en el deporte, los atletas pueden experimentar transformaciones significativas a medida que desarrollan habilidades, mejoran su condición física y superan sus propios límites. Este proceso de entrenamiento y competencia puede moldear a los deportistas en personas más fuertes, disciplinadas y capaces, no solo en el deporte, sino también en la vida. El objetivo es crear seres humanos más integrales.
-    </p>
-    <h3 class="text-center">Misión</h3>
-    <p>
-        Nuestra misión es fomentar el desarrollo integral de los y las jóvenes a través de la práctica del taekwondo. Buscamos brindarles una formación sólida en esta disciplina marcial y promover valores positivos como el respeto, la disciplina, la perseverancia y la autoconfianza. Nuestro objetivo es ayudar a nuestros y nuestras estudiantes a alcanzar su máximo potencial físico y mental.
-    </p>
+    Misión
+    Nuestra misión es fomentar el desarrollo integral de los y las jóvenes a través de la práctica del taekwondo. Buscamos brindarles una formación sólida en esta disciplina marcial y promover valores positivos como el respeto, la disciplina, la perseverancia y la autoconfianza. Nuestro objetivo es ayudar a nuestros y nuestras estudiantes a alcanzar su máximo potencial físico y mental.
 
-    <h3 class="text-center">Visión</h3>
-    <p>
-        Nuestra visión es convertirnos en una academia de taekwondo de renombre, reconocida por su excelencia en la enseñanza y formación de jóvenes. Aspiramos a ser un referente en la comunidad, donde los y las jóvenes encuentren un espacio seguro y motivador para desarrollar habilidades físicas, fortalecer su carácter y cultivar una mentalidad positiva. Nos esforzamos por formar campeones no solo en el arte marcial, sino también en la vida, guiándolos hacia un camino de autodisciplina, resiliencia y liderazgo.
-    </p>
-    </div>
-    `
-  },
-  {
-    name: 'Taekwondo en tiempos modernos',
-    id_category: 3,
-    id_bell: 0,
-    videos: [],
-    text : `  
-    <style>
-    ${cssContent}
-   </style> 
-   <div>
-      <p>
-        La Federación Mundial de Taekwondo (WTF) es el ente rector del Taekwondo en todo el mundo, está ubicada en Seúl, Corea y fue fundada en 1973.
-      </p>
+    Visión
+    Nuestra visión es convertirnos en una academia de taekwondo de renombre, reconocida por su excelencia en la enseñanza y formación de jóvenes. Aspiramos a ser un referente en la comunidad, donde los y las jóvenes encuentren un espacio seguro y motivador para desarrollar habilidades físicas, fortalecer su carácter y cultivar una mentalidad positiva. Nos esforzamos por formar campeones no solo en el arte marcial, sino también en la vida, guiándolos hacia un camino de autodisciplina, resiliencia y liderazgo.
+  `
+};
+export const NowTaek =
+{
+  id_category: 3,
+  name: 'Taekwondo en tiempos modernos',
+  id_bell: 0,
+  text: `
+    La Federación Mundial de Taekwondo (WTF) es el ente rector del Taekwondo en todo el mundo. Está ubicada en Seúl, Corea, y fue fundada en 1973.
 
-      <p>
-        El Taekwondo fue introducido en Costa Rica por el Profesor Aquiles Wong Kun Yan en 1969.
-      </p>
-      
-      <p>
-        La Federación Costarricense de Taekwondo es el ente rector del taekwondo a nivel nacional y es liderada por el presidente Wilmar Alvarado.
-      </p>
-    </div> 
-      `
-  },
- 
-  { name: 'Filosofía y honor subyacente', 
-    id_category: 2,
-    videos: [],
-    id_bell : 0,
-    text: `
-    <style>
-    ${cssContent}
-    </style>
-    <div>
-    <p>
-      El Taekwondo es un arte marcial que tiene su origen en <strong>Corea</strong>, por lo que a lo largo de su historia ha desarrollado una gran tradición filosófica y espiritual.
-    </p>
-    
-    <p>
-      El uniforme (dobok) representa tres elementos:
-      <ul>
-        <li>La gabacha: representa el cielo.</li>
-        <li>El pantalón: representa la tierra.</li>
-        <li>El cinturón: representa la persona.</li>
-      </ul>
-      El anudarse el cinturón (Ti) tiene como significado el orden y la apariencia personal; las dos puntas tienen que estar del mismo tamaño, lo que representa el equilibrio.
-    </p>
-    
-    <p>
-      La bandera coreana (Tae Kukki) simboliza la forma de pensar, la filosofía y el misticismo de los coreanos.
-    </p>
-    
-    <p>
-      El código de honor del Taekwondo consiste en:
-      <ul>
-        <li>Respeto a la nación.</li>
-        <li>Respeto y obediencia a los padres.</li>
-        <li>Honor a los amigos.</li>
-        <li>Justicia y omisión a la violencia innecesaria.</li>
-        <li>El valor.</li>
-      </ul>
-    </p>
-    </div>
-    `
-  }
-]
+    El Taekwondo fue introducido en Costa Rica por el Profesor Aquiles Wong Kun Yan en 1969.
+
+    La Federación Costarricense de Taekwondo es el ente rector del taekwondo a nivel nacional y es liderada por el presidente Wilmar Alvarado. `
+};
+
+export const HonorTaek =
+{
+  id_category: 2,
+  name: 'Filosofía y honor subyacente',
+  id_bell: 0,
+  text: `
+    El Taekwondo es un arte marcial que tiene su origen en Corea, por lo que a lo largo de su historia ha desarrollado una gran tradición filosófica y espiritual.
+
+    El uniforme (dobok) representa tres elementos:
+
+    - La gabacha: representa el cielo.
+    - El pantalón: representa la tierra.
+    - El cinturón: representa la persona.
+    - El anudarse el cinturón (Ti) tiene como significado el orden y la apariencia personal; las dos puntas tienen que estar del mismo tamaño, lo que representa el equilibrio.
+
+    La bandera coreana (Tae Kukki) simboliza la forma de pensar, la filosofía y el misticismo de los coreanos.
+
+    El código de honor del Taekwondo consiste en:
+
+     - Respeto a la nación.
+     - Respeto y obediencia a los padres.
+     - Honor a los amigos.
+     - Justicia y omisión a la violencia innecesaria.
+     - El valor.
+  `
+};
+
+
 
 export const belts = [
   { 

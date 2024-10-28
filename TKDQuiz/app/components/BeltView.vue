@@ -13,17 +13,49 @@
             <SegmentedBarItem v-for="(category, index) in categories" :key="category.id" :title="category.name" class="text-center"/>
         </SegmentedBar>
       </ScrollView>
-      <ListView v-show="selectedCategoryId != 6 && selectedCategoryId != 13 && selectedCategoryId != 12 && selectedCategoryId != 11  && selectedCategoryId != 1" ref="listview" for="(section, index) in filterInfo" height="80%">
-        <v-template>
-          <StackLayout>
-            <Label :text="section.name" class="section-title text-center" margin="10" />
-            <WebView v-if="showWebView" disableZoom=true :src="section.text" class="text-center text-secondary m0" @loadFinished="onLoadFinished" backgroundColor="transparent"/>
-          </StackLayout>
-        </v-template>
-      </ListView>
+      
+
+      <StackLayout v-show="selectedCategoryId == 1">
+        <Label :text="IntroduccionTaekwondo.name" textWrap="true" class="title text-center text-primary" />
+        <ScrollView orientation="vertical"  height="80%">
+          <Label class="m-5 text-primary" :text="IntroduccionTaekwondo.text.split('\n').map(line => line.trim()).join('\n')" textWrap="true" />
+        </ScrollView>
+      </StackLayout>
+      <StackLayout v-show="selectedCategoryId == 2">
+        <Label :text="HonorTaek.name" textWrap="true" class="title text-center text-primary" />
+        <ScrollView orientation="vertical"  height="80%">
+          <Label class="m-5 text-primary" :text="HonorTaek.text.split('\n').map(line => line.trim()).join('\n')" textWrap="true" />
+        </ScrollView>
+      </StackLayout>
+      <StackLayout v-show="selectedCategoryId == 3">
+        <Label :text="NowTaek.name" textWrap="true" class="title text-center text-primary" />
+        <ScrollView orientation="vertical"  height="50%">
+          <Label class="m-5 text-primary" :text="NowTaek.text.split('\n').map(line => line.trim()).join('\n')" textWrap="true" />
+        </ScrollView>
+      </StackLayout>
+      <StackLayout v-show="selectedCategoryId == 4">
+        <Label :text="AcademiaFenix.name" textWrap="true" class="title text-center text-primary" />
+        <ScrollView orientation="vertical"  height="80%">
+          <Label class="m-5 text-primary" :text="AcademiaFenix.text.split('\n').map(line => line.trim()).join('\n')" textWrap="true" />
+        </ScrollView>
+      </StackLayout>
+
+      <StackLayout v-show="selectedCategoryId == 5">   
+        <ListView :items="cinturonesValoresTaekwondoConTitulo" height="80%">
+          <v-template>
+            <StackLayout orientation="vertical">
+              <Label  v-if="item.isFirstValor == 3" class="text-center text-primary section-title" textWrap="true" text="Significado del Taekwondo" />
+              <Label v-if="item.isFirstValor == 2"  class="text-center text-primary section-title" textWrap="true" text="Nombres y Significados de los Cinturones" />
+              <Label v-if="item.isFirstValor === true" class="text-center text-primary section-title" textWrap="true" text="Valores" />
+              <Label v-show="item.description != 'valor'" class="m-5 fs-12 text-primary" :text="`${item.name}: ${item.description}`" textWrap="true" />
+              <Label v-show="item.description == 'valor' || item.description == 'sig'  " class="m-5 fs-12 text-primary" :text="`${item.name}`" textWrap="true" />
+            </StackLayout>
+          </v-template>
+        </ListView>
+      </StackLayout>
      
       <StackLayout v-show="selectedCategoryId == 6">
-        <ListView for="(taeguk, index) in taeguks">
+        <ListView for="(taeguk, index) in taeguks"  height="80%">
           <v-template>
             <StackLayout orientation="vertical">
               <Label v-if="index === 0" class="text-center text-primary section-title" textWrap="true" text="Las Taeguk son una serie de movimientos coordinados y sistematizados que simulan un combate con varios oponentes." />
@@ -33,6 +65,72 @@
               <Label v-if="index === 0" class="text-center text-secondary" textWrap="true" text="Para reproducir los videos, es necesario estar conectado a internet. Pronto estaremos utilizando videos propios de la academia." />
               <Label class="m-5 section-subtitle text-primary" :text="`${taeguk.title}: ${taeguk.description}`" textWrap="true" />
               <WebView :src="taeguk.videoUrl"  height="800" @loadFinished="onLoadFinished" />
+            </StackLayout>
+          </v-template>
+        </ListView>
+      </StackLayout>
+      <StackLayout v-show="selectedCategoryId == 7">
+        <Label class="text-center text-primary section-title" textWrap="true" text="Aspectos para Mejorar las Formas" />
+        <ListView :items="aspectsToImproveForms.aspects" height="80%">
+          <v-template>
+            <StackLayout orientation="vertical">
+              <Label class="m-5 fs-12 text-primary" :text="item" textWrap="true" />
+            </StackLayout>
+          </v-template>
+        </ListView>
+      </StackLayout>
+      
+      <StackLayout v-show="selectedCategoryId == 8">
+        <Label class="text-center text-primary section-title" textWrap="true" text="Vocabulario" />
+        <ListView :items="generalVocabulary" height="80%">
+          <v-template>
+            <StackLayout orientation="vertical">
+              <Label class="m-5 fs-12 text-primary" :text="`${item.kor} = ${item.spa}`" textWrap="true" />
+            </StackLayout>
+          </v-template>
+        </ListView> 
+      </StackLayout>
+
+      <StackLayout v-show="selectedCategoryId == 9">
+        <Label class="text-center text-primary section-title" textWrap="true" text="Partes del cuerpo" />
+        <ListView :items="bodyParts" height="80%">
+          <v-template>
+            <StackLayout orientation="vertical">
+              <Label class="m-5 fs-12 text-primary" :text="`${item.kor} = ${item.spa}`" textWrap="true" />
+            </StackLayout>
+          </v-template>
+        </ListView> 
+      </StackLayout>
+
+      <StackLayout v-show="selectedCategoryId == 10">
+        <Label class="text-center text-primary section-title" textWrap="true" text="Números" />
+        <ListView :items="numeros" height="80%">
+          <v-template>
+            <StackLayout orientation="vertical">
+              <Label class="m-5 fs-12 text-primary" :text="`${item.kor} = ${item.spa}`" textWrap="true" />
+            </StackLayout>
+          </v-template>
+        </ListView> 
+      </StackLayout>
+
+      <StackLayout v-show="selectedCategoryId == 11">
+        <Label class="text-center text-primary section-title" textWrap="true" text="Fundamentos Básicos" />
+        <ListView :items="fundamentosAgrupados" height="80%">
+          <v-template>
+            <StackLayout orientation="vertical">
+              <Label class="text-center text-primary section-subtitle" :text="item.type" textWrap="true" />
+              <Label v-for="(subItem, index) in item.items" :class="index === 0 ? 'text-center text-primary' : 'text-primary'" :text="subItem" textWrap="true" />
+            </StackLayout>
+          </v-template>
+        </ListView> 
+      </StackLayout>
+
+      <StackLayout v-show="selectedCategoryId == 12">
+        <Label class="text-center text-primary section-title" textWrap="true" text="Fundamentos Prácticos" />
+        <ListView :items="fundamentosPracticos.fundamentos" height="80%">
+          <v-template>
+            <StackLayout orientation="vertical">
+              <Label class="m-5 fs-12 text-primary" :text="item.name" textWrap="true" />
             </StackLayout>
           </v-template>
         </ListView>
@@ -49,40 +147,11 @@
         </ListView>
       </StackLayout>
 
-      <StackLayout v-show="selectedCategoryId == 1">
-        <Label :text="IntroduccionTaekwondo.name" textWrap="true" class="title text-center text-primary" />
-        <ScrollView orientation="vertical">
-          <Label class="m-5 text-primary" :text="IntroduccionTaekwondo.text.split('\n').map(line => line.trim()).join('\n')" textWrap="true" />
-        </ScrollView>
-      </StackLayout>
-
-      <StackLayout v-show="selectedCategoryId == 12">
-        <Label class="text-center text-primary section-title" textWrap="true" text="Fundamentos Prácticos" />
-        <ListView :items="fundamentosPracticos.fundamentos" height="80%">
-          <v-template>
-            <StackLayout orientation="vertical">
-              <Label class="m-5 fs-12 text-primary" :text="item.name" textWrap="true" />
-            </StackLayout>
-          </v-template>
-        </ListView>
-      </StackLayout>
-
-      
-      <StackLayout v-show="selectedCategoryId == 11">
-        <Label class="text-center text-primary section-title" textWrap="true" text="Fundamentos Básicos" />
-        <ListView :items="fundamentosAgrupados" height="80%">
-          <v-template>
-            <StackLayout orientation="vertical">
-              <Label class="text-center text-primary section-subtitle" :text="item.type" textWrap="true" />
-              <Label v-for="(subItem, index) in item.items" :class="index === 0 ? 'text-center text-primary' : 'text-primary'" :text="subItem" textWrap="true" />
-            </StackLayout>
-          </v-template>
-        </ListView> 
-      </StackLayout>
+   
  
       <StackLayout orientation="horizontal" horizontalAlignment="right">
-        <Button class="bg-secondary" v-show="currentSectionIndex > 0" text="Atrás" @tap="goToPreviousSection" width="100" />
-        <Button class="bg-primary" text=" Siguiente " @tap="goToNextSection" width="100" /> 
+        <Button class="bg-secondary" v-show="currentSectionIndex > 0" text="Anterior" @tap="goToPreviousSection" width="100" />
+        <Button  class="bg-primary" v-show="selectedCategoryId != 13" text=" Siguiente " @tap="goToNextSection" width="100" /> 
       </StackLayout>
       
     </StackLayout>
@@ -90,7 +159,8 @@
 </template>
 
 <script>
-import { categories, info, taeguks,prohibitedActions, fundamentosPracticos, fundamentosBasicos, IntroduccionTaekwondo } from '../data/taekwondo-data.js';
+import { categories, taeguks,prohibitedActions, fundamentosPracticos, fundamentosBasicos, IntroduccionTaekwondo, numeros, bodyParts, 
+  aspectsToImproveForms, generalVocabulary, cinturonesValoresTaekwondo, AcademiaFenix, NowTaek,HonorTaek } from '../data/taekwondo-data.js';
 import * as utils from "@nativescript/core/utils";
 
 export default {
@@ -99,16 +169,24 @@ data() {
   return {
     categories,
     selectedCategoryId: 1,
-    info,
     currentSectionIndex: 0,
     filterInfo: [],
     showWebView: true,
     taeguks,
     prohibitedActions,
     fundamentosPracticos,
+    numeros,
     fundamentosBasicos,
     fundamentosPorSeccion: {},
-    IntroduccionTaekwondo
+    IntroduccionTaekwondo,
+    bodyParts,
+    aspectsToImproveForms,
+    generalVocabulary,
+    cinturonesValoresTaekwondo,
+    AcademiaFenix,
+    NowTaek,
+    HonorTaek
+
   };
 },
 mounted() {
@@ -118,6 +196,14 @@ mounted() {
   this.fundamentosBasicos = this.fundamentosBasicos.find(item => item.id_bell == this.belt.id);
   // ELIMINAMOS EL id_bell DE LOS FUNDAMENTOS BASICOS
   this.fundamentosBasicos = this.fundamentosBasicos.fundamentos;
+  this.numeros = this.numeros.numeros;
+  this.bodyParts = this.bodyParts.bodyParts;
+  this.generalVocabulary = this.generalVocabulary.vocabulary;
+  this.aspectsToImproveForms = this.aspectsToImproveForms;
+  this.cinturonesValoresTaekwondo = this.cinturonesValoresTaekwondo;
+  this.AcademiaFenix = this.AcademiaFenix;
+  this.NowTaek = this.NowTaek;
+  this.HonorTaek = this.HonorTaek;
   //ordenar el array de fundamentos por seccion
   this.fundamentosPorSeccion = this.fundamentosBasicos.reduce((acc, item) => {
     if (!acc[item.section]) {
@@ -128,7 +214,6 @@ mounted() {
     return acc;
   }, {});
   
-  console.log(this.fundamentosPorSeccion.Defensas)
   if(this.belt.id == 2) {
     //solo agarrar las primeras dos taeguks
     this.taeguks = this.taeguks.slice(0, 2);
@@ -141,6 +226,24 @@ mounted() {
   }
 },
 computed: {
+  cinturonesValoresTaekwondoConTitulo() {
+    let foundFirstValor = false;
+    let foundFirstCinturon = false;
+    let foundFirstSig = false;
+    return this.cinturonesValoresTaekwondo.map(item => {
+      if (item.description === 'valor' && !foundFirstValor) {
+        foundFirstValor = true;
+        return { ...item, isFirstValor: true };
+      } else if (item.description !== 'valor' && !foundFirstCinturon) {
+        foundFirstCinturon = true;
+        return { ...item, isFirstValor: 2 };
+      } else if (item.description === 'sig' && !foundFirstSig) {
+        foundFirstSig = true;
+        return { ...item, isFirstValor: 3 };
+      }
+      return { ...item, isFirstValor: false };
+    });
+  },
   fundamentosAgrupados() {
     return [
       {
@@ -210,10 +313,9 @@ methods: {
   onCategorySelected(index) {
     this.currentSectionIndex = index.value;
     this.selectedCategoryId = this.categories[index.value].id;
-    this.filterInfo = this.info.filter(item => item.id_category === this.selectedCategoryId && (this.belt.id == item.id_bell || item.id_bell == 0));
+    //this.filterInfo = this.info.filter(item => item.id_category === this.selectedCategoryId && (this.belt.id == item.id_bell || item.id_bell == 0));
   },
   goToNextSection() {
-    console.log(this.fundamentosPorSeccion)
     if (this.currentSectionIndex < this.categories.length - 1) {
       this.currentSectionIndex++;
       this.showWebView = false;

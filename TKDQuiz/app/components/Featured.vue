@@ -9,9 +9,37 @@
         </GridLayout>
       </ActionBar>
 
-        <GridLayout class="page__content">
-         <HtmlView  margin="10" :html="message" class="text-center text-secondary" />
-        </GridLayout>
+      <StackLayout class="content">
+      <Label class="title" text="Acerca de Nosotros" />
+
+      <Label class="paragraph" textWrap="true" text="Esta aplicación es el resultado de una iniciativa que surgió con el propósito de proporcionar información esencial sobre el cambio de cinta en Taekwondo. Nuestra misión es ofrecer a los practicantes de Taekwondo una herramienta confiable y accesible que les permita acceder de manera sencilla a la información que necesitan." />
+
+      <Label class="paragraph" textWrap="true">
+        <FormattedString>
+          <Span text="La información que encontrarás en esta aplicación se basa en la experiencia y el conocimiento del Profesor " />
+          <Span text="Ernesto Carballo Rodríguez" fontWeight="bold" />
+          <Span text=", Cinturón Negro 2 Dan de la academia Taekwondo Fénix Esparza. Su dedicación y pasión por el Taekwondo han sido fundamentales para impulsar y respaldar el desarrollo de cada miembro de TKD Fénix Esparza." />
+        </FormattedString>
+      </Label>
+
+      <Label class="paragraph" textWrap="true">
+        <FormattedString>
+          <Span text="Facebook de la Academia Taekwondo Fenix Esparza: " />
+          <Span text="https://www.facebook.com/profile.php?id=100054609752257" class="link" />
+        </FormattedString>
+      </Label>
+
+      <Label class="paragraph" textWrap="true" text="Nuestro compromiso es seguir mejorándola y expandiéndola para proporcionar aún más funcionalidades y recursos útiles a la comunidad de Taekwondo." />
+
+      <Label class="paragraph" textWrap="true" text="¡Esperamos que disfrutes explorando y aprendiendo a través de nuestra aplicación!" />
+
+      <Label class="paragraph" textWrap="true">
+        <FormattedString>
+          <Span text="Esta aplicación ha sido desarrollada por Francis Meléndez Chaves. " />
+          <Span text="Ver perfil de linkedin" class="link" />
+        </FormattedString>
+      </Label>
+    </StackLayout>
     </Page>
 </template>
 
@@ -65,6 +93,25 @@
     // Start custom common variables
     @import '@nativescript/theme/scss/variables/blue';
     // End custom common variables
+    .content {
+      padding: 20px;
+    }
 
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .paragraph {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    .link {
+      color: #007bff;
+      text-decoration: underline;
+    }
     // Custom styles
 </style>
