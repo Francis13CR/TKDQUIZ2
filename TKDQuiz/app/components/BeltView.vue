@@ -44,11 +44,12 @@
         <ListView :items="cinturonesValoresTaekwondoConTitulo" height="80%">
           <v-template>
             <StackLayout orientation="vertical">
-              <Label  v-if="item.isFirstValor == 3" class="text-center text-primary section-title" textWrap="true" text="Significado del Taekwondo" />
-              <Label v-if="item.isFirstValor == 2"  class="text-center text-primary section-title" textWrap="true" text="Nombres y Significados de los Cinturones" />
-              <Label v-if="item.isFirstValor === true" class="text-center text-primary section-title" textWrap="true" text="Valores" />
-              <Label v-show="item.description != 'valor'" class="m-5 fs-12 text-primary" :text="`${item.name}: ${item.description}`" textWrap="true" />
-              <Label v-show="item.description == 'valor' || item.description == 'sig'  " class="m-5 fs-12 text-primary" :text="`${item.name}`" textWrap="true" />
+              <Label  v-if="item.isFirstValor === 3" class="text-center text-primary section-title" textWrap="true" text="Significado del Taekwondo" />
+              <Label v-if="item.isFirstValor === 2"  class="text-center text-primary section-title" textWrap="true" text="Nombres y Significados de los Cinturones" />
+              <Label v-if="item.isFirstValor === 1" class="text-center text-primary section-title" textWrap="true" text="Valores del Taekwondo" />
+              <Label v-show="item.description != 'valor' && item.description != 'sig' " class="m-5 fs-12 text-primary" :text="`${item.name}: ${item.description}`" textWrap="true" />
+              <Label v-show="item.description == 'valor' " class="m-5 fs-12 text-primary" :text="`${item.name}`" textWrap="true" />
+              <Label v-show="item.description == 'sig'  " class="m-5 fs-12 text-primary" :text="`${item.name}`" textWrap="true" />
             </StackLayout>
           </v-template>
         </ListView>
@@ -233,8 +234,8 @@ computed: {
     return this.cinturonesValoresTaekwondo.map(item => {
       if (item.description === 'valor' && !foundFirstValor) {
         foundFirstValor = true;
-        return { ...item, isFirstValor: true };
-      } else if (item.description !== 'valor' && !foundFirstCinturon) {
+        return { ...item, isFirstValor: 1 };
+      } else if (item.description !== 'valor' && item.description != 'sig' && !foundFirstCinturon) {
         foundFirstCinturon = true;
         return { ...item, isFirstValor: 2 };
       } else if (item.description === 'sig' && !foundFirstSig) {

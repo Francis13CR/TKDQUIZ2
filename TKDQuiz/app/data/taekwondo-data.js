@@ -1307,6 +1307,14 @@ export const HonorTaek =
 
 
 
+export const filosofia = {
+  id_category: 2,
+  name: 'Filosofía y honor subyacente',
+  id_bell: 0,
+  text: `
+  `
+};
+
 export const belts = [
   { 
     id: 1, 
@@ -1351,6 +1359,14 @@ export const belts = [
   },
   
 ];
+
+
+export const infoErnesto = {
+  'fuentes' : 'La información que encontrarás en esta aplicación se basa en la experiencia y el conocimiento del Profesor  Ernesto Carballo Rodríguez , Cinturón Negro 2 Dan de la academia Taekwondo Fénix Esparza. Su dedicación y pasión por el Taekwondo han sido fundamentales para impulsar y respaldar el desarrollo de cada miembro de TKD Fénix Esparza.',
+  'objetivo' : 'Nuestro compromiso es seguir mejorándola y expandiéndola para proporcionar aún más funcionalidades y recursos útiles a la comunidad de Taekwondo.',
+  'grax' : '¡Esperamos que disfrutes explorando y aprendiendo a través de nuestra aplicación!',
+  'developer' : 'Esta aplicación ha sido desarrollada por Francis Meléndez Chaves, desarrollador Full-stack.'
+}
 
 //<StackLayout v-for="(info, index) in section.info" id="" >
 // <!-- si es de tipo imagen mostrar imagen -->
