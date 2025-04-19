@@ -7,3 +7,7 @@ Abre el archivo include.gradle en el directorio node_modules/nativescript-fancya
 Busca la línea que contiene compile.
 
 Reemplaza compile con implementation.
+
+
+cd .\TKDQuiz\  
+ns run  android --debugger 
